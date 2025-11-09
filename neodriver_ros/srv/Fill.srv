@@ -1,0 +1,7 @@
+uint8 r
+uint8 g
+uint8 b
+float32 brightness # -1.0 to keep current global brightness
+---
+bool ok
+string message
