@@ -58,8 +58,8 @@ def generate_launch_description():
                  'joint_name': 'motor4',
              }]),
 
-        # Headless frequency controller
-        Node(package='quad_legs', executable='quad_leg_freq', name='quad_leg_freq',
+        # Beuhler Clock
+        Node(package='quad_legs', executable='beuler_clock', name='beuler_clock',
              parameters=[{
                  'frequency_hz': frequency,
                  'group_offset_deg': offset_deg,
