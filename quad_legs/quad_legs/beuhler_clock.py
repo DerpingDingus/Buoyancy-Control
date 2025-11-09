@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Headless frequency controller for 4 legs (ROS 2 Humble)
+J. Vranicar
+Beuhler Clock control of legs
 
 - Rotates all legs with average frequency 'frequency_hz' (± allowed).
 - Inside ±30° about down (0 rad), angular speed = 6× ω0; outside = 1× ω0.
