@@ -171,16 +171,9 @@ ws2812b_ros/
 ## 🧾 License
 MIT License © 2025 Ryan Kaczmarczyk  
 
----
-
-## 🌟 Future Ideas
-- ROS 2 service `SetLedColors.srv`  
-- Animation presets (pulse, rainbow, chase)  
-- Integration with `rclpy` actions for light cues  
 
 ---
 
 ### 🧰 Maintainer
 **Ryan Kaczmarczyk**  
 Florida State University – Mechanical Engineering  
-NASA Team 517 | Green Propellant Thrust Stand  
