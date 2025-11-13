@@ -10,6 +10,10 @@ setup(
         ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch', ['launch/led_demo.launch.py']),
+        ('share/' + package_name + '/launch', [
+                'launch/led_demo.launch.py',
+                'launch/rainbow_fade.launch.py',   # <-- add this
+            ]),
     ],
     install_requires=[
         'setuptools',
@@ -27,6 +31,7 @@ setup(
             'led_node = ws2812b_ros.led_node:main',
             'led_tester = ws2812b_ros.led_tester:main',
             'ws2812b-set = ws2812b_ros.cli:main',
+            'rainbow_fade = ws2812b_ros.rainbow_fade:main',   # <-- add this
         ],
     },
 )
