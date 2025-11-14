@@ -32,5 +32,6 @@ def generate_launch_description():
                 '--console-command', console_command,
             ],
             output='screen',
+            emulate_tty=True,
         ),
     ])

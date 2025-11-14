@@ -38,9 +38,24 @@ def _session_exists(name: str) -> bool:
     return result.returncode == 0
 
 
-def launch_tmux(session_name: str, left_command: str, right_command: str, recreate: bool, attach: bool) -> None:
+def _ensure_tmux_available() -> None:
+    """Ensure tmux exists before attempting to launch anything."""
+
     if shutil.which('tmux') is None:
-        raise RuntimeError('tmux is not installed or not on PATH.')
+        raise RuntimeError(
+            'tmux is not installed or not on PATH. Install it with "sudo apt install tmux" '
+            'or run "rosdep install selqie_tmux_ui" before launching the UI.'
+        )
+
+
+def _stdio_supports_attach() -> bool:
+    """Return True if stdin/stdout look like interactive terminals."""
+
+    return sys.stdin.isatty() and sys.stdout.isatty()
+
+
+def launch_tmux(session_name: str, left_command: str, right_command: str, recreate: bool, attach: bool) -> None:
+    _ensure_tmux_available()
 
     if _session_exists(session_name):
         if recreate:
@@ -48,7 +63,13 @@ def launch_tmux(session_name: str, left_command: str, right_command: str, recrea
         else:
             print(f"Attaching to existing tmux session '{session_name}'.")
             if attach:
-                _run_tmux_command(['attach-session', '-t', session_name])
+                if _stdio_supports_attach():
+                    _run_tmux_command(['attach-session', '-t', session_name])
+                else:
+                    print(
+                        'Current environment has no interactive TTY; cannot attach automatically.\n'
+                        f"Attach manually with: tmux attach -t {session_name}"
+                    )
             return
 
     # left pane - launch command
@@ -65,7 +86,14 @@ def launch_tmux(session_name: str, left_command: str, right_command: str, recrea
     _run_tmux_command(['select-pane', '-t', f'{session_name}:0.0'])
 
     if attach:
-        _run_tmux_command(['attach-session', '-t', session_name])
+        if _stdio_supports_attach():
+            _run_tmux_command(['attach-session', '-t', session_name])
+        else:
+            print(
+                'Current environment has no interactive TTY; leaving the tmux session detached.\n'
+                f"Attach manually with: tmux attach -t {session_name}"
+            )
+            print(f"tmux session '{session_name}' started in detached mode.")
     else:
         print(f"tmux session '{session_name}' started in detached mode.")
 
