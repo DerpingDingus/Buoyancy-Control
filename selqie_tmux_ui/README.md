@@ -5,16 +5,6 @@ quadruped control nodes on the left pane (via `ros2 launch quad_legs
 quad_full.launch.py`) and exposes a dedicated console pane on the right for
 manual commands.
 
-## Prerequisites
-
-Install tmux (the UI backend) if it is not already available:
-
-```bash
-sudo apt update && sudo apt install tmux
-# or via rosdep
-rosdep install selqie_tmux_ui
-```
-
 ## Usage
 
 ```bash
@@ -24,12 +14,6 @@ ros2 run selqie_tmux_ui tmux_ui
 # Or through the included launch file
 ros2 launch selqie_tmux_ui tmux_session.launch.py
 ```
-
-> **Note**
-> `ros2 launch` (and other supervisor tools) often run without an interactive
-> TTY. The UI automatically stays detached in that scenario and prints the
-> exact `tmux attach -t <session>` command so you can connect from a real
-> terminal.
 
 Useful command-line flags:
 
