@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import shutil
 import subprocess
 import sys
@@ -48,10 +49,17 @@ def _ensure_tmux_available() -> None:
         )
 
 
-def _stdio_supports_attach() -> bool:
-    """Return True if stdin/stdout look like interactive terminals."""
+def _can_attach_interactively() -> bool:
+    """Return True if attaching to tmux from this process is safe."""
 
-    return sys.stdin.isatty() and sys.stdout.isatty()
+    if not (sys.stdin.isatty() and sys.stdout.isatty()):
+        return False
+
+    # Avoid nesting tmux sessions; tmux refuses to attach if $TMUX is set.
+    if os.environ.get('TMUX'):
+        return False
+
+    return True
 
 
 def launch_tmux(session_name: str, left_command: str, right_command: str, recreate: bool, attach: bool) -> None:
@@ -63,11 +71,11 @@ def launch_tmux(session_name: str, left_command: str, right_command: str, recrea
         else:
             print(f"Attaching to existing tmux session '{session_name}'.")
             if attach:
-                if _stdio_supports_attach():
+                if _can_attach_interactively():
                     _run_tmux_command(['attach-session', '-t', session_name])
                 else:
                     print(
-                        'Current environment has no interactive TTY; cannot attach automatically.\n'
+                        'Current environment is not suitable for tmux attach (no TTY or already inside tmux).\n'
                         f"Attach manually with: tmux attach -t {session_name}"
                     )
             return
@@ -86,11 +94,11 @@ def launch_tmux(session_name: str, left_command: str, right_command: str, recrea
     _run_tmux_command(['select-pane', '-t', f'{session_name}:0.0'])
 
     if attach:
-        if _stdio_supports_attach():
+        if _can_attach_interactively():
             _run_tmux_command(['attach-session', '-t', session_name])
         else:
             print(
-                'Current environment has no interactive TTY; leaving the tmux session detached.\n'
+                'Current environment is not suitable for tmux attach (no TTY or already inside tmux).\n'
                 f"Attach manually with: tmux attach -t {session_name}"
             )
             print(f"tmux session '{session_name}' started in detached mode.")
