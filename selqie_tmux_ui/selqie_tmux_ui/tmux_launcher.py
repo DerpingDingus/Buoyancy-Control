@@ -97,7 +97,8 @@ def launch_tmux(session_name: str, left_command: str, right_command: str, recrea
         'bash', '-lc', right_command,
     ])
 
-    _run_tmux_command(['select-pane', '-t', f'{session_name}:0.0'])
+    # Bring focus to the interactive console pane so users can type immediately.
+    _run_tmux_command(['select-pane', '-t', f'{session_name}:0.1'])
 
     if attach:
         if _can_attach_interactively():
