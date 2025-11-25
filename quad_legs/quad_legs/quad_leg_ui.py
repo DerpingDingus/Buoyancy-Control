@@ -17,6 +17,7 @@ Requires:
   sudo apt install python3-pyqt5
 """
 
+import os
 import sys, math, time
 import rclpy
 from rclpy.node import Node
@@ -308,6 +309,10 @@ class MainWindow(QtWidgets.QWidget):
 # ------------------------------ Main ------------------------------------
 
 def main():
+    # Ensure Qt can start even in headless sessions (e.g., tmux without DISPLAY)
+    if not os.environ.get("DISPLAY") and not os.environ.get("QT_QPA_PLATFORM"):
+        os.environ["QT_QPA_PLATFORM"] = "offscreen"
+
     rclpy.init()
     node = LegCommandPublisher()
 
