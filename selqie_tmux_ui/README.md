@@ -46,6 +46,17 @@ Once the layout is up you can:
 
 * Watch the left pane bring up all motors, UI, and joystick nodes via the
   existing `quad_legs` launch file.
-* Type arbitrary ROS 2 commands on the right pane (e.g. `ros2 topic echo`,
-  `ros2 action send_goal`, etc.).
+* Drive the robot from the right pane using the interactive `selqie_terminal`
+  shell. The console now talks directly to the `/motor{1..4}` topics provided
+  by `quad_legs`, so you can:
+  - `start_motors`, `stop_motors`, `zero`, or `clear` (optionally targeting a
+    single motor or `all`).
+  - Send MIT commands with `set_cmd <motor|all> <p> <v> <kp> <kd> <torque>`.
+  - Send quick velocity commands with `set_vel <motor|all> <vel> [kp] [kd]
+    [torque]`.
+  - Inspect feedback with `status` (latest MotorState) and `errors` (last error
+    string per motor).
+  The tool exits cleanly with `exit`. If ROS 2 is unavailable in the environment,
+  the pane falls back to a standard Bash shell so you can still run manual
+  commands like `ros2 topic echo`.
 * Detach from tmux with `Ctrl+b d` and reattach with `tmux attach -t selqie_ui`.

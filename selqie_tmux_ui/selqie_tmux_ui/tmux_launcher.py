@@ -12,18 +12,24 @@ import textwrap
 from typing import Optional
 
 DEFAULT_LAUNCH_COMMAND = 'ros2 launch quad_legs quad_full.launch.py'
+TERMINAL_COMMAND = 'ros2 run selqie_tmux_ui selqie_terminal'
 
 
 def _default_console_command() -> str:
     banner = textwrap.dedent(
         """
         SELQIE command console ready.\n\n"
-        "Use this pane to send additional ROS 2 commands (ros2 topic pub, ros2 action send_goal, etc.).\n"
+        "Starting interactive SELQIE terminal (type 'help' for available commands).\n"
         "Detach from the session with Ctrl+b d, or exit the pane with Ctrl+D.\n"
         """
     ).strip()
     escaped = banner.replace("'", "'\\''")
-    return f"printf '{escaped}\n'; exec bash -i"
+    return textwrap.dedent(
+        f"""
+        (command -v ros2 >/dev/null 2>&1 && {TERMINAL_COMMAND}) \
+          || (printf '{escaped}\n'; exec bash -i)
+        """
+    ).strip()
 
 
 def _run_tmux_command(args: list[str]) -> None:
@@ -91,7 +97,8 @@ def launch_tmux(session_name: str, left_command: str, right_command: str, recrea
         'bash', '-lc', right_command,
     ])
 
-    _run_tmux_command(['select-pane', '-t', f'{session_name}:0.0'])
+    # Bring focus to the interactive console pane so users can type immediately.
+    _run_tmux_command(['select-pane', '-t', f'{session_name}:0.1'])
 
     if attach:
         if _can_attach_interactively():
