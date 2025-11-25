@@ -20,6 +20,7 @@ setup(
     entry_points={
         'console_scripts': [
             'tmux_ui = selqie_tmux_ui.tmux_launcher:main',
+            'selqie_terminal = selqie_tmux_ui.selqie_terminal:main',
         ],
     },
 )
