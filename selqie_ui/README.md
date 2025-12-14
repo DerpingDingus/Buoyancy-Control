@@ -27,7 +27,9 @@ Once the console is running you can:
 
 * `start_motors`, `stop_motors`, `zero`, or `clear` (optionally targeting a
   single motor or `all`).
-* Send MIT commands with `set_cmd <motor|all> <p> <v> <kp> <kd> <torque>`.
+* Send MIT commands with `set_cmd <motor|all> <p> <v> <kp> <kd> <torque>`. Motors
+  auto-start into MIT mode on the first command, so you can send a velocity even
+  if you forgot to call `start_motors`.
 * Send quick velocity commands with `set_vel <motor|all> <vel> [kp] [kd]
   [torque]`.
 * Run a Beuhler clock velocity pattern with `beuhler <freq_hz> [offset_deg]
