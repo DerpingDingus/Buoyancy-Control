@@ -5,7 +5,7 @@ a small quadruped prototype on NVIDIA Jetson hardware: high-level gait control,
 low-level CubeMars motor drivers, a tmux-based operator UI, LED feedback, and
 3D perception stacks for ZED cameras and BNO080 IMUs. Clone the repository into
 `<workspace>/src`, fetch the optional vendor submodules, and build it with
-`colcon` like any other ROS 2 overlay.
+`colcon` like any other ROS 2 overlay. 
 
 > **Status.** The repository mixes actively maintained Python packages with
 > vendor trees that are tracked as Git submodules (`bno08x-ros2-driver`,
