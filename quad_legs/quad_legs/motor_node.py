@@ -283,16 +283,16 @@ class MotorNode(Node):
         if len(msg.data) != 5:
             self.get_logger().warn("mit_cmd expects [position, velocity, Kp, Kd, torque]")
             return
-        
+
         with self._lock:
             self.cmd = list(map(float, msg.data))
             self._neutral_hold = False  # New command cancels any previous "clear" hold
-        
+
         # Auto-start the motor on first command if not already started
-        # if not self._started:
-        #     self._send_special(0xFC)  # START command
-        #     self._started = True
-        #     self.get_logger().info(f"Auto-starting motor {self.joint_name} on first command")
+        if not self._started:
+            self._send_special(0xFC)  # START command
+            self._started = True
+            self.get_logger().info(f"Auto-starting motor {self.joint_name} on first command")
 
     def on_special(self, msg):
         """
