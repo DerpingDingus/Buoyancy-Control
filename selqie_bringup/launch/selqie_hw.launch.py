@@ -17,7 +17,7 @@ def LaunchFile(name : str):
 def generate_launch_description():
     return LaunchDescription([
         # LaunchFile('actuation.launch.py'),
-        LaunchFile('sensing.launch.py'),
+        # LaunchFile('sensing.launch.py'),
         # LaunchFile('vision.launch.py'),
         # LaunchFile('leg_control.launch.py'),
         # LaunchFile('mapping.launch.py'),
