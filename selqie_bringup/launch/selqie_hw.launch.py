@@ -1,28 +1,42 @@
-import os
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
-from launch.launch_description_sources import PythonLaunchDescriptionSource
-from ament_index_python.packages import get_package_share_directory
+from launch_ros.actions import Node
 
-LAUNCH_FOLDER = os.path.join(get_package_share_directory('selqie_bringup'), 'launch')
-
-def LaunchFile(name : str):
-    return IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(LAUNCH_FOLDER, name)
-        ),
-        launch_arguments={'use_sim_time': 'false'}.items()
-    )
 
 def generate_launch_description():
+    """Bring up SELQIE hardware: four motors with MIT control enabled."""
+
+    params_common = {
+        'can_interface': 'can0',
+        'motor_type': 'AK40-10',
+        'control_hz': 50.0,
+        'auto_start': True,
+        'invert_direction': False,
+    }
+
     return LaunchDescription([
-        # LaunchFile('actuation.launch.py'),
-        # LaunchFile('sensing.launch.py'),
-        # LaunchFile('vision.launch.py'),
-        # LaunchFile('leg_control.launch.py'),
-        # LaunchFile('mapping.launch.py'),
-        # LaunchFile('planning.launch.py'),
-        # LaunchFile('tf.launch.py'),
-        # LaunchFile('localization.launch.py'),
-        # LaunchFile('marker_localization.launch.py'),
+        # --- Four Motor Nodes ---
+        Node(
+            package='quad_legs',
+            executable='motor_node',
+            name='motor1',
+            parameters=[{**params_common, 'can_id': 1, 'joint_name': 'motor1', 'reverse_polarity': True}],
+        ),
+        Node(
+            package='quad_legs',
+            executable='motor_node',
+            name='motor2',
+            parameters=[{**params_common, 'can_id': 2, 'joint_name': 'motor2'}],
+        ),
+        Node(
+            package='quad_legs',
+            executable='motor_node',
+            name='motor3',
+            parameters=[{**params_common, 'can_id': 3, 'joint_name': 'motor3', 'reverse_polarity': True}],
+        ),
+        Node(
+            package='quad_legs',
+            executable='motor_node',
+            name='motor4',
+            parameters=[{**params_common, 'can_id': 4, 'joint_name': 'motor4'}],
+        ),
     ])
