@@ -235,12 +235,13 @@ class BeuhlerClock:
 
             dt = 1.0 / max(1e-6, self.control_hz)
             now = time.monotonic()
-            step = max(0.0, min(now - last_time, 0.05))
+            # step = max(0.0, min(now - last_time, 0.05))
+            step = dt
             last_time = now
 
             f = gait_frequency_hz
             omega_base = self._region_speed(self._theta_base, f, fast_band_deg, alpha)
-            self._theta_base += omega_base * step
+            self._theta_base = _wrap_to_pi(self._theta_base + omega_base * step)
 
             theta_a = self._theta_base
             theta_b = self._theta_base + math.radians(self.group_offset_deg)
