@@ -33,8 +33,8 @@ class QuadLegFreq(Node):
         self.declare_parameter('frequency_hz', 0.5)       # average frequency (±)
         self.declare_parameter('sweep_angle_deg', 180.0) # phase offset between (1&4) and (2&3)
         self.declare_parameter('centerline_angle_Q3_deg', 30.0)     # +/- around "down"
-        self.declare_parameter('kp', 0.0)
-        self.declare_parameter('kd', 1.0)
+        self.declare_parameter('kp', 1.0)
+        self.declare_parameter('kd', 0.0)
         self.declare_parameter('max_vel_abs', 30.0)       # rad/s clamp
         self.declare_parameter('control_hz', 100.0)       # publish rate
         self.declare_parameter('auto_start', True)        # send "start" once
