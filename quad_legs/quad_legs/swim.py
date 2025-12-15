@@ -106,33 +106,29 @@ class QuadLegFreq(Node):
         self.freq_hz = f
         
         cur_omega = self.freq_hz * self.cur_direction
-        self.theta_base += cur_omega * dt
+        self.theta_base += cur_omega * dt   ##### CHANGE THIS LINE AND UP ONCE POSITION FEEDBACK AVAILABLE            
         
-        # Check if we've made it
-        theta = self.theta_base
-        min_theta, max_theta = self._omegaRange()
-    
-        # Compute per-leg velocities
-        for i in range(1, 5):
-            self._pub(i, cur_omega)
-            
-        # Now, check if we need to flip directions for next time
         # CW and CCW from the perspective of looking at starboard side, selqie moving to the right
         # -1 is CW 1 is CCW
-        if self.cur_direction == 0:
+        min_theta, max_theta = self._omegaRange()
+        if self.cur_direction == 1:
             des_theta = min_theta
         else:
             des_theta = max_theta
-
+    
+        # Compute per-leg velocities
+        for i in range(1, 5):
+            self._pub(i, des_theta)
+            
+        # Now, check if we need to flip directions for next time
         # If close enough, flip directions
-        if abs(theta - des_theta) < 2:
+        if abs(self.theta_base - des_theta) < 2:
             self.cur_direction *= -1
         
-        
 
-    def _pub(self, idx: int, vel: float):
+    def _pub(self, idx: int, pos: float):
         msg = Float64MultiArray()
-        msg.data = [0.0, float(vel), self.KP, self.KD, 0.0]
+        msg.data = [pos, 0.0, self.KP, self.KD, 0.0]
         self.cmd_pubs[idx].publish(msg)
 
 
