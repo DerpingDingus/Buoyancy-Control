@@ -138,7 +138,14 @@ def _sgn(x: float) -> float:
 
 ## Beuhler Class
 class BeuhlerClock:
-    """Threaded implementation of the Beuhler clock velocity pattern."""
+    """Threaded implementation of the Beuhler clock velocity pattern.
+
+    The clock assumes its configuration is only tweaked from the terminal
+    thread while the worker loop reads the latest values without additional
+    locking. Removing the lock means updates can land mid-iteration, so a
+    single tick may blend old/new values, but the loop quickly converges to
+    the new settings and avoids the extra synchronization overhead we don't
+    need for the single-robot terminal."""
 
     def __init__(self, console: MotorConsole):
         self._console = console
@@ -159,7 +166,6 @@ class BeuhlerClock:
         self._theta_base = 0.0
         self._stop_event = threading.Event()
         self._thread: threading.Thread | None = None
-        self._cfg_lock = threading.Lock()
 
     # ---- core math ---------------------------------------------------
     def _calcOmegaSlow(self, f_abs: float, alpha: float) -> float:
@@ -198,32 +204,18 @@ class BeuhlerClock:
             return _sgn(f_hz) * self.max_vel_abs
 
     # ---- lifecycle ---------------------------------------------------
-    def _apply_config(
-        self,
-        *,
-        gait_frequency_hz: float | None = None,
-        alpha: float | None = None,
-        fast_band_deg: float | None = None,
-    ) -> None:
-        with self._cfg_lock:
-            if gait_frequency_hz is not None:
-                self.gait_frequency_hz = gait_frequency_hz
-            if alpha is not None:
-                self.alpha = alpha
-            if fast_band_deg is not None:
-                self.fast_band_deg = fast_band_deg
-                
     def start(
         self,
         gait_frequency_hz: float | None = None,
         alpha: float | None = None,
         fast_band_deg: float | None = None,
     ) -> None:
-        self._apply_config(
-            gait_frequency_hz=gait_frequency_hz,
-            alpha = alpha,
-            fast_band_deg=fast_band_deg
-        )
+        if gait_frequency_hz is not None:
+            self.gait_frequency_hz = gait_frequency_hz
+        if alpha is not None:
+            self.alpha = alpha
+        if fast_band_deg is not None:
+            self.fast_band_deg = fast_band_deg
 
         if self._thread and self._thread.is_alive():
             # Update in-place without phase reset for real-time tuning.
@@ -248,10 +240,9 @@ class BeuhlerClock:
         last_time = time.monotonic()
 
         while not self._stop_event.is_set():
-            with self._cfg_lock:
-                gait_frequency_hz = self.gait_frequency_hz
-                alpha = self.alpha
-                fast_band_deg = self.fast_band_deg
+            gait_frequency_hz = self.gait_frequency_hz
+            alpha = self.alpha
+            fast_band_deg = self.fast_band_deg
 
             dt = 1.0 / max(1e-6, self.control_hz)
             now = time.monotonic()
