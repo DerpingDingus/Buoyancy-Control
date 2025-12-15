@@ -112,6 +112,7 @@ class MotorConsole(Node):
         self._executor.shutdown()
         self.destroy_node()
         self._spin_thread.join(timeout=1.0)
+        
 
 #######################################################
 ########### BEUHLER CLOCK IMPLEMENTATION ##############
@@ -336,7 +337,7 @@ class SELQIETerminal(Cmd):
 
         parts = line.split()
         if not parts:
-            print('Usage: beuhler stop | <frequency_hz> [group_offset_deg] [fast_band_deg] [alpha]')
+            print('Usage: beuhler stop | <frequency_hz> [fast_band_deg] [alpha]')
             return
 
         if parts[0].lower() == 'stop':
@@ -351,7 +352,7 @@ class SELQIETerminal(Cmd):
         try:
             values = [float(p) for p in parts]
         except ValueError:
-            print('All parameters must be numeric. Usage: beuhler <frequency_hz> [group_offset_deg] [fast_band_deg] [alpha]')
+            print('All parameters must be numeric. Usage: beuhler <frequency_hz> [fast_band_deg] [alpha]')
             return
 
         params = {
