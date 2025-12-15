@@ -12,7 +12,8 @@ def generate_launch_description():
 
     return LaunchDescription([
         DeclareLaunchArgument('frequency_hz', default_value='0.5'),
-        DeclareLaunchArgument('group_offset_deg', default_value='180.0'),
+        DeclareLaunchArgument('sweep_angle_deg', default_value='30.0'),
+        DeclareLaunchArgument('centerline_angle_Q3_deg', default_value='45.0'), # angle from the negative x axis
         DeclareLaunchArgument('motor_type', default_value='AK40-10'),
         DeclareLaunchArgument('can_interface', default_value='can0'),
 
@@ -58,8 +59,8 @@ def generate_launch_description():
                  'joint_name': 'motor4',
              }]),
 
-        # Beuhler Clock
-        Node(package='quad_legs', executable='beuhler_clock', name='beuhler_clock',
+        # Swim Node
+        Node(package='quad_legs', executable='swim', name='swim',
              parameters=[{
                  'frequency_hz': frequency,
                  'group_offset_deg': offset_deg,
