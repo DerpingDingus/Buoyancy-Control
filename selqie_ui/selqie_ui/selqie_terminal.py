@@ -144,7 +144,7 @@ class BeuhlerClock:
         self.control_hz = 100.0
         self.kp = 0.0
         self.kd = 1.0
-        self.max_vel_abs = 2.0
+        self.max_vel_abs = 20.0
         
         # Internal state
         self._theta_base = 0.0
@@ -154,7 +154,9 @@ class BeuhlerClock:
 
     # ---- core math ---------------------------------------------------
     def _calcOmegaSlow(self, f_abs: float, alpha: float) -> float:
-        return (f_abs / (2 * math.pi * (1.0 + alpha)))
+        t = alpha/(f_abs * (alpha + 1))
+        omegaSlow = (2* math.pi - math.radians(self.fast_band_deg)) / t
+        return (omegaSlow)
     
     def _calcOmegaFast(self, f_abs: float, alpha: float) -> float:
         t = 1/(f_abs * (alpha + 1))
@@ -164,14 +166,11 @@ class BeuhlerClock:
     def _region_speed(self, theta: float, f_hz: float, fast_band_deg: float, alpha: float) -> float:
         if f_hz == 0.0:
             return 0.0
-     
-        # omegaSlow = self._calcOmegaSlow(abs(f_hz), alpha)
-        omegaFast = self._calcOmegaFast(abs(f_hz), alpha)
         
-        if abs(_wrap_to_pi(theta) <= math.radians(fast_band_deg)):
-            omega_mag = omegaFast
+        if abs(_wrap_to_pi(theta)) <= math.radians(fast_band_deg):
+            omega_mag = self._calcOmegaFast(abs(f_hz), alpha)
         else:
-            omega_mag = omegaFast / self.alpha
+            omega_mag = self._calcOmegaSlow(abs(f_hz), alpha)
             
         if omega_mag <= self.max_vel_abs:
             return _sgn(f_hz) * omega_mag
