@@ -50,6 +50,15 @@ class MotorConsole(Node):
                 lambda msg, mid=motor_id: self._on_state(mid, msg),
                 10,
             )
+            # Prefer `current_state` if available because it carries a relative
+            # encoder angle without wrap drift; we cache it the same way so the
+            # rest of the console can transparently use it.
+            self.create_subscription(
+                MotorState,
+                f'/motor{motor_id}/current_state',
+                lambda msg, mid=motor_id: self._on_state(mid, msg),
+                10,
+            )
             self.create_subscription(
                 String,
                 f'/motor{motor_id}/error_code',
@@ -163,6 +172,17 @@ class BeuhlerClock:
         omegaFast = math.radians(self.fast_band_deg) / t
         return (omegaFast)
 
+    def _feedback_theta(self) -> float | None:
+        """Return the latest measured leg angle (rad) if available."""
+
+        # Users report `/motor2/current_state` publishes the relative encoder
+        # angle; we read motor 2 by default but keep the method general in case
+        # we want to make the source configurable later.
+        state = self._console.snapshot_states().get(2)
+        if state is None:
+            return None
+        return _wrap_to_pi(float(state.position))
+
     def _region_speed(self, theta: float, f_hz: float, fast_band_deg: float, alpha: float) -> float:
         if f_hz == 0.0:
             return 0.0
@@ -240,8 +260,12 @@ class BeuhlerClock:
             last_time = now
 
             f = gait_frequency_hz
-            omega_base = self._region_speed(self._theta_base, f, fast_band_deg, alpha)
-            self._theta_base = _wrap_to_pi(self._theta_base + omega_base * step)
+            feedback_theta = self._feedback_theta()
+            if feedback_theta is None:
+                omega_base = self._region_speed(self._theta_base, f, fast_band_deg, alpha)
+                self._theta_base = _wrap_to_pi(self._theta_base + omega_base * step)
+            else:
+                self._theta_base = feedback_theta
 
             theta_a = self._theta_base
             theta_b = self._theta_base + math.radians(self.group_offset_deg)
