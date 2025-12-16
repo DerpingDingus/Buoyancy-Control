@@ -11,8 +11,7 @@ Build the workspace with `colcon build --symlink-install`, source it, then run:
 
 ```bash
 ros2 run mjbots_power_dist power_dist_node --ros-args \
-  -p can_interface:=can0 \
-  -p status_id:=0x500
+  -p can_interface:=can0
 ```
 
 A launch file is also provided:
@@ -26,9 +25,10 @@ ros2 launch mjbots_power_dist power_dist.launch.py
 | Name | Default | Description |
 | ---- | ------- | ----------- |
 | `can_interface` | `can0` | SocketCAN interface that the power dist board is connected to. |
-| `status_id` | `0x0500` | Arbitration ID for the periodic telemetry frame. |
+| `status_id` | `0` | Set to the expected telemetry arbitration ID. When left at `0` the node auto-detects the first compatible frame (matching the upstream [mjbots/power_dist](https://github.com/mjbots/power_dist) layout). |
+| `status_id_mask` | `0x1FFFFFFF` | Optional mask applied to the arbitration ID match (useful when the firmware encodes a device ID in the CAN identifier). |
 | `poll_hz` | `50.0` | How often the node polls buffered CAN frames for new telemetry. |
-| `frame_length_warning` | `8` | Minimum payload length expected before logging a warning. |
+| `frame_length_warning` | `16` | Minimum payload length expected before logging a warning. |
 
 ### Topics
 

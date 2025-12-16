@@ -63,18 +63,25 @@ class PowerDistNode(Node):
         super().__init__('mjbots_power_dist')
 
         self.declare_parameter('can_interface', 'can0')
-        self.declare_parameter('status_id', 0x0500)
+        self.declare_parameter('status_id', 0)
+        self.declare_parameter('status_id_mask', 0x1FFFFFFF)
         self.declare_parameter('poll_hz', 50.0)
-        self.declare_parameter('frame_length_warning', 8)
+        self.declare_parameter('frame_length_warning', 16)
 
         self._can_interface = self.get_parameter('can_interface').get_parameter_value().string_value
         self._status_id = int(self.get_parameter('status_id').value)
+        self._status_id_mask = int(self.get_parameter('status_id_mask').value)
         poll_hz = float(self.get_parameter('poll_hz').value)
         self._frame_length_warning = int(self.get_parameter('frame_length_warning').value)
 
         self.get_logger().info(
-            f'Opening SocketCAN interface "{self._can_interface}" for power dist telemetry (ID=0x{self._status_id:X})'
+            f'Opening SocketCAN interface "{self._can_interface}" for power dist telemetry'
         )
+        if self._status_id:
+            self.get_logger().info(
+                f'Expecting status frames matching ID 0x{self._status_id:X} (mask 0x{self._status_id_mask:X})'
+            )
+
         self._bus = can.interface.Bus(channel=self._can_interface, bustype='socketcan')
         self._reader = can.BufferedReader()
         self._notifier = can.Notifier(self._bus, [self._reader], timeout=1.0)
@@ -99,12 +106,27 @@ class PowerDistNode(Node):
             frame = self._reader.get_message(0.0)
             if frame is None:
                 break
-            if frame.arbitration_id != self._status_id:
+            if self._status_id:
+                if (frame.arbitration_id & self._status_id_mask) != (
+                    self._status_id & self._status_id_mask
+                ):
+                    continue
+            elif len(frame.data) < 8:
+                # Skip frames that cannot match the upstream telemetry format when auto-detecting
                 continue
             self._handle_frame(frame)
 
     def _handle_frame(self, frame: can.Message) -> None:
         data = bytes(frame.data)
+        if self._status_id == 0:
+            # Auto-detect the first plausible telemetry frame so the node works with
+            # the default MJBots ID (0x500) as well as custom firmware IDs from the
+            # upstream repository.
+            self._status_id = frame.arbitration_id
+            self.get_logger().info(
+                f'Auto-detected power dist status ID: 0x{self._status_id:X} (extended={frame.is_extended_id})'
+            )
+
         if len(data) < self._frame_length_warning:
             self.get_logger().warn(
                 f'Received short power dist frame (len={len(data)}); expected at least {self._frame_length_warning} bytes'
