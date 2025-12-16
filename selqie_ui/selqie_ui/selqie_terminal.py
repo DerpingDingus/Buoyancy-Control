@@ -156,8 +156,6 @@ class BeuhlerClock:
         self.max_vel_abs = 20.0
         
         # Internal state
-        self._old_motor_angles = np.array([0, 0, 0, 0])
-        self._cur_motor_angles = np.array([0, 0, 0, 0])
         self._theta_base = 0.0
         self._stop_event = threading.Event()
         self._thread: threading.Thread | None = None
@@ -237,7 +235,6 @@ class BeuhlerClock:
 
         self._stop_event.clear()
         self._theta_base = 0.0
-        self._old_motor_angles = np.array([0, 0, 0, 0])
         self._thread = threading.Thread(target=self._run, daemon=True)
         self._thread.start()
 
