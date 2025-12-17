@@ -353,6 +353,19 @@ class SELQIETerminal(Cmd):
         if targets:
             self._console.send_special('zero', targets)
 
+    def do_origin(self, line: str) -> None:
+        """Command motors to return to the origin (0 rad).
+
+        Usage: origin [motor_id|all]
+        """
+
+        targets = self._parse_targets(line, default_all=True)
+        if not targets:
+            return
+
+        for motor_id in targets:
+            self._console.send_cmd(motor_id, 0.0, 0.0, 5.0, 1.0, 0.0)
+
     def do_clear(self, line: str) -> None:
         """Clear commands and hold zeros. Usage: clear [motor_id|all]"""
         targets = self._parse_targets(line, default_all=True)
