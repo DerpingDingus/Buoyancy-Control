@@ -6,6 +6,7 @@ import threading
 import time
 from cmd import Cmd
 from typing import Iterable, List
+import numpy as np
 
 import rclpy
 from rclpy.executors import SingleThreadedExecutor
@@ -46,6 +47,15 @@ class MotorConsole(Node):
             self.create_subscription(
                 MotorState,
                 f'/motor{motor_id}/motor_state',
+                lambda msg, mid=motor_id: self._on_state(mid, msg),
+                10,
+            )
+            # Prefer `current_state` if available because it carries a relative
+            # encoder angle without wrap drift; we cache it the same way so the
+            # rest of the console can transparently use it.
+            self.create_subscription(
+                MotorState,
+                f'/motor{motor_id}/current_state',
                 lambda msg, mid=motor_id: self._on_state(mid, msg),
                 10,
             )
@@ -111,8 +121,13 @@ class MotorConsole(Node):
         self._executor.shutdown()
         self.destroy_node()
         self._spin_thread.join(timeout=1.0)
+        
 
+#######################################################
+########### BEUHLER CLOCK IMPLEMENTATION ##############
+#######################################################
 
+## Helper Functions
 def _wrap_to_pi(x: float) -> float:
     return (x + math.pi) % (2.0 * math.pi) - math.pi
 
@@ -121,6 +136,7 @@ def _sgn(x: float) -> float:
     return -1.0 if x < 0 else (1.0 if x > 0 else 0.0)
 
 
+## Beuhler Class
 class BeuhlerClock:
     """Threaded implementation of the Beuhler clock velocity pattern."""
 
@@ -128,14 +144,17 @@ class BeuhlerClock:
         self._console = console
 
         # Tunables (defaults mirror the standalone beuhler_clock node)
-        self.frequency_hz = 0.5
+        self.gait_frequency_hz = 0.5 # 1 / total gait period
+        self.alpha = 6.0 # how much faster fast portion is
+        self.slow_band_deg = 30.0 # d_theta in stance
+
+        # Constants
         self.group_offset_deg = 180.0
-        self.fast_band_deg = 30.0
+        self.control_hz = 100.0
         self.kp = 0.0
         self.kd = 1.0
-        self.max_vel_abs = 30.0
-        self.control_hz = 100.0
-
+        self.max_vel_abs = 20.0
+        
         # Internal state
         self._theta_base = 0.0
         self._stop_event = threading.Event()
@@ -143,66 +162,71 @@ class BeuhlerClock:
         self._cfg_lock = threading.Lock()
 
     # ---- core math ---------------------------------------------------
-    def _omega0(self, f_abs: float) -> float:
-        return (31.0 / 36.0) * 2.0 * math.pi * f_abs
+    def _calcOmegaSlow(self, f_abs: float, alpha: float) -> float:
+        t = alpha/(f_abs * (alpha + 1))
+        omegaSlow = (2* math.pi - math.radians(self.slow_band_deg)) / t
+        return (omegaSlow)
+    
+    def _calcOmegaFast(self, f_abs: float, alpha: float) -> float:
+        t = 1/(f_abs * (alpha + 1))
+        omegaFast = math.radians(self.slow_band_deg) / t
+        return (omegaFast)
 
-    def _region_speed(self, theta: float, f_hz: float, fast_band_deg: float, max_vel_abs: float) -> float:
+    def _feedback_theta(self, motor: int) -> float:
+        """Return the latest measured leg angle (rad) if available."""
+
+        # Users report `/motor2/current_state` publishes the relative encoder
+        # angle; we read motor 2 by default but keep the method general in case
+        # we want to make the source configurable later.
+        state = self._console.snapshot_states().get(motor)
+        if state is None:
+            return 0.0
+            # return None
+        return _wrap_to_pi(float(state.position))
+
+    def _region_speed(self, theta: float, f_hz: float, slow_band_deg: float, alpha: float) -> float:
         if f_hz == 0.0:
             return 0.0
-        sign = _sgn(f_hz)
-        omega0 = self._omega0(abs(f_hz))
-        omega_mag = (
-            6.0 * omega0 if abs(_wrap_to_pi(theta)) <= math.radians(fast_band_deg) else omega0
-        )
-        omega = sign * omega_mag
-        return max(-max_vel_abs, min(max_vel_abs, omega))
+        
+        slow_band_min = - slow_band_deg / 2
+        slow_band_max =  slow_band_deg / 2
+        
+        if ( _wrap_to_pi(theta) <= math.radians(slow_band_max)) and ( _wrap_to_pi(theta) >= math.radians(slow_band_min)):
+            omega_mag = self._calcOmegaSlow(abs(f_hz), alpha)
+        else:
+            omega_mag = self._calcOmegaFast(abs(f_hz), alpha)
+            
+        if omega_mag <= self.max_vel_abs:
+            return _sgn(f_hz) * omega_mag
+        else:
+            return _sgn(f_hz) * self.max_vel_abs
 
     # ---- lifecycle ---------------------------------------------------
     def _apply_config(
         self,
         *,
-        frequency_hz: float | None = None,
-        group_offset_deg: float | None = None,
-        fast_band_deg: float | None = None,
-        kp: float | None = None,
-        kd: float | None = None,
-        max_vel_abs: float | None = None,
-        control_hz: float | None = None,
+        gait_frequency_hz: float | None = None,
+        alpha: float | None = None,
+        slow_band_deg: float | None = None,
     ) -> None:
         with self._cfg_lock:
-            if frequency_hz is not None:
-                self.frequency_hz = frequency_hz
-            if group_offset_deg is not None:
-                self.group_offset_deg = group_offset_deg
-            if fast_band_deg is not None:
-                self.fast_band_deg = fast_band_deg
-            if kp is not None:
-                self.kp = kp
-            if kd is not None:
-                self.kd = kd
-            if max_vel_abs is not None:
-                self.max_vel_abs = max_vel_abs
-            if control_hz is not None:
-                self.control_hz = control_hz
-
+            if gait_frequency_hz is not None:
+                self.gait_frequency_hz = gait_frequency_hz
+            if alpha is not None:
+                self.alpha = alpha
+            if slow_band_deg is not None:
+                self.slow_band_deg = slow_band_deg
+                
     def start(
         self,
-        frequency_hz: float | None = None,
-        group_offset_deg: float | None = None,
-        fast_band_deg: float | None = None,
-        kp: float | None = None,
-        kd: float | None = None,
-        max_vel_abs: float | None = None,
-        control_hz: float | None = None,
+        gait_frequency_hz: float | None = None,
+        alpha: float | None = None,
+        slow_band_deg: float | None = None,
     ) -> None:
         self._apply_config(
-            frequency_hz=frequency_hz,
-            group_offset_deg=group_offset_deg,
-            fast_band_deg=fast_band_deg,
-            kp=kp,
-            kd=kd,
-            max_vel_abs=max_vel_abs,
-            control_hz=control_hz,
+            gait_frequency_hz=gait_frequency_hz,
+            alpha = alpha,
+            slow_band_deg=slow_band_deg
         )
 
         if self._thread and self._thread.is_alive():
@@ -225,44 +249,48 @@ class BeuhlerClock:
 
     # ---- runner ------------------------------------------------------
     def _run(self) -> None:
-        last_time = time.monotonic()
+        last_feedback_theta = -math.pi
+        cur_feedback_theta = -math.pi
 
         while not self._stop_event.is_set():
             with self._cfg_lock:
-                frequency_hz = self.frequency_hz
-                group_offset_deg = self.group_offset_deg
-                fast_band_deg = self.fast_band_deg
-                kp = self.kp
-                kd = self.kd
-                max_vel_abs = self.max_vel_abs
-                control_hz = self.control_hz
+                gait_frequency_hz = self.gait_frequency_hz
+                alpha = self.alpha
+                slow_band_deg = self.slow_band_deg
 
-            dt = 1.0 / max(1e-6, control_hz)
-            now = time.monotonic()
-            step = max(0.0, min(now - last_time, 0.05))
-            last_time = now
-
-            f = frequency_hz
-            omega_base = self._region_speed(self._theta_base, f, fast_band_deg, max_vel_abs)
-            self._theta_base += omega_base * step
+            f = gait_frequency_hz
+            
+            # For now, going to trust that none of the motors slip, so we can rely on one reading alone
+            trustworthy_motor = 2
+            cur_feedback_theta = self._feedback_theta(trustworthy_motor)
+            d_theta = cur_feedback_theta - last_feedback_theta
+            
+            # Add the change in angle to the base
+            self._theta_base += d_theta
+            
+            # Now, see if it is more than 2pi to update last_feedback
+            # This is to read only the change in position, not the actual angles
+            if d_theta >= 2*math.pi:
+                last_feedback_theta = cur_feedback_theta
 
             theta_a = self._theta_base
-            theta_b = self._theta_base + math.radians(group_offset_deg)
+            theta_b = self._theta_base + math.radians(self.group_offset_deg)
+            
+            vA = self._region_speed(theta_a, f, slow_band_deg, alpha)
+            vB = self._region_speed(theta_b, f, slow_band_deg, alpha)
+            
+            motorOrder = np.array([1, 4, 2, 3])
+            
+            for i, motor in enumerate(motorOrder):
+                if i <= 2:
+                    curV = vA
+                else: 
+                    curV = vB
+                self._console.send_velocity((motor,), curV, kp=self.kp, kd=self.kd)
 
-            v1 = self._region_speed(theta_a, f, fast_band_deg, max_vel_abs)
-            v4 = self._region_speed(theta_a, f, fast_band_deg, max_vel_abs)
-            v2 = self._region_speed(theta_b, f, fast_band_deg, max_vel_abs)
-            v3 = self._region_speed(theta_b, f, fast_band_deg, max_vel_abs)
-
-            self._console.send_velocity((1,), v1, kp=kp, kd=kd)
-            self._console.send_velocity((2,), v2, kp=kp, kd=kd)
-            self._console.send_velocity((3,), v3, kp=kp, kd=kd)
-            self._console.send_velocity((4,), v4, kp=kp, kd=kd)
-
-            sleep_time = dt - (time.monotonic() - now)
-            if sleep_time > 0:
-                time.sleep(sleep_time)
-
+#######################################################
+###################### TERMINAL #######################
+#######################################################
 
 class SELQIETerminal(Cmd):
     """Cmd-based shell that speaks directly to the quad_legs motor topics."""
@@ -336,18 +364,19 @@ class SELQIETerminal(Cmd):
 
         Usage:
           beuhler stop
-          beuhler <frequency_hz> [group_offset_deg] [fast_band_deg] [kp] [kd] [max_vel_abs] [control_hz]
+          beuhler <frequency_hz> [group_offset_deg] [alpha]
         """
 
         parts = line.split()
         if not parts:
-            print('Usage: beuhler stop | <frequency_hz> [group_offset_deg] [fast_band_deg] [kp] [kd] [max_vel_abs] [control_hz]')
+            print('Usage: beuhler stop | <frequency_hz> [slow_band_deg] [alpha]')
             return
 
         if parts[0].lower() == 'stop':
             if self._beuhler.is_running():
                 self._beuhler.stop()
-                print('Beuhler clock stopped.')
+                self.do_stop_motors("All")
+                print('Beuhler clock and motors stopped.')
             else:
                 print('Beuhler clock was not running.')
             return
@@ -355,26 +384,21 @@ class SELQIETerminal(Cmd):
         try:
             values = [float(p) for p in parts]
         except ValueError:
-            print('All parameters must be numeric. Usage: beuhler <frequency_hz> [group_offset_deg] [fast_band_deg] [kp] [kd] [max_vel_abs] [control_hz]')
+            print('All parameters must be numeric. Usage: beuhler <frequency_hz> [slow_band_deg] [alpha]')
             return
 
         params = {
-            'frequency_hz': values[0],
-            'group_offset_deg': values[1] if len(values) > 1 else None,
-            'fast_band_deg': values[2] if len(values) > 2 else None,
-            'kp': values[3] if len(values) > 3 else None,
-            'kd': values[4] if len(values) > 4 else None,
-            'max_vel_abs': values[5] if len(values) > 5 else None,
-            'control_hz': values[6] if len(values) > 6 else None,
+            'gait_frequency_hz': values[0],
+            'slow_band_deg': values[1] if len(values) > 1 else None,
+            'alpha': values[2] if len(values) > 2 else None,
         }
 
         was_running = self._beuhler.is_running()
         self._beuhler.start(**params)
         print(
             ('Beuhler clock updated: ' if was_running else 'Beuhler clock running: '),
-            f"f={self._beuhler.frequency_hz:+.3f} Hz, offset={self._beuhler.group_offset_deg:.1f}°, "
-            f"band=±{self._beuhler.fast_band_deg:.1f}°, kp={self._beuhler.kp}, kd={self._beuhler.kd}, "
-            f"max_vel={self._beuhler.max_vel_abs}, rate={self._beuhler.control_hz} Hz"
+            f"f={self._beuhler.gait_frequency_hz:+.3f} Hz, "
+            f"band=±{self._beuhler.slow_band_deg:.1f}°, alpha={self._beuhler.alpha}"
         )
 
     # ---- MIT command helpers -----------------------------------------
