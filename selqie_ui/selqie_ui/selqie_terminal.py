@@ -284,9 +284,92 @@ class BeuhlerClock:
             for i, motor in enumerate(motorOrder):
                 if i <= 2:
                     curV = vA
-                else: 
+                else:
                     curV = vB
                 self._console.send_velocity((motor,), curV, kp=self.kp, kd=self.kd)
+
+
+class SwimGait:
+    """Synchronized oscillatory position control gait for all legs."""
+
+    def __init__(self, console: MotorConsole):
+        self._console = console
+
+        # Tunables
+        self.frequency_hz = 0.5
+        self.center_angle = 0.0
+        self.delta_angle = 0.5
+
+        # Control settings
+        self.control_hz = 100.0
+        self.kp = 5.0
+        self.kd = 1.0
+
+        # Internal state
+        self._stop_event = threading.Event()
+        self._thread: threading.Thread | None = None
+        self._cfg_lock = threading.Lock()
+
+    def _apply_config(
+        self,
+        *,
+        frequency_hz: float,
+        center_angle: float | None = None,
+        delta_angle: float | None = None,
+    ) -> None:
+        with self._cfg_lock:
+            self.frequency_hz = frequency_hz
+            if center_angle is not None:
+                self.center_angle = center_angle
+            if delta_angle is not None:
+                self.delta_angle = abs(delta_angle)
+
+    def start(
+        self,
+        *,
+        frequency_hz: float,
+        center_angle: float | None = None,
+        delta_angle: float | None = None,
+    ) -> None:
+        self._apply_config(
+            frequency_hz=frequency_hz,
+            center_angle=center_angle,
+            delta_angle=delta_angle,
+        )
+
+        if self._thread and self._thread.is_alive():
+            return
+
+        self._stop_event.clear()
+        self._thread = threading.Thread(target=self._run, daemon=True)
+        self._thread.start()
+
+    def stop(self) -> None:
+        self._stop_event.set()
+        if self._thread:
+            self._thread.join(timeout=1.0)
+        self._thread = None
+
+    def is_running(self) -> bool:
+        return self._thread is not None and self._thread.is_alive()
+
+    def _run(self) -> None:
+        start_time = time.time()
+        while not self._stop_event.is_set():
+            with self._cfg_lock:
+                freq = self.frequency_hz
+                center = self.center_angle
+                delta = self.delta_angle
+
+            elapsed = time.time() - start_time
+            omega = 2.0 * math.pi * freq
+            position = center if freq == 0.0 else center + delta * math.sin(omega * elapsed)
+            velocity = 0.0 if freq == 0.0 else omega * delta * math.cos(omega * elapsed)
+
+            for motor_id in MotorConsole.MOTOR_IDS:
+                self._console.send_cmd(motor_id, position, velocity, self.kp, self.kd, 0.0)
+
+            time.sleep(1.0 / self.control_hz)
 
 #######################################################
 ###################### TERMINAL #######################
@@ -302,6 +385,7 @@ class SELQIETerminal(Cmd):
         super().__init__()
         self._console = MotorConsole()
         self._beuhler = BeuhlerClock(self._console)
+        self._swim = SwimGait(self._console)
 
     # ---- helpers ------------------------------------------------------
     def _parse_targets(self, text: str, default_all: bool = False) -> List[int]:
@@ -329,6 +413,7 @@ class SELQIETerminal(Cmd):
         """Exit the terminal."""
         print('Exiting...')
         self._beuhler.stop()
+        self._swim.stop()
         self._console.shutdown()
         if rclpy.ok():
             rclpy.shutdown()
@@ -412,6 +497,47 @@ class SELQIETerminal(Cmd):
             ('Beuhler clock updated: ' if was_running else 'Beuhler clock running: '),
             f"f={self._beuhler.gait_frequency_hz:+.3f} Hz, "
             f"band=±{self._beuhler.slow_band_deg:.1f}°, alpha={self._beuhler.alpha}"
+        )
+
+    def do_swim(self, line: str) -> None:
+        """Start or stop the synchronized swim gait.
+
+        Usage:
+          swim stop
+          swim <frequency_hz> [center_angle_deg] [delta_angle_deg]
+        """
+
+        parts = line.split()
+        if not parts:
+            print('Usage: swim stop | <frequency_hz> [center_angle_deg] [delta_angle_deg]')
+            return
+
+        if parts[0].lower() == 'stop':
+            if self._swim.is_running():
+                self._swim.stop()
+                self.do_stop_motors('All')
+                print('Swim gait and motors stopped.')
+            else:
+                print('Swim gait was not running.')
+            return
+
+        try:
+            frequency_hz = float(parts[0])
+            center_angle_deg = float(parts[1]) if len(parts) > 1 else None
+            delta_angle_deg = float(parts[2]) if len(parts) > 2 else None
+        except ValueError:
+            print('All parameters must be numeric. Usage: swim <frequency_hz> [center_angle_deg] [delta_angle_deg]')
+            return
+
+        self._swim.start(
+            frequency_hz=frequency_hz,
+            center_angle=math.radians(center_angle_deg) if center_angle_deg is not None else None,
+            delta_angle=math.radians(delta_angle_deg) if delta_angle_deg is not None else None,
+        )
+        print(
+            'Swim gait running: '
+            f"f={self._swim.frequency_hz:+.3f} Hz, center={math.degrees(self._swim.center_angle):+.1f}°, "
+            f"delta={math.degrees(self._swim.delta_angle):.1f}°"
         )
 
     # ---- MIT command helpers -----------------------------------------
