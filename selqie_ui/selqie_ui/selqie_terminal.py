@@ -249,10 +249,12 @@ class BeuhlerClock:
 
     # ---- runner ------------------------------------------------------
     def _run(self) -> None:
-        last_feedback_theta = -math.pi
-        cur_feedback_theta = -math.pi
+        control_dt = 1.0 / max(self.control_hz, 1e-6)
+        last_feedback_theta = self._feedback_theta(2)
+        cur_feedback_theta = last_feedback_theta
 
         while not self._stop_event.is_set():
+            cycle_start = time.monotonic()
             with self._cfg_lock:
                 gait_frequency_hz = self.gait_frequency_hz
                 alpha = self.alpha
@@ -263,15 +265,12 @@ class BeuhlerClock:
             # For now, going to trust that none of the motors slip, so we can rely on one reading alone
             trustworthy_motor = 2
             cur_feedback_theta = self._feedback_theta(trustworthy_motor)
-            d_theta = cur_feedback_theta - last_feedback_theta
-            
+            d_theta = _wrap_to_pi(cur_feedback_theta - last_feedback_theta)
+
             # Add the change in angle to the base
             self._theta_base += d_theta
-            
-            # Now, see if it is more than 2pi to update last_feedback
-            # This is to read only the change in position, not the actual angles
-            if d_theta >= 2*math.pi:
-                last_feedback_theta = cur_feedback_theta
+
+            last_feedback_theta = cur_feedback_theta
 
             theta_a = self._theta_base
             theta_b = self._theta_base + math.radians(self.group_offset_deg)
@@ -287,6 +286,12 @@ class BeuhlerClock:
                 else:
                     curV = vB
                 self._console.send_velocity((motor,), curV, kp=self.kp, kd=self.kd)
+
+            # Rate-limit the loop to the configured control frequency
+            elapsed = time.monotonic() - cycle_start
+            sleep_time = control_dt - elapsed
+            if sleep_time > 0:
+                time.sleep(sleep_time)
 
 
 class SwimGait:
