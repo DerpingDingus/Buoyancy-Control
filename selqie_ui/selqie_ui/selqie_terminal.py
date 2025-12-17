@@ -504,12 +504,12 @@ class SELQIETerminal(Cmd):
 
         Usage:
           swim stop
-          swim <frequency_hz> [center_angle_rad] [delta_angle_rad]
+          swim <frequency_hz> [center_angle_deg] [delta_angle_deg]
         """
 
         parts = line.split()
         if not parts:
-            print('Usage: swim stop | <frequency_hz> [center_angle_rad] [delta_angle_rad]')
+            print('Usage: swim stop | <frequency_hz> [center_angle_deg] [delta_angle_deg]')
             return
 
         if parts[0].lower() == 'stop':
@@ -523,21 +523,21 @@ class SELQIETerminal(Cmd):
 
         try:
             frequency_hz = float(parts[0])
-            center_angle = float(parts[1]) if len(parts) > 1 else None
-            delta_angle = float(parts[2]) if len(parts) > 2 else None
+            center_angle_deg = float(parts[1]) if len(parts) > 1 else None
+            delta_angle_deg = float(parts[2]) if len(parts) > 2 else None
         except ValueError:
-            print('All parameters must be numeric. Usage: swim <frequency_hz> [center_angle_rad] [delta_angle_rad]')
+            print('All parameters must be numeric. Usage: swim <frequency_hz> [center_angle_deg] [delta_angle_deg]')
             return
 
         self._swim.start(
             frequency_hz=frequency_hz,
-            center_angle=center_angle,
-            delta_angle=delta_angle,
+            center_angle=math.radians(center_angle_deg) if center_angle_deg is not None else None,
+            delta_angle=math.radians(delta_angle_deg) if delta_angle_deg is not None else None,
         )
         print(
             'Swim gait running: '
-            f"f={self._swim.frequency_hz:+.3f} Hz, center={self._swim.center_angle:+.3f} rad, "
-            f"delta={self._swim.delta_angle:.3f} rad"
+            f"f={self._swim.frequency_hz:+.3f} Hz, center={math.degrees(self._swim.center_angle):+.1f}°, "
+            f"delta={math.degrees(self._swim.delta_angle):.1f}°"
         )
 
     # ---- MIT command helpers -----------------------------------------
