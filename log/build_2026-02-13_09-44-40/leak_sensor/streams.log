@@ -1,0 +1,21 @@
+[2.563s] Invoking command in '/home/selqie/buoyancy/leak_sensor': PYTHONPATH=/home/selqie/buoyancy/build/leak_sensor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/leak_sensor/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/leak_sensor build --build-base /home/selqie/buoyancy/build/leak_sensor/build install --record /home/selqie/buoyancy/build/leak_sensor/install.log --single-version-externally-managed install_data
+[3.100s] running egg_info
+[3.130s] writing ../build/leak_sensor/leak_sensor.egg-info/PKG-INFO
+[3.130s] writing dependency_links to ../build/leak_sensor/leak_sensor.egg-info/dependency_links.txt
+[3.131s] writing entry points to ../build/leak_sensor/leak_sensor.egg-info/entry_points.txt
+[3.131s] writing requirements to ../build/leak_sensor/leak_sensor.egg-info/requires.txt
+[3.132s] writing top-level names to ../build/leak_sensor/leak_sensor.egg-info/top_level.txt
+[3.199s] reading manifest file '../build/leak_sensor/leak_sensor.egg-info/SOURCES.txt'
+[3.201s] writing manifest file '../build/leak_sensor/leak_sensor.egg-info/SOURCES.txt'
+[3.201s] running build
+[3.202s] running build_py
+[3.205s] running install
+[3.218s] running install_lib
+[3.249s] running install_data
+[3.250s] running install_egg_info
+[3.281s] removing '/home/selqie/buoyancy/install/leak_sensor/lib/python3.12/site-packages/leak_sensor-0.1.0-py3.12.egg-info' (and everything under it)
+[3.282s] Copying ../build/leak_sensor/leak_sensor.egg-info to /home/selqie/buoyancy/install/leak_sensor/lib/python3.12/site-packages/leak_sensor-0.1.0-py3.12.egg-info
+[3.285s] running install_scripts
+[3.682s] Installing leak_sensor_node script to /home/selqie/buoyancy/install/leak_sensor/lib/leak_sensor
+[3.682s] writing list of installed files to '/home/selqie/buoyancy/build/leak_sensor/install.log'
+[4.013s] Invoked command in '/home/selqie/buoyancy/leak_sensor' returned '0': PYTHONPATH=/home/selqie/buoyancy/build/leak_sensor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/leak_sensor/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/leak_sensor build --build-base /home/selqie/buoyancy/build/leak_sensor/build install --record /home/selqie/buoyancy/build/leak_sensor/install.log --single-version-externally-managed install_data

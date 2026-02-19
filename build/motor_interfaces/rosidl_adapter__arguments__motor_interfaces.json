@@ -1,0 +1,6 @@
+{
+  "package_name": "motor_interfaces",
+  "non_idl_tuples": [
+    "/home/selqie/buoyancy/motor_interfaces:msg/MotorState.msg"
+  ]
+}

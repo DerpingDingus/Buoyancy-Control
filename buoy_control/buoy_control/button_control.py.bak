@@ -1,0 +1,113 @@
+#!/usr/bin/env python3
+"""
+ROS2 Node for controlling a servo motor via button inputs on Raspberry Pi.
+
+This node subscribes to the motor state to track the current position and publishes
+servo commands to move the motor by +90 or -90 degrees relative to the current position
+when buttons are pressed.
+
+Dependencies:
+- gpiozero (for GPIO button handling)
+- motor_interfaces.msg (MotorState, assumed to be available from the motor package)
+
+Parameters:
+- joint_name (string): The joint name for topic namespace (default: 'joint')
+- button_pin_cw (int): GPIO pin for clockwise rotation button (default: 17, BCM mode)
+- button_pin_ccw (int): GPIO pin for counter-clockwise rotation button (default: 27, BCM mode)
+- debounce_time (float): Debounce time for buttons in seconds (default: 0.05)
+
+Buttons are assumed to be connected with pull-up resistors (internal via gpiozero).
+Pressing the CW button increments position by 90 degrees; CCW decrements by 90 degrees.
+"""
+
+import rclpy
+from rclpy.node import Node
+
+from std_msgs.msg import Float64MultiArray
+from motor_interfaces.msg import MotorState
+
+import gpiozero
+
+
+class ButtonMotorNode(Node):
+    def __init__(self):
+        super().__init__('button_motor_node')
+
+        # Declare parameters
+        self.declare_parameter('joint_name', 'joint')
+        self.declare_parameter('button_pin_cw', 5)
+        self.declare_parameter('button_pin_ccw', 3)
+        self.declare_parameter('debounce_time', 0.05)
+
+        # Get parameters
+        self.joint_name = self.get_parameter('joint_name').value
+        # Green clockwise pin 5
+        # Red counterclockwise pin 3
+        pin_cw = self.get_parameter('button_pin_cw').value
+        pin_ccw = self.get_parameter('button_pin_ccw').value
+        debounce = self.get_parameter('debounce_time').value
+
+        
+        self.get_logger().info(
+            f"Button Motor Node for joint '{self.joint_name}'\n"
+            f"  CW Button Pin: {pin_cw}\n"
+            f"  CCW Button Pin: {pin_ccw}\n"
+            f"  Debounce Time: {debounce} s"
+        )
+
+        # Publisher for servo commands
+        self.pub_cmd = self.create_publisher(
+            Float64MultiArray, f'/{self.joint_name}/servo_cmd', 10
+        )
+
+        # Current position tracking
+        self.current_pos_deg = 0.0
+
+        # Subscriber for motor state
+        self.sub_state = self.create_subscription(
+            MotorState, f'/{self.joint_name}/motor_state', self.on_state, 10
+        )
+
+        # Setup buttons with gpiozero (uses BCM numbering by default)
+        self.button_cw = gpiozero.Button(pin_cw, bounce_time=debounce)
+        self.button_ccw = gpiozero.Button(pin_ccw, bounce_time=debounce)
+
+        # Assign callbacks
+        self.button_cw.when_pressed = self.on_cw_press
+        self.button_ccw.when_pressed = self.on_ccw_press
+
+    def on_state(self, msg: MotorState):
+        # Update current position from absolute degrees
+        self.current_pos_deg = msg.abs_position
+
+    def on_cw_press(self):
+        new_pos = self.current_pos_deg + 90.0
+        self.send_pos(new_pos)
+        self.get_logger().info(f"CW button pressed: Moving to {new_pos:.1f} degrees")
+        print(f"CW button pressed: Moving to {new_pos:.1f} degrees")
+
+    def on_ccw_press(self):
+        new_pos = self.current_pos_deg - 90.0
+        self.send_pos(new_pos)
+        self.get_logger().info(f"CCW button pressed: Moving to {new_pos:.1f} degrees")
+        print(f"CCW button pressed: Moving to {new_pos:.1f} degrees")
+
+    def send_pos(self, pos_deg: float):
+        msg = Float64MultiArray()
+        msg.data = [4.0, pos_deg]  # Mode 4: position_deg
+        self.pub_cmd.publish(msg)
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = ButtonMotorNode()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    node.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()

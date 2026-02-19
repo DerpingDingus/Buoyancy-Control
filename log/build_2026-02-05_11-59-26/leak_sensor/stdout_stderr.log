@@ -1,0 +1,19 @@
+running egg_info
+writing ../build/leak_sensor/leak_sensor.egg-info/PKG-INFO
+writing dependency_links to ../build/leak_sensor/leak_sensor.egg-info/dependency_links.txt
+writing entry points to ../build/leak_sensor/leak_sensor.egg-info/entry_points.txt
+writing requirements to ../build/leak_sensor/leak_sensor.egg-info/requires.txt
+writing top-level names to ../build/leak_sensor/leak_sensor.egg-info/top_level.txt
+reading manifest file '../build/leak_sensor/leak_sensor.egg-info/SOURCES.txt'
+writing manifest file '../build/leak_sensor/leak_sensor.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/selqie/buoyancy/install/leak_sensor/lib/python3.12/site-packages/leak_sensor-0.1.0-py3.12.egg-info' (and everything under it)
+Copying ../build/leak_sensor/leak_sensor.egg-info to /home/selqie/buoyancy/install/leak_sensor/lib/python3.12/site-packages/leak_sensor-0.1.0-py3.12.egg-info
+running install_scripts
+Installing leak_sensor_node script to /home/selqie/buoyancy/install/leak_sensor/lib/leak_sensor
+writing list of installed files to '/home/selqie/buoyancy/build/leak_sensor/install.log'

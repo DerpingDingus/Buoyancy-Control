@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: servo
+Version: 0.1.0
+Summary: ROS2 node for CubeMars servo-mode CAN control (socketcan)
+Maintainer: Ryan
+Maintainer-email: you@example.com
+License: MIT

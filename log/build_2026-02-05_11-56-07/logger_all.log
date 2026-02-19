@@ -1,0 +1,373 @@
+[0.266s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.266s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffa96fbc50>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa98d0200>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa98d0200>>, mixin_verb=('build',))
+[0.377s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.377s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.377s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.377s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.377s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.377s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.377s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/selqie/buoyancy'
+[0.377s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.433s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(battery) by extensions ['ignore', 'ignore_ament_install']
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(battery) by extension 'ignore'
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(battery) by extension 'ignore_ament_install'
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(battery) by extensions ['colcon_pkg']
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(battery) by extension 'colcon_pkg'
+[0.434s] Level 1:colcon.colcon_core.package_identification:_identify(battery) by extensions ['colcon_meta']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(battery) by extension 'colcon_meta'
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(battery) by extensions ['ros']
+[0.435s] Level 1:colcon.colcon_core.package_identification:_identify(battery) by extension 'ros'
+[0.440s] DEBUG:colcon.colcon_core.package_identification:Package 'battery' with type 'ros.ament_python' and name 'battery'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(buoy_control) by extensions ['ignore', 'ignore_ament_install']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(buoy_control) by extension 'ignore'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(buoy_control) by extension 'ignore_ament_install'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(buoy_control) by extensions ['colcon_pkg']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(buoy_control) by extension 'colcon_pkg'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(buoy_control) by extensions ['colcon_meta']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(buoy_control) by extension 'colcon_meta'
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(buoy_control) by extensions ['ros']
+[0.441s] Level 1:colcon.colcon_core.package_identification:_identify(buoy_control) by extension 'ros'
+[0.442s] DEBUG:colcon.colcon_core.package_identification:Package 'buoy_control' with type 'ros.ament_python' and name 'buoy_control'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.442s] Level 1:colcon.colcon_core.package_identification:_identify(leak_sensor) by extensions ['ignore', 'ignore_ament_install']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(leak_sensor) by extension 'ignore'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(leak_sensor) by extension 'ignore_ament_install'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(leak_sensor) by extensions ['colcon_pkg']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(leak_sensor) by extension 'colcon_pkg'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(leak_sensor) by extensions ['colcon_meta']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(leak_sensor) by extension 'colcon_meta'
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(leak_sensor) by extensions ['ros']
+[0.443s] Level 1:colcon.colcon_core.package_identification:_identify(leak_sensor) by extension 'ros'
+[0.444s] DEBUG:colcon.colcon_core.package_identification:Package 'leak_sensor' with type 'ros.ament_python' and name 'leak_sensor'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(motor_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(motor_interfaces) by extension 'ignore'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(motor_interfaces) by extension 'ignore_ament_install'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(motor_interfaces) by extensions ['colcon_pkg']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(motor_interfaces) by extension 'colcon_pkg'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(motor_interfaces) by extensions ['colcon_meta']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(motor_interfaces) by extension 'colcon_meta'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(motor_interfaces) by extensions ['ros']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(motor_interfaces) by extension 'ros'
+[0.446s] DEBUG:colcon.colcon_core.package_identification:Package 'motor_interfaces' with type 'ros.ament_cmake' and name 'motor_interfaces'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(servo) by extensions ['ignore', 'ignore_ament_install']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(servo) by extension 'ignore'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(servo) by extension 'ignore_ament_install'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(servo) by extensions ['colcon_pkg']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(servo) by extension 'colcon_pkg'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(servo) by extensions ['colcon_meta']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(servo) by extension 'colcon_meta'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(servo) by extensions ['ros']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(servo) by extension 'ros'
+[0.448s] DEBUG:colcon.colcon_core.package_identification:Package 'servo' with type 'ros.ament_python' and name 'servo'
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-examples) by extensions ['ignore', 'ignore_ament_install']
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-examples) by extension 'ignore'
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-examples) by extension 'ignore_ament_install'
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-examples) by extensions ['colcon_pkg']
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-examples) by extension 'colcon_pkg'
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-examples) by extensions ['colcon_meta']
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-examples) by extension 'colcon_meta'
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-examples) by extensions ['ros']
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-examples) by extension 'ros'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-examples) by extensions ['cmake', 'python']
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-examples) by extension 'cmake'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-examples) by extension 'python'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-examples) by extensions ['python_setup_py']
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-examples) by extension 'python_setup_py'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-wrapper) by extensions ['ignore', 'ignore_ament_install']
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-wrapper) by extension 'ignore'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-wrapper) by extension 'ignore_ament_install'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-wrapper) by extensions ['colcon_pkg']
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-wrapper) by extension 'colcon_pkg'
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-wrapper) by extensions ['colcon_meta']
+[0.449s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-wrapper) by extension 'colcon_meta'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-wrapper) by extensions ['ros']
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-wrapper) by extension 'ros'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-wrapper) by extensions ['cmake', 'python']
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-wrapper) by extension 'cmake'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-wrapper) by extension 'python'
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-wrapper) by extensions ['python_setup_py']
+[0.450s] Level 1:colcon.colcon_core.package_identification:_identify(zed-ros2-wrapper) by extension 'python_setup_py'
+[0.450s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.450s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.450s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.450s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.450s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.490s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.490s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.495s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/selqie/buoyancy/install
+[0.497s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 192 installed packages in /opt/ros/jazzy
+[0.498s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'battery' build argument 'cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'battery' build argument 'cmake_target' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'battery' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'battery' build argument 'cmake_clean_cache' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'battery' build argument 'cmake_clean_first' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'battery' build argument 'cmake_force_configure' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'battery' build argument 'ament_cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'battery' build argument 'catkin_cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'battery' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.544s] DEBUG:colcon.colcon_core.verb:Building package 'battery' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/selqie/buoyancy/build/battery', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/selqie/buoyancy/install/battery', 'merge_install': False, 'path': '/home/selqie/buoyancy/battery', 'symlink_install': False, 'test_result_base': None}
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'leak_sensor' build argument 'cmake_args' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'leak_sensor' build argument 'cmake_target' from command line to 'None'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'leak_sensor' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'leak_sensor' build argument 'cmake_clean_cache' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'leak_sensor' build argument 'cmake_clean_first' from command line to 'False'
+[0.544s] Level 5:colcon.colcon_core.verb:set package 'leak_sensor' build argument 'cmake_force_configure' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'leak_sensor' build argument 'ament_cmake_args' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'leak_sensor' build argument 'catkin_cmake_args' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'leak_sensor' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.545s] DEBUG:colcon.colcon_core.verb:Building package 'leak_sensor' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/selqie/buoyancy/build/leak_sensor', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/selqie/buoyancy/install/leak_sensor', 'merge_install': False, 'path': '/home/selqie/buoyancy/leak_sensor', 'symlink_install': False, 'test_result_base': None}
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'motor_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'motor_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'motor_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'motor_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'motor_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'motor_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'motor_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'motor_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'motor_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.545s] DEBUG:colcon.colcon_core.verb:Building package 'motor_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/selqie/buoyancy/build/motor_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/selqie/buoyancy/install/motor_interfaces', 'merge_install': False, 'path': '/home/selqie/buoyancy/motor_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'buoy_control' build argument 'cmake_args' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'buoy_control' build argument 'cmake_target' from command line to 'None'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'buoy_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'buoy_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.545s] Level 5:colcon.colcon_core.verb:set package 'buoy_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'buoy_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'buoy_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'buoy_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'buoy_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.546s] DEBUG:colcon.colcon_core.verb:Building package 'buoy_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/selqie/buoyancy/build/buoy_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/selqie/buoyancy/install/buoy_control', 'merge_install': False, 'path': '/home/selqie/buoyancy/buoy_control', 'symlink_install': False, 'test_result_base': None}
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'servo' build argument 'cmake_args' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'servo' build argument 'cmake_target' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'servo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'servo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'servo' build argument 'cmake_clean_first' from command line to 'False'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'servo' build argument 'cmake_force_configure' from command line to 'False'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'servo' build argument 'ament_cmake_args' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'servo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.546s] Level 5:colcon.colcon_core.verb:set package 'servo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.546s] DEBUG:colcon.colcon_core.verb:Building package 'servo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/selqie/buoyancy/build/servo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/selqie/buoyancy/install/servo', 'merge_install': False, 'path': '/home/selqie/buoyancy/servo', 'symlink_install': False, 'test_result_base': None}
+[0.546s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.548s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.548s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/selqie/buoyancy/motor_interfaces' with build type 'ament_cmake'
+[0.548s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/selqie/buoyancy/motor_interfaces'
+[0.556s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.556s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.556s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.561s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/selqie/buoyancy/battery' with build type 'ament_python'
+[0.561s] Level 1:colcon.colcon_core.shell:create_environment_hook('battery', 'ament_prefix_path')
+[0.562s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/battery/share/battery/hook/ament_prefix_path.ps1'
+[0.564s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/selqie/buoyancy/install/battery/share/battery/hook/ament_prefix_path.dsv'
+[0.566s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/battery/share/battery/hook/ament_prefix_path.sh'
+[0.569s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.569s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.574s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/selqie/buoyancy/leak_sensor' with build type 'ament_python'
+[0.574s] Level 1:colcon.colcon_core.shell:create_environment_hook('leak_sensor', 'ament_prefix_path')
+[0.575s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/leak_sensor/share/leak_sensor/hook/ament_prefix_path.ps1'
+[0.576s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/selqie/buoyancy/install/leak_sensor/share/leak_sensor/hook/ament_prefix_path.dsv'
+[0.577s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/leak_sensor/share/leak_sensor/hook/ament_prefix_path.sh'
+[0.578s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.579s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.592s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/selqie/buoyancy/build/motor_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/selqie/buoyancy/install/servo:/home/selqie/buoyancy/install/buoy_control:/home/selqie/buoyancy/install/leak_sensor:/home/selqie/buoyancy/install/battery:/opt/ros/jazzy /usr/bin/cmake --build /home/selqie/buoyancy/build/motor_interfaces -- -j4 -l4
+[1.057s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/selqie/buoyancy/battery'
+[1.057s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.057s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.594s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/selqie/buoyancy/leak_sensor'
+[1.595s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.595s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.759s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/selqie/buoyancy/build/motor_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/selqie/buoyancy/install/servo:/home/selqie/buoyancy/install/buoy_control:/home/selqie/buoyancy/install/leak_sensor:/home/selqie/buoyancy/install/battery:/opt/ros/jazzy /usr/bin/cmake --build /home/selqie/buoyancy/build/motor_interfaces -- -j4 -l4
+[1.786s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/selqie/buoyancy/build/motor_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/selqie/buoyancy/install/servo:/home/selqie/buoyancy/install/buoy_control:/home/selqie/buoyancy/install/leak_sensor:/home/selqie/buoyancy/install/battery:/opt/ros/jazzy /usr/bin/cmake --install /home/selqie/buoyancy/build/motor_interfaces
+[1.957s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(motor_interfaces)
+[1.958s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/selqie/buoyancy/build/motor_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/selqie/buoyancy/install/servo:/home/selqie/buoyancy/install/buoy_control:/home/selqie/buoyancy/install/leak_sensor:/home/selqie/buoyancy/install/battery:/opt/ros/jazzy /usr/bin/cmake --install /home/selqie/buoyancy/build/motor_interfaces
+[1.967s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/motor_interfaces' for CMake module files
+[1.969s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/motor_interfaces' for CMake config files
+[1.969s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_interfaces', 'cmake_prefix_path')
+[1.970s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/cmake_prefix_path.ps1'
+[1.970s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/cmake_prefix_path.dsv'
+[1.972s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/cmake_prefix_path.sh'
+[1.973s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/motor_interfaces/lib'
+[1.974s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_interfaces', 'ld_library_path_lib')
+[1.974s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/ld_library_path_lib.ps1'
+[1.975s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/ld_library_path_lib.dsv'
+[1.976s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/ld_library_path_lib.sh'
+[1.977s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/motor_interfaces/bin'
+[1.978s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/motor_interfaces/lib/pkgconfig/motor_interfaces.pc'
+[1.978s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages'
+[1.978s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_interfaces', 'pythonpath')
+[1.979s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/pythonpath.ps1'
+[1.979s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/pythonpath.dsv'
+[1.981s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/pythonpath.sh'
+[1.983s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/motor_interfaces/bin'
+[1.983s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/package.ps1'
+[1.985s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/package.dsv'
+[1.988s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/package.sh'
+[1.992s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/package.bash'
+[1.998s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/package.zsh'
+[2.000s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/selqie/buoyancy/install/motor_interfaces/share/colcon-core/packages/motor_interfaces)
+[2.002s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(motor_interfaces)
+[2.002s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/motor_interfaces' for CMake module files
+[2.003s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/motor_interfaces' for CMake config files
+[2.004s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_interfaces', 'cmake_prefix_path')
+[2.004s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/cmake_prefix_path.ps1'
+[2.005s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/cmake_prefix_path.dsv'
+[2.005s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/cmake_prefix_path.sh'
+[2.007s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/motor_interfaces/lib'
+[2.007s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_interfaces', 'ld_library_path_lib')
+[2.007s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/ld_library_path_lib.ps1'
+[2.008s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/ld_library_path_lib.dsv'
+[2.009s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/ld_library_path_lib.sh'
+[2.010s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/motor_interfaces/bin'
+[2.010s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/motor_interfaces/lib/pkgconfig/motor_interfaces.pc'
+[2.010s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages'
+[2.010s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_interfaces', 'pythonpath')
+[2.011s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/pythonpath.ps1'
+[2.011s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/pythonpath.dsv'
+[2.012s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/hook/pythonpath.sh'
+[2.013s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/motor_interfaces/bin'
+[2.013s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/package.ps1'
+[2.014s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/package.dsv'
+[2.015s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/package.sh'
+[2.016s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/package.bash'
+[2.016s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/package.zsh'
+[2.017s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/selqie/buoyancy/install/motor_interfaces/share/colcon-core/packages/motor_interfaces)
+[2.017s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/selqie/buoyancy/buoy_control' with build type 'ament_python'
+[2.017s] Level 1:colcon.colcon_core.shell:create_environment_hook('buoy_control', 'ament_prefix_path')
+[2.018s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/buoy_control/share/buoy_control/hook/ament_prefix_path.ps1'
+[2.019s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/selqie/buoyancy/install/buoy_control/share/buoy_control/hook/ament_prefix_path.dsv'
+[2.020s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/buoy_control/share/buoy_control/hook/ament_prefix_path.sh'
+[2.020s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.020s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.027s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/selqie/buoyancy/servo' with build type 'ament_python'
+[2.027s] Level 1:colcon.colcon_core.shell:create_environment_hook('servo', 'ament_prefix_path')
+[2.028s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/servo/share/servo/hook/ament_prefix_path.ps1'
+[2.035s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/selqie/buoyancy/install/servo/share/servo/hook/ament_prefix_path.dsv'
+[2.036s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/servo/share/servo/hook/ament_prefix_path.sh'
+[2.037s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.037s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.443s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/selqie/buoyancy/buoy_control'
+[2.444s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.444s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.889s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/selqie/buoyancy/servo'
+[2.889s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.890s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.167s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/selqie/buoyancy/leak_sensor': PYTHONPATH=/home/selqie/buoyancy/build/leak_sensor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/leak_sensor/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/leak_sensor build --build-base /home/selqie/buoyancy/build/leak_sensor/build install --record /home/selqie/buoyancy/build/leak_sensor/install.log --single-version-externally-managed install_data
+[3.227s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/selqie/buoyancy/battery': PYTHONPATH=/home/selqie/buoyancy/build/battery/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/battery build --build-base /home/selqie/buoyancy/build/battery/build install --record /home/selqie/buoyancy/build/battery/install.log --single-version-externally-managed install_data
+[4.254s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/selqie/buoyancy/buoy_control': PYTHONPATH=/home/selqie/buoyancy/build/buoy_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/leak_sensor/lib/python3.12/site-packages:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/buoy_control build --build-base /home/selqie/buoyancy/build/buoy_control/build install --record /home/selqie/buoyancy/build/buoy_control/install.log --single-version-externally-managed install_data
+[4.557s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/battery' for CMake module files
+[4.559s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/selqie/buoyancy/battery' returned '0': PYTHONPATH=/home/selqie/buoyancy/build/battery/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/battery build --build-base /home/selqie/buoyancy/build/battery/build install --record /home/selqie/buoyancy/build/battery/install.log --single-version-externally-managed install_data
+[4.561s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/battery' for CMake config files
+[4.564s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/battery/lib'
+[4.565s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/battery/bin'
+[4.566s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/battery/lib/pkgconfig/battery.pc'
+[4.567s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages'
+[4.568s] Level 1:colcon.colcon_core.shell:create_environment_hook('battery', 'pythonpath')
+[4.569s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/battery/share/battery/hook/pythonpath.ps1'
+[4.572s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/selqie/buoyancy/install/battery/share/battery/hook/pythonpath.dsv'
+[4.574s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/battery/share/battery/hook/pythonpath.sh'
+[4.579s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/battery/bin'
+[4.580s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(battery)
+[4.581s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/battery/share/battery/package.ps1'
+[4.586s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/selqie/buoyancy/install/battery/share/battery/package.dsv'
+[4.589s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/battery/share/battery/package.sh'
+[4.591s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/battery/share/battery/package.bash'
+[4.593s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/battery/share/battery/package.zsh'
+[4.595s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/selqie/buoyancy/install/battery/share/colcon-core/packages/battery)
+[4.710s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/selqie/buoyancy/servo': PYTHONPATH=/home/selqie/buoyancy/build/servo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/leak_sensor/lib/python3.12/site-packages:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/servo build --build-base /home/selqie/buoyancy/build/servo/build install --record /home/selqie/buoyancy/build/servo/install.log --single-version-externally-managed install_data
+[4.717s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/leak_sensor' for CMake module files
+[4.718s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/leak_sensor' for CMake config files
+[4.719s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/selqie/buoyancy/leak_sensor' returned '0': PYTHONPATH=/home/selqie/buoyancy/build/leak_sensor/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/leak_sensor/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/leak_sensor build --build-base /home/selqie/buoyancy/build/leak_sensor/build install --record /home/selqie/buoyancy/build/leak_sensor/install.log --single-version-externally-managed install_data
+[4.719s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/leak_sensor/lib'
+[4.720s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/leak_sensor/bin'
+[4.720s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/leak_sensor/lib/pkgconfig/leak_sensor.pc'
+[4.720s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/leak_sensor/lib/python3.12/site-packages'
+[4.720s] Level 1:colcon.colcon_core.shell:create_environment_hook('leak_sensor', 'pythonpath')
+[4.721s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/leak_sensor/share/leak_sensor/hook/pythonpath.ps1'
+[4.721s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/selqie/buoyancy/install/leak_sensor/share/leak_sensor/hook/pythonpath.dsv'
+[4.723s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/leak_sensor/share/leak_sensor/hook/pythonpath.sh'
+[4.725s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/leak_sensor/bin'
+[4.725s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(leak_sensor)
+[4.726s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/leak_sensor/share/leak_sensor/package.ps1'
+[4.727s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/selqie/buoyancy/install/leak_sensor/share/leak_sensor/package.dsv'
+[4.728s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/leak_sensor/share/leak_sensor/package.sh'
+[4.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/leak_sensor/share/leak_sensor/package.bash'
+[4.732s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/leak_sensor/share/leak_sensor/package.zsh'
+[4.733s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/selqie/buoyancy/install/leak_sensor/share/colcon-core/packages/leak_sensor)
+[5.296s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/buoy_control' for CMake module files
+[5.296s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/selqie/buoyancy/buoy_control' returned '0': PYTHONPATH=/home/selqie/buoyancy/build/buoy_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/leak_sensor/lib/python3.12/site-packages:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/buoy_control build --build-base /home/selqie/buoyancy/build/buoy_control/build install --record /home/selqie/buoyancy/build/buoy_control/install.log --single-version-externally-managed install_data
+[5.297s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/buoy_control' for CMake config files
+[5.298s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/buoy_control/lib'
+[5.298s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/buoy_control/bin'
+[5.298s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/buoy_control/lib/pkgconfig/buoy_control.pc'
+[5.298s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages'
+[5.298s] Level 1:colcon.colcon_core.shell:create_environment_hook('buoy_control', 'pythonpath')
+[5.299s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/buoy_control/share/buoy_control/hook/pythonpath.ps1'
+[5.299s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/selqie/buoyancy/install/buoy_control/share/buoy_control/hook/pythonpath.dsv'
+[5.300s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/buoy_control/share/buoy_control/hook/pythonpath.sh'
+[5.301s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/buoy_control/bin'
+[5.301s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(buoy_control)
+[5.302s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/buoy_control/share/buoy_control/package.ps1'
+[5.302s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/selqie/buoyancy/install/buoy_control/share/buoy_control/package.dsv'
+[5.303s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/buoy_control/share/buoy_control/package.sh'
+[5.304s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/buoy_control/share/buoy_control/package.bash'
+[5.305s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/buoy_control/share/buoy_control/package.zsh'
+[5.306s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/selqie/buoyancy/install/buoy_control/share/colcon-core/packages/buoy_control)
+[5.491s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/servo' for CMake module files
+[5.492s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/selqie/buoyancy/servo' returned '0': PYTHONPATH=/home/selqie/buoyancy/build/servo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/leak_sensor/lib/python3.12/site-packages:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/servo build --build-base /home/selqie/buoyancy/build/servo/build install --record /home/selqie/buoyancy/build/servo/install.log --single-version-externally-managed install_data
+[5.493s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/servo' for CMake config files
+[5.494s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/servo/lib'
+[5.494s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/servo/bin'
+[5.494s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/servo/lib/pkgconfig/servo.pc'
+[5.495s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages'
+[5.495s] Level 1:colcon.colcon_core.shell:create_environment_hook('servo', 'pythonpath')
+[5.495s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/servo/share/servo/hook/pythonpath.ps1'
+[5.496s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/selqie/buoyancy/install/servo/share/servo/hook/pythonpath.dsv'
+[5.497s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/selqie/buoyancy/install/servo/share/servo/hook/pythonpath.sh'
+[5.499s] Level 1:colcon.colcon_core.environment:checking '/home/selqie/buoyancy/install/servo/bin'
+[5.499s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(servo)
+[5.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/servo/share/servo/package.ps1'
+[5.500s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/selqie/buoyancy/install/servo/share/servo/package.dsv'
+[5.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/servo/share/servo/package.sh'
+[5.503s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/servo/share/servo/package.bash'
+[5.505s] INFO:colcon.colcon_core.shell:Creating package script '/home/selqie/buoyancy/install/servo/share/servo/package.zsh'
+[5.506s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/selqie/buoyancy/install/servo/share/colcon-core/packages/servo)
+[5.508s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.508s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.508s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.509s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.524s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[5.524s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.525s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.525s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.551s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[5.551s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.552s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/selqie/buoyancy/install/local_setup.ps1'
+[5.554s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/selqie/buoyancy/install/_local_setup_util_ps1.py'
+[5.558s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/selqie/buoyancy/install/setup.ps1'
+[5.561s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/selqie/buoyancy/install/local_setup.sh'
+[5.564s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/selqie/buoyancy/install/_local_setup_util_sh.py'
+[5.566s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/selqie/buoyancy/install/setup.sh'
+[5.572s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/selqie/buoyancy/install/local_setup.bash'
+[5.574s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/selqie/buoyancy/install/setup.bash'
+[5.577s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/selqie/buoyancy/install/local_setup.zsh'
+[5.579s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/selqie/buoyancy/install/setup.zsh'

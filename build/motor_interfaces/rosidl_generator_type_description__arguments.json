@@ -1,0 +1,7 @@
+{
+  "package_name": "motor_interfaces",
+  "output_dir": "/home/selqie/buoyancy/build/motor_interfaces/rosidl_generator_type_description/motor_interfaces",
+  "idl_tuples": [
+    "/home/selqie/buoyancy/build/motor_interfaces/rosidl_adapter/motor_interfaces:msg/MotorState.idl"
+  ]
+}

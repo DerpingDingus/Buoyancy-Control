@@ -1,0 +1,37 @@
+running egg_info
+creating ../build/battery/battery.egg-info
+writing ../build/battery/battery.egg-info/PKG-INFO
+writing dependency_links to ../build/battery/battery.egg-info/dependency_links.txt
+writing entry points to ../build/battery/battery.egg-info/entry_points.txt
+writing requirements to ../build/battery/battery.egg-info/requires.txt
+writing top-level names to ../build/battery/battery.egg-info/top_level.txt
+writing manifest file '../build/battery/battery.egg-info/SOURCES.txt'
+reading manifest file '../build/battery/battery.egg-info/SOURCES.txt'
+writing manifest file '../build/battery/battery.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/selqie/buoyancy/build/battery/build
+creating /home/selqie/buoyancy/build/battery/build/lib
+creating /home/selqie/buoyancy/build/battery/build/lib/battery
+copying battery/__init__.py -> /home/selqie/buoyancy/build/battery/build/lib/battery
+copying battery/tinybms_voltage_uart.py -> /home/selqie/buoyancy/build/battery/build/lib/battery
+running install
+running install_lib
+creating /home/selqie/buoyancy/install/battery/lib/python3.12/site-packages/battery
+copying /home/selqie/buoyancy/build/battery/build/lib/battery/__init__.py -> /home/selqie/buoyancy/install/battery/lib/python3.12/site-packages/battery
+copying /home/selqie/buoyancy/build/battery/build/lib/battery/tinybms_voltage_uart.py -> /home/selqie/buoyancy/install/battery/lib/python3.12/site-packages/battery
+byte-compiling /home/selqie/buoyancy/install/battery/lib/python3.12/site-packages/battery/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/selqie/buoyancy/install/battery/lib/python3.12/site-packages/battery/tinybms_voltage_uart.py to tinybms_voltage_uart.cpython-312.pyc
+running install_data
+creating /home/selqie/buoyancy/install/battery/share/ament_index
+creating /home/selqie/buoyancy/install/battery/share/ament_index/resource_index
+creating /home/selqie/buoyancy/install/battery/share/ament_index/resource_index/packages
+copying resource/battery -> /home/selqie/buoyancy/install/battery/share/ament_index/resource_index/packages
+copying package.xml -> /home/selqie/buoyancy/install/battery/share/battery
+creating /home/selqie/buoyancy/install/battery/share/battery/launch
+copying launch/tinybms_voltage_uart.launch.py -> /home/selqie/buoyancy/install/battery/share/battery/launch
+running install_egg_info
+Copying ../build/battery/battery.egg-info to /home/selqie/buoyancy/install/battery/lib/python3.12/site-packages/battery-0.0.0-py3.12.egg-info
+running install_scripts
+Installing tinybms_voltage_uart script to /home/selqie/buoyancy/install/battery/lib/battery
+writing list of installed files to '/home/selqie/buoyancy/build/battery/install.log'

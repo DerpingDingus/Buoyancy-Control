@@ -1,0 +1,21 @@
+[1.729s] Invoking command in '/home/selqie/buoyancy/battery': PYTHONPATH=/home/selqie/buoyancy/build/battery/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/battery build --build-base /home/selqie/buoyancy/build/battery/build install --record /home/selqie/buoyancy/build/battery/install.log --single-version-externally-managed install_data
+[2.139s] running egg_info
+[2.162s] writing ../build/battery/battery.egg-info/PKG-INFO
+[2.163s] writing dependency_links to ../build/battery/battery.egg-info/dependency_links.txt
+[2.163s] writing entry points to ../build/battery/battery.egg-info/entry_points.txt
+[2.163s] writing requirements to ../build/battery/battery.egg-info/requires.txt
+[2.164s] writing top-level names to ../build/battery/battery.egg-info/top_level.txt
+[2.208s] reading manifest file '../build/battery/battery.egg-info/SOURCES.txt'
+[2.209s] writing manifest file '../build/battery/battery.egg-info/SOURCES.txt'
+[2.209s] running build
+[2.210s] running build_py
+[2.210s] running install
+[2.221s] running install_lib
+[2.248s] running install_data
+[2.248s] running install_egg_info
+[2.275s] removing '/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages/battery-0.0.0-py3.12.egg-info' (and everything under it)
+[2.275s] Copying ../build/battery/battery.egg-info to /home/selqie/buoyancy/install/battery/lib/python3.12/site-packages/battery-0.0.0-py3.12.egg-info
+[2.277s] running install_scripts
+[2.439s] Installing tinybms_voltage_uart script to /home/selqie/buoyancy/install/battery/lib/battery
+[2.439s] writing list of installed files to '/home/selqie/buoyancy/build/battery/install.log'
+[2.640s] Invoked command in '/home/selqie/buoyancy/battery' returned '0': PYTHONPATH=/home/selqie/buoyancy/build/battery/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/battery build --build-base /home/selqie/buoyancy/build/battery/build install --record /home/selqie/buoyancy/build/battery/install.log --single-version-externally-managed install_data

@@ -1,0 +1,36 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from motor_interfaces/msg/MotorState.msg
+// generated code does not contain a copyright notice
+
+
+module motor_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "This message contains data used to describe the current state of CubeMars v2 motors")
+    struct MotorState {
+      @verbatim (language="comment", text=
+        "The state of each motor is defined by:" "\n"
+        "  - position of the motor (rad)" "\n"
+        "  - absolute position of the motor (rad)" "\n"
+        "  - velocity of the motor (rad/s)" "\n"
+        "  - current applied (A)" "\n"
+        "  - torque applied (nm)" "\n"
+        "  - temperature (C)" "\n"
+        "" "\n"
+        "Each motor is uniquely identified by its name")
+      string name;
+
+      float position;
+
+      float abs_position;
+
+      float velocity;
+
+      float torque;
+
+      float current;
+
+      int32 temperature;
+    };
+  };
+};

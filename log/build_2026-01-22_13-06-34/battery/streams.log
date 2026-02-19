@@ -1,0 +1,39 @@
+[1.188s] Invoking command in '/home/selqie/buoyancy/battery': PYTHONPATH=/home/selqie/buoyancy/build/battery/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/battery build --build-base /home/selqie/buoyancy/build/battery/build install --record /home/selqie/buoyancy/build/battery/install.log --single-version-externally-managed install_data
+[1.539s] running egg_info
+[1.540s] creating ../build/battery/battery.egg-info
+[1.562s] writing ../build/battery/battery.egg-info/PKG-INFO
+[1.562s] writing dependency_links to ../build/battery/battery.egg-info/dependency_links.txt
+[1.563s] writing entry points to ../build/battery/battery.egg-info/entry_points.txt
+[1.563s] writing requirements to ../build/battery/battery.egg-info/requires.txt
+[1.563s] writing top-level names to ../build/battery/battery.egg-info/top_level.txt
+[1.563s] writing manifest file '../build/battery/battery.egg-info/SOURCES.txt'
+[1.608s] reading manifest file '../build/battery/battery.egg-info/SOURCES.txt'
+[1.609s] writing manifest file '../build/battery/battery.egg-info/SOURCES.txt'
+[1.609s] running build
+[1.610s] running build_py
+[1.610s] creating /home/selqie/buoyancy/build/battery/build
+[1.610s] creating /home/selqie/buoyancy/build/battery/build/lib
+[1.610s] creating /home/selqie/buoyancy/build/battery/build/lib/battery
+[1.610s] copying battery/__init__.py -> /home/selqie/buoyancy/build/battery/build/lib/battery
+[1.611s] copying battery/tinybms_voltage_uart.py -> /home/selqie/buoyancy/build/battery/build/lib/battery
+[1.611s] running install
+[1.621s] running install_lib
+[1.644s] creating /home/selqie/buoyancy/install/battery/lib/python3.12/site-packages/battery
+[1.644s] copying /home/selqie/buoyancy/build/battery/build/lib/battery/__init__.py -> /home/selqie/buoyancy/install/battery/lib/python3.12/site-packages/battery
+[1.644s] copying /home/selqie/buoyancy/build/battery/build/lib/battery/tinybms_voltage_uart.py -> /home/selqie/buoyancy/install/battery/lib/python3.12/site-packages/battery
+[1.645s] byte-compiling /home/selqie/buoyancy/install/battery/lib/python3.12/site-packages/battery/__init__.py to __init__.cpython-312.pyc
+[1.646s] byte-compiling /home/selqie/buoyancy/install/battery/lib/python3.12/site-packages/battery/tinybms_voltage_uart.py to tinybms_voltage_uart.cpython-312.pyc
+[1.648s] running install_data
+[1.648s] creating /home/selqie/buoyancy/install/battery/share/ament_index
+[1.649s] creating /home/selqie/buoyancy/install/battery/share/ament_index/resource_index
+[1.649s] creating /home/selqie/buoyancy/install/battery/share/ament_index/resource_index/packages
+[1.649s] copying resource/battery -> /home/selqie/buoyancy/install/battery/share/ament_index/resource_index/packages
+[1.649s] copying package.xml -> /home/selqie/buoyancy/install/battery/share/battery
+[1.649s] creating /home/selqie/buoyancy/install/battery/share/battery/launch
+[1.649s] copying launch/tinybms_voltage_uart.launch.py -> /home/selqie/buoyancy/install/battery/share/battery/launch
+[1.650s] running install_egg_info
+[1.674s] Copying ../build/battery/battery.egg-info to /home/selqie/buoyancy/install/battery/lib/python3.12/site-packages/battery-0.0.0-py3.12.egg-info
+[1.675s] running install_scripts
+[1.839s] Installing tinybms_voltage_uart script to /home/selqie/buoyancy/install/battery/lib/battery
+[1.840s] writing list of installed files to '/home/selqie/buoyancy/build/battery/install.log'
+[1.941s] Invoked command in '/home/selqie/buoyancy/battery' returned '0': PYTHONPATH=/home/selqie/buoyancy/build/battery/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/battery build --build-base /home/selqie/buoyancy/build/battery/build install --record /home/selqie/buoyancy/build/battery/install.log --single-version-externally-managed install_data

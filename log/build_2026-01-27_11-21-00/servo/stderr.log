@@ -1,0 +1,5 @@
+  File "/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages/servo/servo_motor_node.py", line 275
+    print(f"recieved command [ {mode}, {v0}, {v1}, {v2}]
+          ^
+SyntaxError: unterminated f-string literal (detected at line 275)
+

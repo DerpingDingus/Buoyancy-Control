@@ -1,0 +1,21 @@
+[2.062s] Invoking command in '/home/selqie/buoyancy/servo': PYTHONPATH=/home/selqie/buoyancy/build/servo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/servo build --build-base /home/selqie/buoyancy/build/servo/build install --record /home/selqie/buoyancy/build/servo/install.log --single-version-externally-managed install_data
+[2.453s] running egg_info
+[2.475s] writing ../build/servo/servo.egg-info/PKG-INFO
+[2.475s] writing dependency_links to ../build/servo/servo.egg-info/dependency_links.txt
+[2.477s] writing entry points to ../build/servo/servo.egg-info/entry_points.txt
+[2.478s] writing requirements to ../build/servo/servo.egg-info/requires.txt
+[2.479s] writing top-level names to ../build/servo/servo.egg-info/top_level.txt
+[2.524s] reading manifest file '../build/servo/servo.egg-info/SOURCES.txt'
+[2.525s] writing manifest file '../build/servo/servo.egg-info/SOURCES.txt'
+[2.525s] running build
+[2.526s] running build_py
+[2.526s] running install
+[2.536s] running install_lib
+[2.559s] running install_data
+[2.559s] running install_egg_info
+[2.584s] removing '/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages/servo-0.1.0-py3.12.egg-info' (and everything under it)
+[2.584s] Copying ../build/servo/servo.egg-info to /home/selqie/buoyancy/install/servo/lib/python3.12/site-packages/servo-0.1.0-py3.12.egg-info
+[2.586s] running install_scripts
+[2.755s] Installing servo_motor_node script to /home/selqie/buoyancy/install/servo/lib/servo
+[2.756s] writing list of installed files to '/home/selqie/buoyancy/build/servo/install.log'
+[2.937s] Invoked command in '/home/selqie/buoyancy/servo' returned '0': PYTHONPATH=/home/selqie/buoyancy/build/servo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/servo build --build-base /home/selqie/buoyancy/build/servo/build install --record /home/selqie/buoyancy/build/servo/install.log --single-version-externally-managed install_data

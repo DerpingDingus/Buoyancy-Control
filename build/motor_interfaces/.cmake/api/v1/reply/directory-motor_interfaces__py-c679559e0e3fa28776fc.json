@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "motor_interfaces__py",
+		"source" : "/home/selqie/buoyancy/build/motor_interfaces/motor_interfaces__py"
+	}
+}

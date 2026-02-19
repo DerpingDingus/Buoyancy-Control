@@ -1,0 +1,5 @@
+  File "/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control/button_control.py", line 78
+    self.get_logger().info(f'leak status: {msg.data}'
+                          ^
+SyntaxError: '(' was never closed
+

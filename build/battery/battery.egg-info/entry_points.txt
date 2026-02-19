@@ -1,0 +1,2 @@
+[console_scripts]
+tinybms_voltage_uart = battery.tinybms_voltage_uart:main

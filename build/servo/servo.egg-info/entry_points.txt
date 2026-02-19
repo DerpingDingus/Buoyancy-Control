@@ -1,0 +1,2 @@
+[console_scripts]
+servo_motor_node = servo.servo_motor_node:main
