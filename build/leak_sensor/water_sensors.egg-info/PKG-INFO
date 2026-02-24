@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: water-sensors
+Version: 0.1.0
+Summary: Leak sensor monitoring node using Jetson GPIO.
+Maintainer: Nate
+Maintainer-email: you@example.com
+License: MIT

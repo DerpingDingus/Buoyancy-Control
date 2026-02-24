@@ -1,0 +1,3 @@
+[console_scripts]
+bar02_node = ms5837_bar_ros.bar02_component:main
+bar30_node = ms5837_bar_ros.bar30_component:main

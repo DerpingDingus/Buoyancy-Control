@@ -1,0 +1,4 @@
+rclpy
+setuptools
+spidev
+std_msgs

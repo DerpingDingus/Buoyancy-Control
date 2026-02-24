@@ -1,7 +1,7 @@
 from glob import glob
 from setuptools import setup
 
-package_name = 'leak_sensor'
+package_name = 'water_sensors'
 
 launch_files = glob('launch/*.launch.py') + glob('launch/*.py')
 
@@ -19,7 +19,7 @@ setup(
     data_files=data_files,
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='ryan',
+    maintainer='Nate',
     maintainer_email='you@example.com',
     description='Leak sensor monitoring node using Jetson GPIO.',
     license='MIT',

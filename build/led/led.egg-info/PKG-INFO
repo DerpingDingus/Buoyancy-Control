@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: led
+Version: 0.0.4
+Summary: WS2812B (NeoPixel) SPI driver node for ROS 2 with CLI and demo
+Maintainer: Ryan Kaczmarczyk
+Maintainer-email: 
+License: MIT

@@ -1,0 +1,53 @@
+running egg_info
+creating ../build/led/led.egg-info
+writing ../build/led/led.egg-info/PKG-INFO
+writing dependency_links to ../build/led/led.egg-info/dependency_links.txt
+writing entry points to ../build/led/led.egg-info/entry_points.txt
+writing requirements to ../build/led/led.egg-info/requires.txt
+writing top-level names to ../build/led/led.egg-info/top_level.txt
+writing manifest file '../build/led/led.egg-info/SOURCES.txt'
+reading manifest file '../build/led/led.egg-info/SOURCES.txt'
+writing manifest file '../build/led/led.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/selqie/buoyancy/build/led/build
+creating /home/selqie/buoyancy/build/led/build/lib
+creating /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros
+copying ws2812b_ros/led_tester.py -> /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros
+copying ws2812b_ros/ws2812b_spi.py -> /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros
+copying ws2812b_ros/rainbow_fade.py -> /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros
+copying ws2812b_ros/__init__.py -> /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros
+copying ws2812b_ros/cli.py -> /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros
+copying ws2812b_ros/led_node.py -> /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros
+running install
+running install_lib
+creating /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros
+copying /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros/led_tester.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros
+copying /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros/ws2812b_spi.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros
+copying /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros/rainbow_fade.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros
+copying /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros/__init__.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros
+copying /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros/cli.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros
+copying /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros/led_node.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros
+byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros/led_tester.py to led_tester.cpython-312.pyc
+byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros/ws2812b_spi.py to ws2812b_spi.cpython-312.pyc
+byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros/rainbow_fade.py to rainbow_fade.cpython-312.pyc
+byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros/cli.py to cli.cpython-312.pyc
+byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros/led_node.py to led_node.cpython-312.pyc
+running install_data
+creating /home/selqie/buoyancy/install/led/share/ament_index
+creating /home/selqie/buoyancy/install/led/share/ament_index/resource_index
+creating /home/selqie/buoyancy/install/led/share/ament_index/resource_index/packages
+copying resource/led -> /home/selqie/buoyancy/install/led/share/ament_index/resource_index/packages
+copying package.xml -> /home/selqie/buoyancy/install/led/share/led
+creating /home/selqie/buoyancy/install/led/share/led/launch
+copying launch/led_demo.launch.py -> /home/selqie/buoyancy/install/led/share/led/launch
+copying launch/rainbow_fade.launch.py -> /home/selqie/buoyancy/install/led/share/led/launch
+running install_egg_info
+Copying ../build/led/led.egg-info to /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led-0.0.4-py3.12.egg-info
+running install_scripts
+Installing led_node script to /home/selqie/buoyancy/install/led/lib/led
+Installing led_tester script to /home/selqie/buoyancy/install/led/lib/led
+Installing rainbow_fade script to /home/selqie/buoyancy/install/led/lib/led
+Installing ws2812b-set script to /home/selqie/buoyancy/install/led/lib/led
+writing list of installed files to '/home/selqie/buoyancy/build/led/install.log'

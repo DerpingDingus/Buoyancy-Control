@@ -1,0 +1,5 @@
+[console_scripts]
+led_node = ws2812b_ros.led_node:main
+led_tester = ws2812b_ros.led_tester:main
+rainbow_fade = ws2812b_ros.rainbow_fade:main
+ws2812b-set = ws2812b_ros.cli:main

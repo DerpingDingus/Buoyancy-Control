@@ -1,0 +1,40 @@
+[3.982s] Invoking command in '/home/selqie/buoyancy/buoy_control': CMAKE_PREFIX_PATH=/home/selqie/buoyancy/install/motor_interfaces:/home/selqie/buoyancy/install/sensing_bringup:/home/selqie/buoyancy/install/bno08x_driver PYTHONPATH=/home/selqie/buoyancy/build/buoy_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/ms5837_bar_ros/lib/python3.12/site-packages:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/led/lib/python3.12/site-packages:/home/selqie/buoyancy/install/leak_sensor/lib/python3.12/site-packages:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/buoy_control build --build-base /home/selqie/buoyancy/build/buoy_control/build install --record /home/selqie/buoyancy/build/buoy_control/install.log --single-version-externally-managed install_data
+[4.714s] running egg_info
+[4.715s] creating ../build/buoy_control/buoy_control.egg-info
+[4.753s] writing ../build/buoy_control/buoy_control.egg-info/PKG-INFO
+[4.754s] writing dependency_links to ../build/buoy_control/buoy_control.egg-info/dependency_links.txt
+[4.756s] writing entry points to ../build/buoy_control/buoy_control.egg-info/entry_points.txt
+[4.756s] writing requirements to ../build/buoy_control/buoy_control.egg-info/requires.txt
+[4.756s] writing top-level names to ../build/buoy_control/buoy_control.egg-info/top_level.txt
+[4.757s] writing manifest file '../build/buoy_control/buoy_control.egg-info/SOURCES.txt'
+[4.858s] reading manifest file '../build/buoy_control/buoy_control.egg-info/SOURCES.txt'
+[4.858s] adding license file 'LICENSE'
+[4.858s] writing manifest file '../build/buoy_control/buoy_control.egg-info/SOURCES.txt'
+[4.859s] running build
+[4.859s] running build_py
+[4.859s] creating /home/selqie/buoyancy/build/buoy_control/build
+[4.860s] creating /home/selqie/buoyancy/build/buoy_control/build/lib
+[4.860s] creating /home/selqie/buoyancy/build/buoy_control/build/lib/buoy_control
+[4.863s] copying buoy_control/button_control.py -> /home/selqie/buoyancy/build/buoy_control/build/lib/buoy_control
+[4.863s] copying buoy_control/__init__.py -> /home/selqie/buoyancy/build/buoy_control/build/lib/buoy_control
+[4.863s] running install
+[4.880s] running install_lib
+[4.925s] creating /home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control
+[4.929s] copying /home/selqie/buoyancy/build/buoy_control/build/lib/buoy_control/button_control.py -> /home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control
+[4.929s] copying /home/selqie/buoyancy/build/buoy_control/build/lib/buoy_control/__init__.py -> /home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control
+[4.929s] byte-compiling /home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control/button_control.py to button_control.cpython-312.pyc
+[4.932s] byte-compiling /home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control/__init__.py to __init__.cpython-312.pyc
+[4.932s] running install_data
+[4.933s] creating /home/selqie/buoyancy/install/buoy_control/share/ament_index
+[4.933s] creating /home/selqie/buoyancy/install/buoy_control/share/ament_index/resource_index
+[4.933s] creating /home/selqie/buoyancy/install/buoy_control/share/ament_index/resource_index/packages
+[4.934s] copying resource/buoy_control -> /home/selqie/buoyancy/install/buoy_control/share/ament_index/resource_index/packages
+[4.935s] copying package.xml -> /home/selqie/buoyancy/install/buoy_control/share/buoy_control
+[4.935s] creating /home/selqie/buoyancy/install/buoy_control/share/buoy_control/launch
+[4.935s] copying launch/button_control.launch.py -> /home/selqie/buoyancy/install/buoy_control/share/buoy_control/launch
+[4.937s] running install_egg_info
+[4.985s] Copying ../build/buoy_control/buoy_control.egg-info to /home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control-0.0.0-py3.12.egg-info
+[4.989s] running install_scripts
+[5.410s] Installing button_control_node script to /home/selqie/buoyancy/install/buoy_control/lib/buoy_control
+[5.411s] writing list of installed files to '/home/selqie/buoyancy/build/buoy_control/install.log'
+[5.595s] Invoked command in '/home/selqie/buoyancy/buoy_control' returned '0': CMAKE_PREFIX_PATH=/home/selqie/buoyancy/install/motor_interfaces:/home/selqie/buoyancy/install/sensing_bringup:/home/selqie/buoyancy/install/bno08x_driver PYTHONPATH=/home/selqie/buoyancy/build/buoy_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/ms5837_bar_ros/lib/python3.12/site-packages:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/led/lib/python3.12/site-packages:/home/selqie/buoyancy/install/leak_sensor/lib/python3.12/site-packages:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/buoy_control build --build-base /home/selqie/buoyancy/build/buoy_control/build install --record /home/selqie/buoyancy/build/buoy_control/install.log --single-version-externally-managed install_data

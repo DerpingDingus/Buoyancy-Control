@@ -32,6 +32,7 @@ class ButtonMotorNode(Node):
         led_pin = self.get_parameter('led_pin').value
 
 
+
         self.get_logger().info(
             f"Button Motor Node for joint '{self.joint_name}'\n"
             f"  CW Button Pin: {pin_cw}\n"
@@ -50,11 +51,11 @@ class ButtonMotorNode(Node):
 
         # Current position tracking (updated by motor feedback)
         self.current_pos_deg = 0.0
+        self.commanded_pos = 0.0
+        self.command_ref_set = False
 
         # Subscriber for motor state to know where we are
-        self.sub_state = self.create_subscription(
-            MotorState, f'/{self.joint_name}/motor_state', self.on_state, 10
-        )
+        self.sub_state = self.create_subscription(MotorState, f'/{self.joint_name}/motor_state', self.on_state, 10)
 
         # Setup leak sensor subscription
         self.leak_status = self.create_subscription(Bool, '/leak_status', self.leak_response, 10)
@@ -74,20 +75,32 @@ class ButtonMotorNode(Node):
         # The ServoMotorNode maps position_deg to abs_position in the MotorState message
         self.current_pos_deg = msg.abs_position
 
+        if self.command_ref_set == False:
+            self.commanded_pos = self.current_pos_deg
+            self.command_ref_set = True
+
     def leak_response(self, msg):
         self.get_logger().info(f'leak status: {msg.data}')
         if msg.data:
-            self.led.on() 
+            self.led.on()
 
     def on_cw_press(self):
-        new_pos = self.current_pos_deg + 3600.0
+        self.commanded_pos += 3600.0
+        new_pos = self.commanded_pos
         self.get_logger().info(f"CW Pressed. Target: {new_pos:.1f}°")
         self.send_pos(new_pos)
 
     def on_ccw_press(self):
-        new_pos = self.current_pos_deg - 3600.0
+        self.commanded_pos -= 3600.0
+        new_pos = self.commanded_pos
         self.get_logger().info(f"CCW Pressed. Target: {new_pos:.1f}°")
         self.send_pos(new_pos)
+
+   # def on_state(self, msg: MotorState):
+    #    self.get_logger().info(f"Current drawn is: {msg.current:.3f}A")
+
+    def on_state(self, msg: MotorState):
+        self.get_logger().info(f"Torque output is: {msg.torque: .3f}Nm")
 
     def send_pos(self, pos_deg: float):
         """
@@ -95,7 +108,7 @@ class ButtonMotorNode(Node):
         The layout expected is [mode, value0, value1, value2]
         """
         msg = Float64MultiArray()
-        # Mode 4 = Position Control
+        # Mode 6 = Position/Velocity/Acceleration Control
         # value0 = target position in degrees
         # v1 and v2 are unused in mode 4 but included for consistency
         msg.data = [6.0, float(pos_deg), 7200.0, 3700.0] 

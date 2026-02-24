@@ -1,0 +1,9 @@
+running egg_info
+creating ../build/leak_sensor/water_sensors.egg-info
+writing ../build/leak_sensor/water_sensors.egg-info/PKG-INFO
+writing dependency_links to ../build/leak_sensor/water_sensors.egg-info/dependency_links.txt
+writing entry points to ../build/leak_sensor/water_sensors.egg-info/entry_points.txt
+writing requirements to ../build/leak_sensor/water_sensors.egg-info/requires.txt
+writing top-level names to ../build/leak_sensor/water_sensors.egg-info/top_level.txt
+writing manifest file '../build/leak_sensor/water_sensors.egg-info/SOURCES.txt'
+error: package directory 'water_sensors' does not exist
