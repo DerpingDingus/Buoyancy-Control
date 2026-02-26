@@ -1,0 +1,31 @@
+[0.456s] Invoking command in '/home/selqie/buoyancy/build/bno08x_driver': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/selqie/buoyancy/build/bno08x_driver -- -j4 -l4
+[0.736s] [ 27%] Built target sh2_library
+[0.781s] [ 50%] Built target gmock_main
+[0.781s] [ 55%] Built target gmock
+[0.862s] [ 66%] Built target test_i2c_mock
+[0.888s] [ 77%] Built target test_watchdog
+[0.906s] [100%] Built target bno08x_driver
+[1.087s] Invoked command in '/home/selqie/buoyancy/build/bno08x_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/selqie/buoyancy/build/bno08x_driver -- -j4 -l4
+[1.118s] Invoking command in '/home/selqie/buoyancy/build/bno08x_driver': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/selqie/buoyancy/build/bno08x_driver
+[1.145s] -- Install configuration: ""
+[1.149s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/lib/bno08x_driver/bno08x_driver
+[1.150s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/config
+[1.150s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/config/bno085_i2c.yaml
+[1.153s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/launch
+[1.156s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/launch/bno085_i2c.launch.py
+[1.157s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/ament_index/resource_index/package_run_dependencies/bno08x_driver
+[1.157s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/ament_index/resource_index/parent_prefix_path/bno08x_driver
+[1.157s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.sh
+[1.157s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.dsv
+[1.157s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/environment/path.sh
+[1.158s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/environment/path.dsv
+[1.158s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/local_setup.bash
+[1.158s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/local_setup.sh
+[1.162s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/local_setup.zsh
+[1.163s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/local_setup.dsv
+[1.163s] -- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/package.dsv
+[1.163s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/ament_index/resource_index/packages/bno08x_driver
+[1.163s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig.cmake
+[1.164s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig-version.cmake
+[1.164s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/package.xml
+[1.165s] Invoked command in '/home/selqie/buoyancy/build/bno08x_driver' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/selqie/buoyancy/build/bno08x_driver

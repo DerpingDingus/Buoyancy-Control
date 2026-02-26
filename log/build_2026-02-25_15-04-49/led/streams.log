@@ -1,0 +1,24 @@
+[2.839s] Invoking command in '/home/selqie/buoyancy/led': PYTHONPATH=/home/selqie/buoyancy/build/led/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/led/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/led build --build-base /home/selqie/buoyancy/build/led/build install --record /home/selqie/buoyancy/build/led/install.log --single-version-externally-managed install_data
+[3.374s] running egg_info
+[3.395s] writing ../build/led/led.egg-info/PKG-INFO
+[3.398s] writing dependency_links to ../build/led/led.egg-info/dependency_links.txt
+[3.398s] writing entry points to ../build/led/led.egg-info/entry_points.txt
+[3.398s] writing requirements to ../build/led/led.egg-info/requires.txt
+[3.399s] writing top-level names to ../build/led/led.egg-info/top_level.txt
+[3.448s] reading manifest file '../build/led/led.egg-info/SOURCES.txt'
+[3.449s] writing manifest file '../build/led/led.egg-info/SOURCES.txt'
+[3.449s] running build
+[3.450s] running build_py
+[3.456s] running install
+[3.467s] running install_lib
+[3.493s] running install_data
+[3.494s] running install_egg_info
+[3.524s] removing '/home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led-0.0.4-py3.12.egg-info' (and everything under it)
+[3.524s] Copying ../build/led/led.egg-info to /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led-0.0.4-py3.12.egg-info
+[3.525s] running install_scripts
+[3.775s] Installing led_node script to /home/selqie/buoyancy/install/led/lib/led
+[3.778s] Installing led_tester script to /home/selqie/buoyancy/install/led/lib/led
+[3.779s] Installing rainbow_fade script to /home/selqie/buoyancy/install/led/lib/led
+[3.781s] Installing ws2812b-set script to /home/selqie/buoyancy/install/led/lib/led
+[3.785s] writing list of installed files to '/home/selqie/buoyancy/build/led/install.log'
+[4.056s] Invoked command in '/home/selqie/buoyancy/led' returned '0': PYTHONPATH=/home/selqie/buoyancy/build/led/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/led/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/led build --build-base /home/selqie/buoyancy/build/led/build install --record /home/selqie/buoyancy/build/led/install.log --single-version-externally-managed install_data

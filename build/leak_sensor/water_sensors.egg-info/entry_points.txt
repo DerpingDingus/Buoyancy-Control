@@ -1,2 +1,0 @@
-[console_scripts]
-leak_sensor_node = leak_sensor.leak_sensor_node:main

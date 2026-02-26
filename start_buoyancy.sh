@@ -12,5 +12,6 @@ done
 
 source /opt/ros/jazzy/setup.bash
 source /home/selqie/buoyancy/install/setup.bash
+source /home/selqie/buoyancy/venv/bin/activate
 
 ros2 launch buoy_control button_control.launch.py 

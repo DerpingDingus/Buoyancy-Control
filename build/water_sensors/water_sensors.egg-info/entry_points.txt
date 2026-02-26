@@ -1,0 +1,3 @@
+[console_scripts]
+humidity_sensor_node = water_sensors.humidity_sensor_node:main
+leak_sensor_node = water_sensors.leak_sensor_node:main

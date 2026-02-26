@@ -96,11 +96,9 @@ class ButtonMotorNode(Node):
         self.get_logger().info(f"CCW Pressed. Target: {new_pos:.1f}°")
         self.send_pos(new_pos)
 
-   # def on_state(self, msg: MotorState):
-    #    self.get_logger().info(f"Current drawn is: {msg.current:.3f}A")
-
     def on_state(self, msg: MotorState):
-        self.get_logger().info(f"Torque output is: {msg.torque: .3f}Nm")
+        self.get_logger().info(f"Torque output is: {msg.torque: .3f}Nm", throttle_duration_sec = 1.0)
+        self.get_logger().info(f"Current drawn is: {msg.current: .2f}A", throttle_duration_sec = 1.0)
 
     def send_pos(self, pos_deg: float):
         """

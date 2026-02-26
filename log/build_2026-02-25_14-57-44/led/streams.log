@@ -1,0 +1,55 @@
+[2.698s] Invoking command in '/home/selqie/buoyancy/led': PYTHONPATH=/home/selqie/buoyancy/build/led/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/led/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/led build --build-base /home/selqie/buoyancy/build/led/build install --record /home/selqie/buoyancy/build/led/install.log --single-version-externally-managed install_data
+[3.309s] running egg_info
+[3.310s] creating ../build/led/led.egg-info
+[3.343s] writing ../build/led/led.egg-info/PKG-INFO
+[3.344s] writing dependency_links to ../build/led/led.egg-info/dependency_links.txt
+[3.344s] writing entry points to ../build/led/led.egg-info/entry_points.txt
+[3.345s] writing requirements to ../build/led/led.egg-info/requires.txt
+[3.345s] writing top-level names to ../build/led/led.egg-info/top_level.txt
+[3.345s] writing manifest file '../build/led/led.egg-info/SOURCES.txt'
+[3.413s] reading manifest file '../build/led/led.egg-info/SOURCES.txt'
+[3.414s] writing manifest file '../build/led/led.egg-info/SOURCES.txt'
+[3.416s] running build
+[3.417s] running build_py
+[3.417s] creating /home/selqie/buoyancy/build/led/build
+[3.417s] creating /home/selqie/buoyancy/build/led/build/lib
+[3.417s] creating /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros
+[3.419s] copying ws2812b_ros/led_tester.py -> /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros
+[3.420s] copying ws2812b_ros/ws2812b_spi.py -> /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros
+[3.420s] copying ws2812b_ros/rainbow_fade.py -> /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros
+[3.422s] copying ws2812b_ros/__init__.py -> /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros
+[3.422s] copying ws2812b_ros/cli.py -> /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros
+[3.424s] copying ws2812b_ros/led_node.py -> /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros
+[3.425s] running install
+[3.438s] running install_lib
+[3.484s] creating /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros
+[3.486s] copying /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros/led_tester.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros
+[3.487s] copying /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros/ws2812b_spi.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros
+[3.487s] copying /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros/rainbow_fade.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros
+[3.487s] copying /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros/__init__.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros
+[3.488s] copying /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros/cli.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros
+[3.488s] copying /home/selqie/buoyancy/build/led/build/lib/ws2812b_ros/led_node.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros
+[3.493s] byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros/led_tester.py to led_tester.cpython-312.pyc
+[3.495s] byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros/ws2812b_spi.py to ws2812b_spi.cpython-312.pyc
+[3.499s] byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros/rainbow_fade.py to rainbow_fade.cpython-312.pyc
+[3.499s] byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros/__init__.py to __init__.cpython-312.pyc
+[3.500s] byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros/cli.py to cli.cpython-312.pyc
+[3.501s] byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/ws2812b_ros/led_node.py to led_node.cpython-312.pyc
+[3.503s] running install_data
+[3.504s] creating /home/selqie/buoyancy/install/led/share/ament_index
+[3.504s] creating /home/selqie/buoyancy/install/led/share/ament_index/resource_index
+[3.504s] creating /home/selqie/buoyancy/install/led/share/ament_index/resource_index/packages
+[3.504s] copying resource/led -> /home/selqie/buoyancy/install/led/share/ament_index/resource_index/packages
+[3.505s] copying package.xml -> /home/selqie/buoyancy/install/led/share/led
+[3.505s] creating /home/selqie/buoyancy/install/led/share/led/launch
+[3.507s] copying launch/led_demo.launch.py -> /home/selqie/buoyancy/install/led/share/led/launch
+[3.507s] copying launch/rainbow_fade.launch.py -> /home/selqie/buoyancy/install/led/share/led/launch
+[3.508s] running install_egg_info
+[3.544s] Copying ../build/led/led.egg-info to /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led-0.0.4-py3.12.egg-info
+[3.547s] running install_scripts
+[3.862s] Installing led_node script to /home/selqie/buoyancy/install/led/lib/led
+[3.863s] Installing led_tester script to /home/selqie/buoyancy/install/led/lib/led
+[3.864s] Installing rainbow_fade script to /home/selqie/buoyancy/install/led/lib/led
+[3.864s] Installing ws2812b-set script to /home/selqie/buoyancy/install/led/lib/led
+[3.868s] writing list of installed files to '/home/selqie/buoyancy/build/led/install.log'
+[4.179s] Invoked command in '/home/selqie/buoyancy/led' returned '0': PYTHONPATH=/home/selqie/buoyancy/build/led/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/led/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/led build --build-base /home/selqie/buoyancy/build/led/build install --record /home/selqie/buoyancy/build/led/install.log --single-version-externally-managed install_data
