@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 ROS2 Node for controlling a servo motor via button inputs on Raspberry Pi.
 """
@@ -74,6 +73,7 @@ class ButtonMotorNode(Node):
     def on_state(self, msg: MotorState):
         # The ServoMotorNode maps position_deg to abs_position in the MotorState message
         self.current_pos_deg = msg.abs_position
+        self.get_logger().info(f"Position is: {self.current_pos_deg:.1f}")
 
         if self.command_ref_set == False:
             self.commanded_pos = self.current_pos_deg
@@ -96,9 +96,9 @@ class ButtonMotorNode(Node):
         self.get_logger().info(f"CCW Pressed. Target: {new_pos:.1f}°")
         self.send_pos(new_pos)
 
-    def on_state(self, msg: MotorState):
-        self.get_logger().info(f"Torque output is: {msg.torque: .3f}Nm", throttle_duration_sec = 1.0)
-        self.get_logger().info(f"Current drawn is: {msg.current: .2f}A", throttle_duration_sec = 1.0)
+   # def on_state(self, msg: MotorState):
+  #      self.get_logger().info(f"Torque output is: {msg.torque: .3f}Nm", throttle_duration_sec = 1.0)
+  #      self.get_logger().info(f"Current drawn is: {msg.current: .2f}A", throttle_duration_sec = 1.0)
 
     def send_pos(self, pos_deg: float):
         """

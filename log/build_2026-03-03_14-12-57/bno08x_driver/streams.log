@@ -1,0 +1,31 @@
+[0.660s] Invoking command in '/home/selqie/buoyancy/build/bno08x_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/selqie/buoyancy/install/water_sensors:/home/selqie/buoyancy/install/ms5837_bar_ros:/home/selqie/buoyancy/install/led:/home/selqie/buoyancy/install/battery:/opt/ros/jazzy /usr/bin/cmake --build /home/selqie/buoyancy/build/bno08x_driver -- -j4 -l4
+[0.807s] [ 16%] Built target gmock
+[0.811s] [ 44%] Built target sh2_library
+[0.825s] [ 55%] Built target gmock_main
+[0.886s] [ 77%] Built target bno08x_driver
+[0.920s] [ 88%] Built target test_i2c_mock
+[0.923s] [100%] Built target test_watchdog
+[1.167s] Invoked command in '/home/selqie/buoyancy/build/bno08x_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/selqie/buoyancy/install/water_sensors:/home/selqie/buoyancy/install/ms5837_bar_ros:/home/selqie/buoyancy/install/led:/home/selqie/buoyancy/install/battery:/opt/ros/jazzy /usr/bin/cmake --build /home/selqie/buoyancy/build/bno08x_driver -- -j4 -l4
+[1.188s] Invoking command in '/home/selqie/buoyancy/build/bno08x_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/selqie/buoyancy/install/water_sensors:/home/selqie/buoyancy/install/ms5837_bar_ros:/home/selqie/buoyancy/install/led:/home/selqie/buoyancy/install/battery:/opt/ros/jazzy /usr/bin/cmake --install /home/selqie/buoyancy/build/bno08x_driver
+[1.212s] -- Install configuration: ""
+[1.213s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/lib/bno08x_driver/bno08x_driver
+[1.213s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/config
+[1.213s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/config/bno085_i2c.yaml
+[1.214s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/launch
+[1.214s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/launch/bno085_i2c.launch.py
+[1.214s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/ament_index/resource_index/package_run_dependencies/bno08x_driver
+[1.214s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/ament_index/resource_index/parent_prefix_path/bno08x_driver
+[1.214s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.sh
+[1.214s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.dsv
+[1.215s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/environment/path.sh
+[1.217s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/environment/path.dsv
+[1.217s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/local_setup.bash
+[1.217s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/local_setup.sh
+[1.217s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/local_setup.zsh
+[1.219s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/local_setup.dsv
+[1.219s] -- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/package.dsv
+[1.220s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/ament_index/resource_index/packages/bno08x_driver
+[1.220s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig.cmake
+[1.222s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig-version.cmake
+[1.222s] -- Up-to-date: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/package.xml
+[1.228s] Invoked command in '/home/selqie/buoyancy/build/bno08x_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/selqie/buoyancy/install/water_sensors:/home/selqie/buoyancy/install/ms5837_bar_ros:/home/selqie/buoyancy/install/led:/home/selqie/buoyancy/install/battery:/opt/ros/jazzy /usr/bin/cmake --install /home/selqie/buoyancy/build/bno08x_driver

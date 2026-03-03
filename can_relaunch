@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# 1. Bring the interface down
+sudo ip link set can0 down
+
+# 2. Reconfigure and bring it up
+# Change bitrate to match your hardware requirements
+sudo ip link set can0 type can bitrate 1000000
+
+# 3. Final command to set the state to 'up'
+sudo ip link set can0 up
+
+echo "can0 interface has been restarted."
+

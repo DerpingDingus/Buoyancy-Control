@@ -1,0 +1,229 @@
+[0.029s] Invoking command in '/home/selqie/buoyancy/build/motor_interfaces': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/selqie/buoyancy/motor_interfaces -DCMAKE_INSTALL_PREFIX=/home/selqie/buoyancy/install/motor_interfaces
+[0.503s] -- The C compiler identification is GNU 13.3.0
+[1.065s] -- The CXX compiler identification is GNU 13.3.0
+[1.123s] -- Detecting C compiler ABI info
+[1.417s] -- Detecting C compiler ABI info - done
+[1.438s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.439s] -- Detecting C compile features
+[1.442s] -- Detecting C compile features - done
+[1.463s] -- Detecting CXX compiler ABI info
+[1.811s] -- Detecting CXX compiler ABI info - done
+[1.833s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.834s] -- Detecting CXX compile features
+[1.835s] -- Detecting CXX compile features - done
+[1.839s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.314s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.832s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[2.850s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.962s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.059s] -- Found rosidl_adapter: 4.6.6 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[4.789s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[8.129s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[12.314s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[12.337s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[13.274s] -- Found PythonExtra: /usr/bin/python3  
+[15.949s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[16.198s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[16.323s] -- Added test 'lint_cmake' to check CMake code style
+[16.333s] -- Added test 'xmllint' to check XML markup files
+[16.354s] -- Configuring done (16.3s)
+[16.549s] -- Generating done (0.2s)
+[16.584s] -- Build files have been written to: /home/selqie/buoyancy/build/motor_interfaces
+[16.621s] Invoked command in '/home/selqie/buoyancy/build/motor_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/selqie/buoyancy/motor_interfaces -DCMAKE_INSTALL_PREFIX=/home/selqie/buoyancy/install/motor_interfaces
+[16.630s] Invoking command in '/home/selqie/buoyancy/build/motor_interfaces': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/selqie/buoyancy/build/motor_interfaces -- -j4 -l4
+[16.957s] [  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[17.026s] [  2%] Built target ament_cmake_python_copy_motor_interfaces
+[18.116s] running egg_info
+[18.127s] creating motor_interfaces.egg-info
+[18.253s] writing motor_interfaces.egg-info/PKG-INFO
+[18.261s] writing dependency_links to motor_interfaces.egg-info/dependency_links.txt
+[18.261s] writing top-level names to motor_interfaces.egg-info/top_level.txt
+[18.261s] writing manifest file 'motor_interfaces.egg-info/SOURCES.txt'
+[18.525s] [  2%] Built target motor_interfaces__rosidl_generator_type_description
+[18.586s] reading manifest file 'motor_interfaces.egg-info/SOURCES.txt'
+[18.592s] writing manifest file 'motor_interfaces.egg-info/SOURCES.txt'
+[18.607s] [  5%] [34m[1mGenerating C code for ROS interfaces[0m
+[18.682s] [  8%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[19.065s] [  8%] Built target ament_cmake_python_build_motor_interfaces_egg
+[19.982s] [  8%] Built target motor_interfaces__cpp
+[20.394s] [ 11%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_state__description.c.o[0m
+[20.403s] [ 14%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_state__functions.c.o[0m
+[20.408s] [ 17%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_generator_c.dir/rosidl_generator_c/motor_interfaces/msg/detail/motor_state__type_support.c.o[0m
+[20.614s] [ 20%] [32m[1mLinking C shared library libmotor_interfaces__rosidl_generator_c.so[0m
+[20.764s] [ 20%] Built target motor_interfaces__rosidl_generator_c
+[20.831s] [ 23%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[20.845s] [ 26%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[20.850s] [ 29%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[20.857s] [ 32%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[22.225s] [ 35%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/motor_interfaces/msg/motor_state__type_support.cpp.o[0m
+[22.822s] [ 38%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/motor_interfaces/msg/detail/motor_state__type_support_c.cpp.o[0m
+[22.859s] [ 41%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/motor_interfaces/msg/detail/dds_fastrtps/motor_state__type_support.cpp.o[0m
+[23.062s] [ 44%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/motor_interfaces/msg/detail/motor_state__type_support.cpp.o[0m
+[24.068s] [ 47%] [32m[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_cpp.so[0m
+[24.385s] [ 47%] Built target motor_interfaces__rosidl_typesupport_cpp
+[24.468s] [ 50%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[25.685s] [ 52%] [32m[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[26.125s] [ 55%] [32m[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[26.218s] [ 55%] Built target motor_interfaces__rosidl_typesupport_introspection_cpp
+[26.275s] [ 58%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[26.418s] [ 61%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/motor_interfaces/msg/detail/motor_state__type_support.c.o[0m
+[26.553s] [ 61%] Built target motor_interfaces__rosidl_typesupport_fastrtps_c
+[26.585s] [ 64%] [32m[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[26.678s] [ 67%] [32m[1mLinking C shared library libmotor_interfaces__rosidl_typesupport_introspection_c.so[0m
+[26.814s] [ 67%] Built target motor_interfaces__rosidl_typesupport_introspection_c
+[27.164s] [ 67%] Built target motor_interfaces__rosidl_typesupport_fastrtps_cpp
+[27.539s] [ 70%] [32mBuilding CXX object CMakeFiles/motor_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/motor_interfaces/msg/motor_state__type_support.cpp.o[0m
+[27.683s] [ 73%] [32m[1mLinking CXX shared library libmotor_interfaces__rosidl_typesupport_c.so[0m
+[27.807s] [ 73%] Built target motor_interfaces__rosidl_typesupport_c
+[27.869s] [ 73%] Built target motor_interfaces
+[27.926s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[28.985s] [ 76%] Built target motor_interfaces__py
+[29.056s] [ 79%] [32mBuilding C object CMakeFiles/motor_interfaces__rosidl_generator_py.dir/rosidl_generator_py/motor_interfaces/msg/_motor_state_s.c.o[0m
+[29.576s] [ 82%] [32m[1mLinking C shared library libmotor_interfaces__rosidl_generator_py.so[0m
+[29.718s] [ 82%] Built target motor_interfaces__rosidl_generator_py
+[29.828s] [ 85%] [32mBuilding C object CMakeFiles/motor_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[29.834s] [ 88%] [32mBuilding C object CMakeFiles/motor_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[29.845s] [ 91%] [32mBuilding C object CMakeFiles/motor_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[30.423s] [ 94%] [32m[1mLinking C shared module rosidl_generator_py/motor_interfaces/motor_interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[30.569s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/motor_interfaces/motor_interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[30.616s] [ 97%] Built target motor_interfaces_s__rosidl_typesupport_introspection_c
+[30.654s] [100%] [32m[1mLinking C shared module rosidl_generator_py/motor_interfaces/motor_interfaces_s__rosidl_typesupport_c.so[0m
+[30.756s] [100%] Built target motor_interfaces_s__rosidl_typesupport_fastrtps_c
+[30.850s] [100%] Built target motor_interfaces_s__rosidl_typesupport_c
+[30.928s] Invoked command in '/home/selqie/buoyancy/build/motor_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/selqie/buoyancy/build/motor_interfaces -- -j4 -l4
+[30.937s] Invoking command in '/home/selqie/buoyancy/build/motor_interfaces': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/selqie/buoyancy/build/motor_interfaces
+[30.998s] -- Install configuration: ""
+[30.999s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/ament_index/resource_index/rosidl_interfaces/motor_interfaces
+[30.999s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/msg/MotorState.json
+[30.999s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces
+[31.001s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg
+[31.002s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/motor_state.h
+[31.002s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail
+[31.002s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__functions.c
+[31.002s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__type_support.c
+[31.007s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__description.c
+[31.011s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__struct.h
+[31.011s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__type_support.h
+[31.012s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__functions.h
+[31.012s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/rosidl_generator_c__visibility_control.h
+[31.012s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/environment/library_path.sh
+[31.012s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/environment/library_path.dsv
+[31.019s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_generator_c.so
+[31.020s] -- Set non-toolchain portion of runtime path of "/home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_generator_c.so" to ""
+[31.020s] -- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces
+[31.020s] -- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg
+[31.020s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[31.020s] -- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail
+[31.026s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__rosidl_typesupport_fastrtps_c.h
+[31.026s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_fastrtps_c.so
+[31.027s] -- Set non-toolchain portion of runtime path of "/home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[31.027s] -- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces
+[31.028s] -- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg
+[31.033s] -- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail
+[31.033s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__type_support.c
+[31.033s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__rosidl_typesupport_introspection_c.h
+[31.034s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[31.038s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_introspection_c.so
+[31.038s] -- Set non-toolchain portion of runtime path of "/home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[31.043s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_c.so
+[31.043s] -- Set non-toolchain portion of runtime path of "/home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_c.so" to ""
+[31.049s] -- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces
+[31.049s] -- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg
+[31.050s] -- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail
+[31.050s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__traits.hpp
+[31.050s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__type_support.hpp
+[31.050s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__builder.hpp
+[31.050s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__struct.hpp
+[31.050s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/motor_state.hpp
+[31.051s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[31.057s] -- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces
+[31.058s] -- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg
+[31.058s] -- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail
+[31.058s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__rosidl_typesupport_fastrtps_cpp.hpp
+[31.058s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/dds_fastrtps
+[31.058s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[31.058s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[31.059s] -- Set non-toolchain portion of runtime path of "/home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[31.065s] -- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces
+[31.066s] -- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg
+[31.066s] -- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail
+[31.069s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__rosidl_typesupport_introspection_cpp.hpp
+[31.070s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__type_support.cpp
+[31.070s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_introspection_cpp.so
+[31.070s] -- Set non-toolchain portion of runtime path of "/home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[31.070s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_cpp.so
+[31.070s] -- Set non-toolchain portion of runtime path of "/home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_cpp.so" to ""
+[31.071s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/environment/pythonpath.sh
+[31.072s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/environment/pythonpath.dsv
+[31.072s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces-0.0.0-py3.12.egg-info
+[31.072s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[31.073s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[31.073s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[31.073s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[31.080s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces
+[31.080s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[31.080s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[31.081s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/msg
+[31.081s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/msg/_motor_state.py
+[31.081s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/msg/_motor_state_s.c
+[31.081s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/msg/__init__.py
+[31.081s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_introspection_c.so
+[31.085s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/__init__.py
+[31.085s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_c.so
+[31.085s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[31.086s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_c.c
+[31.357s] Listing '/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces'...
+[31.358s] Compiling '/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/__init__.py'...
+[31.358s] Listing '/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/msg'...
+[31.359s] Compiling '/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/msg/__init__.py'...
+[31.359s] Compiling '/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/msg/_motor_state.py'...
+[31.440s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[31.441s] -- Set non-toolchain portion of runtime path of "/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""
+[31.441s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_introspection_c.so
+[31.443s] -- Set non-toolchain portion of runtime path of "/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_introspection_c.so" to ""
+[31.448s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_c.so
+[31.449s] -- Set non-toolchain portion of runtime path of "/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_c.so" to ""
+[31.454s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_generator_py.so
+[31.457s] -- Set non-toolchain portion of runtime path of "/home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_generator_py.so" to ""
+[31.457s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/msg/MotorState.idl
+[31.459s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/msg/MotorState.msg
+[31.462s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/ament_index/resource_index/package_run_dependencies/motor_interfaces
+[31.464s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/ament_index/resource_index/parent_prefix_path/motor_interfaces
+[31.464s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/environment/ament_prefix_path.sh
+[31.472s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/environment/ament_prefix_path.dsv
+[31.473s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/environment/path.sh
+[31.473s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/environment/path.dsv
+[31.474s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/local_setup.bash
+[31.476s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/local_setup.sh
+[31.481s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/local_setup.zsh
+[31.487s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/local_setup.dsv
+[31.487s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/package.dsv
+[31.488s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/ament_index/resource_index/packages/motor_interfaces
+[31.488s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_generator_cExport.cmake
+[31.492s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_generator_cExport-noconfig.cmake
+[31.492s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[31.493s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[31.497s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[31.498s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[31.499s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_cExport.cmake
+[31.503s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[31.504s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_generator_cppExport.cmake
+[31.505s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[31.508s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[31.508s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[31.516s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[31.516s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_cppExport.cmake
+[31.516s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[31.516s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_generator_pyExport.cmake
+[31.526s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[31.526s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/rosidl_cmake-extras.cmake
+[31.527s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[31.527s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[31.527s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[31.527s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[31.529s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[31.530s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[31.530s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfacesConfig.cmake
+[31.530s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfacesConfig-version.cmake
+[31.537s] -- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/package.xml
+[31.549s] Invoked command in '/home/selqie/buoyancy/build/motor_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/selqie/buoyancy/build/motor_interfaces

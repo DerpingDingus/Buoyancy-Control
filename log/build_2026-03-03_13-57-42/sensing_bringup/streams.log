@@ -1,0 +1,48 @@
+[0.015s] Invoking command in '/home/selqie/buoyancy/build/sensing_bringup': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/selqie/buoyancy/sensing/sensing_bringup -DCMAKE_INSTALL_PREFIX=/home/selqie/buoyancy/install/sensing_bringup
+[0.279s] -- The C compiler identification is GNU 13.3.0
+[0.593s] -- The CXX compiler identification is GNU 13.3.0
+[0.658s] -- Detecting C compiler ABI info
+[1.257s] -- Detecting C compiler ABI info - done
+[1.296s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.300s] -- Detecting C compile features
+[1.304s] -- Detecting C compile features - done
+[1.360s] -- Detecting CXX compiler ABI info
+[2.136s] -- Detecting CXX compiler ABI info - done
+[2.218s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.218s] -- Detecting CXX compile features
+[2.218s] -- Detecting CXX compile features - done
+[2.234s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.532s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[4.400s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[5.209s] -- Added test 'flake8' to check Python code syntax and style conventions
+[5.211s] -- Configured 'flake8' exclude dirs and/or files: 
+[5.218s] -- Added test 'lint_cmake' to check CMake code style
+[5.219s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[5.228s] -- Added test 'xmllint' to check XML markup files
+[5.241s] -- Configuring done (5.2s)
+[5.264s] -- Generating done (0.0s)
+[5.280s] -- Build files have been written to: /home/selqie/buoyancy/build/sensing_bringup
+[5.370s] Invoked command in '/home/selqie/buoyancy/build/sensing_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake /home/selqie/buoyancy/sensing/sensing_bringup -DCMAKE_INSTALL_PREFIX=/home/selqie/buoyancy/install/sensing_bringup
+[5.375s] Invoking command in '/home/selqie/buoyancy/build/sensing_bringup': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/selqie/buoyancy/build/sensing_bringup -- -j4 -l4
+[5.627s] Invoked command in '/home/selqie/buoyancy/build/sensing_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/selqie/buoyancy/build/sensing_bringup -- -j4 -l4
+[5.716s] Invoking command in '/home/selqie/buoyancy/build/sensing_bringup': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/selqie/buoyancy/build/sensing_bringup
+[5.776s] -- Install configuration: ""
+[5.777s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/sensing_bringup/launch
+[5.784s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/sensing_bringup/launch/bar30.launch.py
+[5.791s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/sensing_bringup/launch/imu.launch.py
+[5.791s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/ament_index/resource_index/package_run_dependencies/sensing_bringup
+[5.791s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/ament_index/resource_index/parent_prefix_path/sensing_bringup
+[5.792s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/sensing_bringup/environment/ament_prefix_path.sh
+[5.792s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/sensing_bringup/environment/ament_prefix_path.dsv
+[5.792s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/sensing_bringup/environment/path.sh
+[5.798s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/sensing_bringup/environment/path.dsv
+[5.798s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/sensing_bringup/local_setup.bash
+[5.803s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/sensing_bringup/local_setup.sh
+[5.804s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/sensing_bringup/local_setup.zsh
+[5.804s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/sensing_bringup/local_setup.dsv
+[5.804s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/sensing_bringup/package.dsv
+[5.804s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/ament_index/resource_index/packages/sensing_bringup
+[5.805s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/sensing_bringup/cmake/sensing_bringupConfig.cmake
+[5.805s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/sensing_bringup/cmake/sensing_bringupConfig-version.cmake
+[5.805s] -- Installing: /home/selqie/buoyancy/install/sensing_bringup/share/sensing_bringup/package.xml
+[5.820s] Invoked command in '/home/selqie/buoyancy/build/sensing_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --install /home/selqie/buoyancy/build/sensing_bringup

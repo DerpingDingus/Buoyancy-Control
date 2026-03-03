@@ -1,2 +1,3 @@
 [console_scripts]
 button_control_node = buoy_control.button_control:main
+timer_control_node = buoy_control.timer_control:main

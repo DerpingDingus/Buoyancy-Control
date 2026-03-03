@@ -185,5 +185,4 @@ def generate_launch_description() -> LaunchDescription:
         servo_node,
         button_node,
         leak_node,
-        humidity_node,
     ])

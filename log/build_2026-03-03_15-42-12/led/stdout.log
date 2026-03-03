@@ -1,0 +1,22 @@
+running egg_info
+writing ../build/led/led.egg-info/PKG-INFO
+writing dependency_links to ../build/led/led.egg-info/dependency_links.txt
+writing entry points to ../build/led/led.egg-info/entry_points.txt
+writing requirements to ../build/led/led.egg-info/requires.txt
+writing top-level names to ../build/led/led.egg-info/top_level.txt
+reading manifest file '../build/led/led.egg-info/SOURCES.txt'
+writing manifest file '../build/led/led.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led-0.0.4-py3.12.egg-info' (and everything under it)
+Copying ../build/led/led.egg-info to /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led-0.0.4-py3.12.egg-info
+running install_scripts
+Installing led_node script to /home/selqie/buoyancy/install/led/lib/led
+Installing led_tester script to /home/selqie/buoyancy/install/led/lib/led
+Installing rainbow_fade script to /home/selqie/buoyancy/install/led/lib/led
+Installing ws2812b-set script to /home/selqie/buoyancy/install/led/lib/led
+writing list of installed files to '/home/selqie/buoyancy/build/led/install.log'

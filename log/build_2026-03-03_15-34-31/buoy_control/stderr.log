@@ -1,0 +1,5 @@
+  File "/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control/timer_control.py", line 22
+    self.declare_parameter('start_time', 30
+                          ^
+SyntaxError: '(' was never closed
+

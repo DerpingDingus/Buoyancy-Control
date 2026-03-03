@@ -20,7 +20,7 @@ setup(
     zip_safe=True,
     maintainer='selqie',
     maintainer_email='selqie@todo.todo',
-    description='ROS 2 node that controls motors using buttons',
+    description='Nodes that control the motors',
     license='Apache-2.0',
     extras_require={
         'test': [
@@ -29,7 +29,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'button_control_node = buoy_control.button_control:main'
+            'button_control_node = buoy_control.button_control:main',
+            'timer_control_node = buoy_control.timer_control:main'
         ],
     },
 )

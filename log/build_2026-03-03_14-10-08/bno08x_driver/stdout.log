@@ -1,0 +1,28 @@
+[ 27%] Built target sh2_library
+[ 44%] Built target gmock
+[ 55%] Built target gmock_main
+[ 77%] Built target bno08x_driver
+[ 88%] Built target test_watchdog
+[100%] Built target test_i2c_mock
+-- Install configuration: ""
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/lib/bno08x_driver/bno08x_driver
+-- Set non-toolchain portion of runtime path of "/home/selqie/buoyancy/install/bno08x_driver/lib/bno08x_driver/bno08x_driver" to ""
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/config
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/config/bno085_i2c.yaml
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/launch
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/launch/bno085_i2c.launch.py
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/ament_index/resource_index/package_run_dependencies/bno08x_driver
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/ament_index/resource_index/parent_prefix_path/bno08x_driver
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.sh
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/environment/ament_prefix_path.dsv
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/environment/path.sh
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/environment/path.dsv
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/local_setup.bash
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/local_setup.sh
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/local_setup.zsh
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/local_setup.dsv
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/package.dsv
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/ament_index/resource_index/packages/bno08x_driver
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig.cmake
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/cmake/bno08x_driverConfig-version.cmake
+-- Installing: /home/selqie/buoyancy/install/bno08x_driver/share/bno08x_driver/package.xml

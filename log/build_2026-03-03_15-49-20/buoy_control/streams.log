@@ -1,0 +1,26 @@
+[1.998s] Invoking command in '/home/selqie/buoyancy/buoy_control': CMAKE_PREFIX_PATH=/home/selqie/buoyancy/install/motor_interfaces:/home/selqie/buoyancy/install/bno08x_driver:/home/selqie/buoyancy/install/sensing_bringup PYTHONPATH=/home/selqie/buoyancy/build/buoy_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:/home/selqie/buoyancy/install/water_sensors/lib/python3.12/site-packages:/home/selqie/buoyancy/install/ms5837_bar_ros/lib/python3.12/site-packages:/home/selqie/buoyancy/install/led/lib/python3.12/site-packages:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/buoy_control build --build-base /home/selqie/buoyancy/build/buoy_control/build install --record /home/selqie/buoyancy/build/buoy_control/install.log --single-version-externally-managed install_data
+[2.382s] running egg_info
+[2.406s] writing ../build/buoy_control/buoy_control.egg-info/PKG-INFO
+[2.406s] writing dependency_links to ../build/buoy_control/buoy_control.egg-info/dependency_links.txt
+[2.407s] writing entry points to ../build/buoy_control/buoy_control.egg-info/entry_points.txt
+[2.407s] writing requirements to ../build/buoy_control/buoy_control.egg-info/requires.txt
+[2.408s] writing top-level names to ../build/buoy_control/buoy_control.egg-info/top_level.txt
+[2.457s] reading manifest file '../build/buoy_control/buoy_control.egg-info/SOURCES.txt'
+[2.457s] adding license file 'LICENSE'
+[2.458s] writing manifest file '../build/buoy_control/buoy_control.egg-info/SOURCES.txt'
+[2.458s] running build
+[2.459s] running build_py
+[2.459s] copying buoy_control/timer_control.py -> /home/selqie/buoyancy/build/buoy_control/build/lib/buoy_control
+[2.459s] running install
+[2.469s] running install_lib
+[2.495s] copying /home/selqie/buoyancy/build/buoy_control/build/lib/buoy_control/timer_control.py -> /home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control
+[2.495s] byte-compiling /home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control/timer_control.py to timer_control.cpython-312.pyc
+[2.497s] running install_data
+[2.497s] running install_egg_info
+[2.524s] removing '/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control-0.0.0-py3.12.egg-info' (and everything under it)
+[2.524s] Copying ../build/buoy_control/buoy_control.egg-info to /home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control-0.0.0-py3.12.egg-info
+[2.526s] running install_scripts
+[2.704s] Installing button_control_node script to /home/selqie/buoyancy/install/buoy_control/lib/buoy_control
+[2.705s] Installing timer_control_node script to /home/selqie/buoyancy/install/buoy_control/lib/buoy_control
+[2.706s] writing list of installed files to '/home/selqie/buoyancy/build/buoy_control/install.log'
+[2.867s] Invoked command in '/home/selqie/buoyancy/buoy_control' returned '0': CMAKE_PREFIX_PATH=/home/selqie/buoyancy/install/motor_interfaces:/home/selqie/buoyancy/install/bno08x_driver:/home/selqie/buoyancy/install/sensing_bringup PYTHONPATH=/home/selqie/buoyancy/build/buoy_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:/home/selqie/buoyancy/install/water_sensors/lib/python3.12/site-packages:/home/selqie/buoyancy/install/ms5837_bar_ros/lib/python3.12/site-packages:/home/selqie/buoyancy/install/led/lib/python3.12/site-packages:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/buoy_control build --build-base /home/selqie/buoyancy/build/buoy_control/build install --record /home/selqie/buoyancy/build/buoy_control/install.log --single-version-externally-managed install_data

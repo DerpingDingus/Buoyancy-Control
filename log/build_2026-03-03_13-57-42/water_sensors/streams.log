@@ -1,0 +1,43 @@
+[6.828s] Invoking command in '/home/selqie/buoyancy/water_sensors': PYTHONPATH=/home/selqie/buoyancy/build/water_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/water_sensors/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/water_sensors build --build-base /home/selqie/buoyancy/build/water_sensors/build install --record /home/selqie/buoyancy/build/water_sensors/install.log --single-version-externally-managed install_data
+[7.551s] running egg_info
+[7.551s] creating ../build/water_sensors/water_sensors.egg-info
+[7.601s] writing ../build/water_sensors/water_sensors.egg-info/PKG-INFO
+[7.603s] writing dependency_links to ../build/water_sensors/water_sensors.egg-info/dependency_links.txt
+[7.603s] writing entry points to ../build/water_sensors/water_sensors.egg-info/entry_points.txt
+[7.606s] writing requirements to ../build/water_sensors/water_sensors.egg-info/requires.txt
+[7.606s] writing top-level names to ../build/water_sensors/water_sensors.egg-info/top_level.txt
+[7.607s] writing manifest file '../build/water_sensors/water_sensors.egg-info/SOURCES.txt'
+[7.700s] reading manifest file '../build/water_sensors/water_sensors.egg-info/SOURCES.txt'
+[7.705s] writing manifest file '../build/water_sensors/water_sensors.egg-info/SOURCES.txt'
+[7.705s] running build
+[7.706s] running build_py
+[7.706s] creating /home/selqie/buoyancy/build/water_sensors/build
+[7.706s] creating /home/selqie/buoyancy/build/water_sensors/build/lib
+[7.706s] creating /home/selqie/buoyancy/build/water_sensors/build/lib/water_sensors
+[7.706s] copying water_sensors/leak_sensor_node.py -> /home/selqie/buoyancy/build/water_sensors/build/lib/water_sensors
+[7.710s] copying water_sensors/humidity_sensor_node.py -> /home/selqie/buoyancy/build/water_sensors/build/lib/water_sensors
+[7.710s] copying water_sensors/__init__.py -> /home/selqie/buoyancy/build/water_sensors/build/lib/water_sensors
+[7.712s] running install
+[7.759s] running install_lib
+[7.857s] creating /home/selqie/buoyancy/install/water_sensors/lib/python3.12/site-packages/water_sensors
+[7.858s] copying /home/selqie/buoyancy/build/water_sensors/build/lib/water_sensors/leak_sensor_node.py -> /home/selqie/buoyancy/install/water_sensors/lib/python3.12/site-packages/water_sensors
+[7.859s] copying /home/selqie/buoyancy/build/water_sensors/build/lib/water_sensors/humidity_sensor_node.py -> /home/selqie/buoyancy/install/water_sensors/lib/python3.12/site-packages/water_sensors
+[7.860s] copying /home/selqie/buoyancy/build/water_sensors/build/lib/water_sensors/__init__.py -> /home/selqie/buoyancy/install/water_sensors/lib/python3.12/site-packages/water_sensors
+[7.863s] byte-compiling /home/selqie/buoyancy/install/water_sensors/lib/python3.12/site-packages/water_sensors/leak_sensor_node.py to leak_sensor_node.cpython-312.pyc
+[7.868s] byte-compiling /home/selqie/buoyancy/install/water_sensors/lib/python3.12/site-packages/water_sensors/humidity_sensor_node.py to humidity_sensor_node.cpython-312.pyc
+[7.869s] byte-compiling /home/selqie/buoyancy/install/water_sensors/lib/python3.12/site-packages/water_sensors/__init__.py to __init__.cpython-312.pyc
+[7.870s] running install_data
+[7.871s] creating /home/selqie/buoyancy/install/water_sensors/share/ament_index
+[7.872s] creating /home/selqie/buoyancy/install/water_sensors/share/ament_index/resource_index
+[7.873s] creating /home/selqie/buoyancy/install/water_sensors/share/ament_index/resource_index/packages
+[7.874s] copying resource/water_sensors -> /home/selqie/buoyancy/install/water_sensors/share/ament_index/resource_index/packages
+[7.879s] copying package.xml -> /home/selqie/buoyancy/install/water_sensors/share/water_sensors
+[7.879s] creating /home/selqie/buoyancy/install/water_sensors/share/water_sensors/launch
+[7.879s] copying launch/leak_sensor.launch.py -> /home/selqie/buoyancy/install/water_sensors/share/water_sensors/launch
+[7.885s] running install_egg_info
+[8.066s] Copying ../build/water_sensors/water_sensors.egg-info to /home/selqie/buoyancy/install/water_sensors/lib/python3.12/site-packages/water_sensors-0.1.0-py3.12.egg-info
+[8.068s] running install_scripts
+[8.689s] Installing humidity_sensor_node script to /home/selqie/buoyancy/install/water_sensors/lib/water_sensors
+[8.692s] Installing leak_sensor_node script to /home/selqie/buoyancy/install/water_sensors/lib/water_sensors
+[8.694s] writing list of installed files to '/home/selqie/buoyancy/build/water_sensors/install.log'
+[8.953s] Invoked command in '/home/selqie/buoyancy/water_sensors' returned '0': PYTHONPATH=/home/selqie/buoyancy/build/water_sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/water_sensors/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/water_sensors build --build-base /home/selqie/buoyancy/build/water_sensors/build install --record /home/selqie/buoyancy/build/water_sensors/install.log --single-version-externally-managed install_data
