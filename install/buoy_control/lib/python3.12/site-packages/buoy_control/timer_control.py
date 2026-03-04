@@ -131,7 +131,7 @@ class TimerControlNode(Node):
         self.pub_cmd.publish(msg)
 
     def countdown(self):
-        if self.counter < 4:
+        if self.counter < 3:
             self.counter += 1
         else:
             self.get_logger().info('Finished 2 runs. Stopping node...')
