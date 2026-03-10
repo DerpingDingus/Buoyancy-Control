@@ -14,6 +14,7 @@ buoy_control/button_control.py
 buoy_control/timer_control.py
 launch/button_control.launch.py
 launch/timer_control.launch.py
+launch/timer_control_single.launch.py
 resource/buoy_control
 test/test_copyright.py
 test/test_flake8.py

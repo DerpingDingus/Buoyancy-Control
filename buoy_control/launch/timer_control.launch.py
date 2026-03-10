@@ -97,7 +97,7 @@ def generate_launch_description() -> LaunchDescription:
         output='screen',
         emulate_tty=True,
         parameters=[{
-            'joint_name': LaunchConfiguration('joint_name_2'),
+            'joint_name': LaunchConfiguration('joint_name_1'),
             'can_interface': LaunchConfiguration('can_interface'),
             'can_id': LaunchConfiguration('can_id_1'),
             'motor_type': LaunchConfiguration('motor_type'),
@@ -113,7 +113,7 @@ def generate_launch_description() -> LaunchDescription:
         output='screen',
         emulate_tty=True,
         parameters=[{
-            'joint_name': LaunchConfiguration('joint_name_2'),
+            'joint_name': LaunchConfiguration('joint_name_1'),
             'can_interface': LaunchConfiguration('can_interface'),
             'can_id': LaunchConfiguration('can_id_2'),
             'motor_type': LaunchConfiguration('motor_type'),
@@ -135,18 +135,18 @@ def generate_launch_description() -> LaunchDescription:
         }]
     )
 
-    timer_node_2 = Node(
-        package='buoy_control',
-        executable='timer_control_node',
-        namespace=LaunchConfiguration('joint_name_2'),
-        output='screen',
-        emulate_tty=True,
-        parameters=[{
-            'joint_name': LaunchConfiguration('joint_name_2'),
-            'start_time': LaunchConfiguration('start_time'),
-            'delay_time': LaunchConfiguration('delay_time'),
-        }]
-    )
+    #timer_node_2 = Node(
+    #    package='buoy_control',
+    #    executable='timer_control_node',
+    #    namespace=LaunchConfiguration('joint_name_2'),
+    #    output='screen',
+    #    emulate_tty=True,
+    #    parameters=[{
+    #        'joint_name': LaunchConfiguration('joint_name_2'),
+    #        'start_time': LaunchConfiguration('start_time'),
+    #        'delay_time': LaunchConfiguration('delay_time'),
+    #    }]
+    #)
 
     leak_node = Node(
         package='water_sensors',
@@ -176,6 +176,6 @@ def generate_launch_description() -> LaunchDescription:
         servo_node_1,
         servo_node_2,
         timer_node_1,
-        timer_node_2,
+        #timer_node_2,
         leak_node,
     ])

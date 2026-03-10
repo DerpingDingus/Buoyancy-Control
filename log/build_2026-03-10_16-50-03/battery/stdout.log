@@ -1,0 +1,19 @@
+running egg_info
+writing ../build/battery/battery.egg-info/PKG-INFO
+writing dependency_links to ../build/battery/battery.egg-info/dependency_links.txt
+writing entry points to ../build/battery/battery.egg-info/entry_points.txt
+writing requirements to ../build/battery/battery.egg-info/requires.txt
+writing top-level names to ../build/battery/battery.egg-info/top_level.txt
+reading manifest file '../build/battery/battery.egg-info/SOURCES.txt'
+writing manifest file '../build/battery/battery.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages/battery-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../build/battery/battery.egg-info to /home/selqie/buoyancy/install/battery/lib/python3.12/site-packages/battery-0.0.0-py3.12.egg-info
+running install_scripts
+Installing tinybms_voltage_uart script to /home/selqie/buoyancy/install/battery/lib/battery
+writing list of installed files to '/home/selqie/buoyancy/build/battery/install.log'
