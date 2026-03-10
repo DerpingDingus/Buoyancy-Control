@@ -21,13 +21,13 @@ class TimerControlNode(Node):
         self.declare_parameter('joint_name', 'joint')
         self.declare_parameter('start_time', 30)
         self.declare_parameter('delay_time', 10)
-        self.declare_parameter('led_pin', 26)
+        #self.declare_parameter('led_pin', 26)
 
         # Get parameters
         self.joint_name = self.get_parameter('joint_name').value
         self.start_time = self.get_parameter('start_time').value
         self.delay_time = self.get_parameter('delay_time').value
-        led_pin = self.get_parameter('led_pin').value
+        #led_pin = self.get_parameter('led_pin').value
 
 
 
@@ -35,10 +35,10 @@ class TimerControlNode(Node):
             f"  Timer Control Node for joint '{self.joint_name}'\n"
             f"  Start Delay Time: {self.start_time}\n"
             f"  Switch Delay: {self.delay_time}\n"
-            f"  Led Pin: {led_pin}\n"
+        #    f"  Led Pin: {led_pin}\n"
         )
 
-        self.led = LED(led_pin)
+        #self.led = LED(led_pin)
 
         # Publisher for servo commands
         # Topic matches servo_motor_node: /{joint_name}/servo_cmd
@@ -61,7 +61,7 @@ class TimerControlNode(Node):
         self.sub_state = self.create_subscription(MotorState, f'/{self.joint_name}/motor_state', self.motion_state, 10)
 
         # Setup leak sensor subscription
-        self.leak_status = self.create_subscription(Bool, '/leak_status', self.leak_response, 10)
+        #self.leak_status = self.create_subscription(Bool, '/leak_status', self.leak_response, 10)
         
         #Start Delay
 
@@ -70,17 +70,10 @@ class TimerControlNode(Node):
         # Start Motion
         self.motion_state(MotorState) 
 
-    #def start_delay(self):
-    #    if self.start == True:
-    #        time.sleep(self.start_time)
-    #        self.start = False
-    #    else:
-    #        pass
-
-    def leak_response(self, msg):
-        self.get_logger().info(f'leak status: {msg.data}')
-        if msg.data:
-            self.led.on()
+    #def leak_response(self, msg):
+    #    self.get_logger().info(f'leak status: {msg.data}')
+    #    if msg.data:
+    #        self.led.on()
 
     def buoyancy_down(self):
             self.commanded_pos = 3200.0

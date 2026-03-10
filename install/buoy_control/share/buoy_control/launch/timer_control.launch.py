@@ -10,10 +10,16 @@ from launch_ros.actions import Node
 
 def generate_launch_description() -> LaunchDescription:
     # -- Launch arguments --------------------------------------------------------
-    joint_name = DeclareLaunchArgument(
-        'joint_name',
-        default_value='joint',
-        description='Joint name (used for topic namespaces)'
+    joint_name_1 = DeclareLaunchArgument(
+        'joint_name_1',
+        default_value='joint_1',
+        description='Joint name for motor 1'
+    )
+
+    joint_name_2 = DeclareLaunchArgument(
+        'joint_name_2',
+        default_value='joint_2',
+        description='Joint name for motor 2'
     )
 
     can_interface = DeclareLaunchArgument(
@@ -22,8 +28,14 @@ def generate_launch_description() -> LaunchDescription:
         description='CAN interface name (socketcan)'
     )
 
-    can_id = DeclareLaunchArgument(
-        'can_id',
+    can_id_1 = DeclareLaunchArgument(
+        'can_id_1',
+        default_value='1',
+        description='Motor CAN ID (0-255)'
+    )
+
+    can_id_2 = DeclareLaunchArgument(
+        'can_id_2',
         default_value='2',
         description='Motor CAN ID (0-255)'
     )
@@ -70,65 +82,69 @@ def generate_launch_description() -> LaunchDescription:
         description='Sets pin state'
     )
 
-    leak_led_pin = DeclareLaunchArgument(
-        'leak_led_pin',
-        default_value='26',
-        description='Defines the LED pin'
-    )
-
-    humidity_led_pin = DeclareLaunchArgument(
-        'humidity_led_pin',
-        default_value='16',
-        description='Defines the LED pin'
-    )
-
-    dht_pin = DeclareLaunchArgument(
-        'dht_pin',
-        default_value='6',
-        description='Defines the LED pin'
-    )
-
-    name = DeclareLaunchArgument(
-        'name',
-        default_value='humidity_1',
-        description='Defines the LED pin'
-    )
-
-    humidity_threshold = DeclareLaunchArgument(
-        'humidity_threshold',
-        default_value='60.0',
-        description='Defines the LED pin'
-    )
+    #leak_led_pin = DeclareLaunchArgument(
+    #    'leak_led_pin',
+    #    default_value='26',
+    #    description='Defines the LED pin'
+    #)
 
     # -- Nodes -------------------------------------------------------------------
 
-    servo_node = Node(
+    servo_node_1 = Node(
         package='servo',
         executable='servo_motor_node',
-        namespace=LaunchConfiguration('joint_name'),
+        namespace=LaunchConfiguration('joint_name_1'),
         output='screen',
         emulate_tty=True,
         parameters=[{
-            'joint_name': LaunchConfiguration('joint_name'),
+            'joint_name': LaunchConfiguration('joint_name_2'),
             'can_interface': LaunchConfiguration('can_interface'),
-            'can_id': LaunchConfiguration('can_id'),
+            'can_id': LaunchConfiguration('can_id_1'),
             'motor_type': LaunchConfiguration('motor_type'),
             'control_hz': LaunchConfiguration('control_hz'),
             'auto_start': LaunchConfiguration('auto_start'),
         }]
     )
 
-    timer_node = Node(
-        package='buoy_control',
-        executable='timer_control_node',
-        namespace=LaunchConfiguration('joint_name'),
+    servo_node_2 = Node(
+        package='servo',
+        executable='servo_motor_node',
+        namespace=LaunchConfiguration('joint_name_2'),
         output='screen',
         emulate_tty=True,
         parameters=[{
-            'joint_name': LaunchConfiguration('joint_name'),
+            'joint_name': LaunchConfiguration('joint_name_2'),
+            'can_interface': LaunchConfiguration('can_interface'),
+            'can_id': LaunchConfiguration('can_id_2'),
+            'motor_type': LaunchConfiguration('motor_type'),
+            'control_hz': LaunchConfiguration('control_hz'),
+            'auto_start': LaunchConfiguration('auto_start'),
+        }]
+    )
+
+    timer_node_1 = Node(
+        package='buoy_control',
+        executable='timer_control_node',
+        namespace=LaunchConfiguration('joint_name_1'),
+        output='screen',
+        emulate_tty=True,
+        parameters=[{
+            'joint_name': LaunchConfiguration('joint_name_1'),
             'start_time': LaunchConfiguration('start_time'),
             'delay_time': LaunchConfiguration('delay_time'),
-            'led_pin': LaunchConfiguration('leak_led_pin'),
+        }]
+    )
+
+    timer_node_2 = Node(
+        package='buoy_control',
+        executable='timer_control_node',
+        namespace=LaunchConfiguration('joint_name_2'),
+        output='screen',
+        emulate_tty=True,
+        parameters=[{
+            'joint_name': LaunchConfiguration('joint_name_2'),
+            'start_time': LaunchConfiguration('start_time'),
+            'delay_time': LaunchConfiguration('delay_time'),
         }]
     )
 
@@ -144,37 +160,22 @@ def generate_launch_description() -> LaunchDescription:
         }]
     )
 
-    humidity_node = Node(
-        package='water_sensors',
-        executable='humidity_sensor_node',
-        name="humidity_sensor",
-        output='screen',
-        emulate_tty=True,
-        parameters=[{
-            'led_pin': LaunchConfiguration('humidity_led_pin'),
-            'dht_pin': LaunchConfiguration('dht_pin'),
-            'humidity_threshold': LaunchConfiguration('humidity_threshold'),
-            'name': LaunchConfiguration('name'),
-        }]
-    )
-
     return LaunchDescription([
-        joint_name,
+        joint_name_1,
+        joint_name_2,
         can_interface,
-        can_id,
+        can_id_1,
+        can_id_2,
         motor_type,
         control_hz,
         auto_start,
         start_time,
         delay_time,
         gpio_pin,
-        leak_led_pin,
         pull,
-        humidity_led_pin,
-        name,
-        humidity_threshold,
-        dht_pin,
-        servo_node,
-        timer_node,
+        servo_node_1,
+        servo_node_2,
+        timer_node_1,
+        timer_node_2,
         leak_node,
     ])
