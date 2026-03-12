@@ -76,14 +76,14 @@ class TimerControlNode(Node):
     #        self.led.on()
 
     def buoyancy_down(self):
-            self.commanded_pos = 3200.0
+            self.commanded_pos = 20160
             new_pos = self.commanded_pos
             self.get_logger().info(f"Decreasing Buoyancy")
             self.send_pos(new_pos)
             self.countdown()
 
     def buoyancy_up(self):
-            self.commanded_pos = -3200.0
+            self.commanded_pos = 0
             new_pos = self.commanded_pos
             self.get_logger().info(f"Increasing Buoyancy")
             self.send_pos(new_pos)
@@ -98,14 +98,13 @@ class TimerControlNode(Node):
         if self.state == 'DOWN' and self.stopped == True:
             self.buoyancy_down()
             self.state = 'UP'
-            self.stopped = False
 
         time.sleep(self.delay_time)
         
-        if self.commanded_pos == self.current_pos_deg:
-            self.stopped = True
+    #    if self.commanded_pos == self.current_pos_deg:
+    #        self.stopped = True
 
-        if self.state == 'UP' and self.stopped == True:
+        if self.state == 'UP':
             self.buoyancy_up()
             self.state = 'DOWN'
             self.stopped = False
@@ -120,7 +119,7 @@ class TimerControlNode(Node):
         # Mode 6 = Position/Velocity/Acceleration Control
         # value0 = target position in degrees
         # v1 and v2 are unused in mode 4 but included for consistency
-        msg.data = [6.0, float(pos_deg), 7200.0, 3700.0] 
+        msg.data = [6.0, float(pos_deg), 10800.0, 5400.0] 
         self.pub_cmd.publish(msg)
 
     def countdown(self):

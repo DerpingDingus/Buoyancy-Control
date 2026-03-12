@@ -24,7 +24,7 @@ def generate_launch_description() -> LaunchDescription:
 
     can_id_1 = DeclareLaunchArgument(
         'can_id_1',
-        default_value='1',
+        default_value='2',
         description='Motor CAN ID (0-255)'
     )
 
@@ -48,13 +48,13 @@ def generate_launch_description() -> LaunchDescription:
 
     start_time = DeclareLaunchArgument(
         'start_time',
-        default_value='10',
+        default_value='30',
         description='Defines start delay time'
     )
 
     delay_time = DeclareLaunchArgument(
         'delay_time',
-        default_value='5',
+        default_value='60',
         description='Defines transition delay time'
     )
 

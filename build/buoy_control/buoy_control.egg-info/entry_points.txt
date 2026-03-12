@@ -1,3 +1,5 @@
 [console_scripts]
+backup_motor_node = buoy_control.backup_motor:main
 button_control_node = buoy_control.button_control:main
 timer_control_node = buoy_control.timer_control:main
+zero_motor_node = buoy_control.zero_motor:main

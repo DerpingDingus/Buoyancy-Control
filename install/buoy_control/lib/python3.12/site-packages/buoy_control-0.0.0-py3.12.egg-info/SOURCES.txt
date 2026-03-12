@@ -10,11 +10,15 @@ setup.py
 ../build/buoy_control/buoy_control.egg-info/top_level.txt
 ../build/buoy_control/buoy_control.egg-info/zip-safe
 buoy_control/__init__.py
+buoy_control/backup_motor.py
 buoy_control/button_control.py
 buoy_control/timer_control.py
+buoy_control/zero_motor.py
+launch/backup_motor.launch.py
 launch/button_control.launch.py
 launch/timer_control.launch.py
 launch/timer_control_single.launch.py
+launch/zero_motor.launch.py
 resource/buoy_control
 test/test_copyright.py
 test/test_flake8.py

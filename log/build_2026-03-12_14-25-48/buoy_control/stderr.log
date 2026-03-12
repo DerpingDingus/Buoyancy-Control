@@ -1,0 +1,5 @@
+  File "/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control/timer_control.py", line 98
+    if self.state == 'DOWN' and self.stopped = True:
+                                             ^
+SyntaxError: invalid syntax
+

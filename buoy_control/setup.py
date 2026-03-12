@@ -30,7 +30,9 @@ setup(
     entry_points={
         'console_scripts': [
             'button_control_node = buoy_control.button_control:main',
-            'timer_control_node = buoy_control.timer_control:main'
+            'timer_control_node = buoy_control.timer_control:main',
+            'backup_motor_node = buoy_control.backup_motor:main',
+            'zero_motor_node = buoy_control.zero_motor:main'
         ],
     },
 )
