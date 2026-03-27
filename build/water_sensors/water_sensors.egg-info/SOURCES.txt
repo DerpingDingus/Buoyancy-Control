@@ -11,5 +11,5 @@ setup.py
 launch/leak_sensor.launch.py
 resource/water_sensors
 water_sensors/__init__.py
-water_sensors/humidity_sensor_node.py
+water_sensors/curtor_sensor_node.py
 water_sensors/leak_sensor_node.py

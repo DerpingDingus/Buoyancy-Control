@@ -1,0 +1,43 @@
+[2.260s] Invoking command in '/home/selqie/buoyancy/sensors': PYTHONPATH=/home/selqie/buoyancy/build/sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/sensors build --build-base /home/selqie/buoyancy/build/sensors/build install --record /home/selqie/buoyancy/build/sensors/install.log --single-version-externally-managed install_data
+[2.843s] running egg_info
+[2.844s] creating ../build/sensors/sensors.egg-info
+[2.869s] writing ../build/sensors/sensors.egg-info/PKG-INFO
+[2.869s] writing dependency_links to ../build/sensors/sensors.egg-info/dependency_links.txt
+[2.869s] writing entry points to ../build/sensors/sensors.egg-info/entry_points.txt
+[2.869s] writing requirements to ../build/sensors/sensors.egg-info/requires.txt
+[2.870s] writing top-level names to ../build/sensors/sensors.egg-info/top_level.txt
+[2.870s] writing manifest file '../build/sensors/sensors.egg-info/SOURCES.txt'
+[2.932s] reading manifest file '../build/sensors/sensors.egg-info/SOURCES.txt'
+[2.932s] writing manifest file '../build/sensors/sensors.egg-info/SOURCES.txt'
+[2.933s] running build
+[2.933s] running build_py
+[2.934s] creating /home/selqie/buoyancy/build/sensors/build
+[2.934s] creating /home/selqie/buoyancy/build/sensors/build/lib
+[2.935s] creating /home/selqie/buoyancy/build/sensors/build/lib/sensors
+[2.936s] copying sensors/leak_sensor_node.py -> /home/selqie/buoyancy/build/sensors/build/lib/sensors
+[2.936s] copying sensors/curtor_sensor_node.py -> /home/selqie/buoyancy/build/sensors/build/lib/sensors
+[2.936s] copying sensors/__init__.py -> /home/selqie/buoyancy/build/sensors/build/lib/sensors
+[2.939s] running install
+[2.960s] running install_lib
+[3.013s] creating /home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages/sensors
+[3.014s] copying /home/selqie/buoyancy/build/sensors/build/lib/sensors/leak_sensor_node.py -> /home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages/sensors
+[3.015s] copying /home/selqie/buoyancy/build/sensors/build/lib/sensors/curtor_sensor_node.py -> /home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages/sensors
+[3.017s] copying /home/selqie/buoyancy/build/sensors/build/lib/sensors/__init__.py -> /home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages/sensors
+[3.017s] byte-compiling /home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages/sensors/leak_sensor_node.py to leak_sensor_node.cpython-312.pyc
+[3.023s] byte-compiling /home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages/sensors/curtor_sensor_node.py to curtor_sensor_node.cpython-312.pyc
+[3.023s] byte-compiling /home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages/sensors/__init__.py to __init__.cpython-312.pyc
+[3.024s] running install_data
+[3.025s] creating /home/selqie/buoyancy/install/sensors/share/ament_index
+[3.025s] creating /home/selqie/buoyancy/install/sensors/share/ament_index/resource_index
+[3.026s] creating /home/selqie/buoyancy/install/sensors/share/ament_index/resource_index/packages
+[3.027s] copying resource/sensors -> /home/selqie/buoyancy/install/sensors/share/ament_index/resource_index/packages
+[3.027s] copying package.xml -> /home/selqie/buoyancy/install/sensors/share/sensors
+[3.030s] creating /home/selqie/buoyancy/install/sensors/share/sensors/launch
+[3.030s] copying launch/leak_sensor.launch.py -> /home/selqie/buoyancy/install/sensors/share/sensors/launch
+[3.031s] running install_egg_info
+[3.062s] Copying ../build/sensors/sensors.egg-info to /home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages/sensors-0.1.0-py3.12.egg-info
+[3.066s] running install_scripts
+[3.310s] Installing curtor_sensor_node script to /home/selqie/buoyancy/install/sensors/lib/sensors
+[3.311s] Installing leak_sensor_node script to /home/selqie/buoyancy/install/sensors/lib/sensors
+[3.312s] writing list of installed files to '/home/selqie/buoyancy/build/sensors/install.log'
+[3.555s] Invoked command in '/home/selqie/buoyancy/sensors' returned '0': PYTHONPATH=/home/selqie/buoyancy/build/sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/sensors build --build-base /home/selqie/buoyancy/build/sensors/build install --record /home/selqie/buoyancy/build/sensors/install.log --single-version-externally-managed install_data

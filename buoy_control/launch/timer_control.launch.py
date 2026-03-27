@@ -11,15 +11,21 @@ from launch_ros.actions import Node
 def generate_launch_description() -> LaunchDescription:
     # -- Launch arguments --------------------------------------------------------
     joint_name_1 = DeclareLaunchArgument(
-        'joint_name_1',
-        default_value='joint_1',
-        description='Joint name for motor 1'
+        'piston_1',
+        default_value='Piston_1',
+        description='Joint name for piston 1'
     )
 
     joint_name_2 = DeclareLaunchArgument(
-        'joint_name_2',
-        default_value='joint_2',
-        description='Joint name for motor 2'
+        'piston_2',
+        default_value='Piston_2',
+        description='Joint name for piston 2'
+    )
+
+    joint_name_3 = DeclareLaunchArgument(
+        'electric_tube',
+        default_value='Electric_tube',
+        description='Joint name for electronics tube'
     )
 
     can_interface = DeclareLaunchArgument(
@@ -60,19 +66,31 @@ def generate_launch_description() -> LaunchDescription:
 
     start_time = DeclareLaunchArgument(
         'start_time',
-        default_value='10',
+        default_value='30',
         description='Defines start delay time'
     )
 
     delay_time = DeclareLaunchArgument(
         'delay_time',
-        default_value='5',
+        default_value='45',
         description='Defines transition delay time'
     )
 
-    gpio_pin = DeclareLaunchArgument(
-        'gpio_pin',
-        default_value='23',
+    gpio_pin_1 = DeclareLaunchArgument(
+        'gpio_pin_1',
+        default_value='17',
+        description='Defines the leak sensor pin'
+    )
+
+    gpio_pin_2 = DeclareLaunchArgument(
+        'gpio_pin_2',
+        default_value='27',
+        description='Defines the leak sensor pin'
+    )
+
+    gpio_pin_3 = DeclareLaunchArgument(
+        'gpio_pin_3',
+        default_value='22',
         description='Defines the leak sensor pin'
     )
 
@@ -93,11 +111,11 @@ def generate_launch_description() -> LaunchDescription:
     servo_node_1 = Node(
         package='servo',
         executable='servo_motor_node',
-        namespace=LaunchConfiguration('joint_name_1'),
+        namespace=LaunchConfiguration('piston_1'),
         output='screen',
         emulate_tty=True,
         parameters=[{
-            'joint_name': LaunchConfiguration('joint_name_1'),
+            'joint_name': LaunchConfiguration('piston_1'),
             'can_interface': LaunchConfiguration('can_interface'),
             'can_id': LaunchConfiguration('can_id_1'),
             'motor_type': LaunchConfiguration('motor_type'),
@@ -109,11 +127,11 @@ def generate_launch_description() -> LaunchDescription:
     servo_node_2 = Node(
         package='servo',
         executable='servo_motor_node',
-        namespace=LaunchConfiguration('joint_name_2'),
+        namespace=LaunchConfiguration('piston_2'),
         output='screen',
         emulate_tty=True,
         parameters=[{
-            'joint_name': LaunchConfiguration('joint_name_1'),
+            'joint_name': LaunchConfiguration('piston_1'),
             'can_interface': LaunchConfiguration('can_interface'),
             'can_id': LaunchConfiguration('can_id_2'),
             'motor_type': LaunchConfiguration('motor_type'),
@@ -125,44 +143,60 @@ def generate_launch_description() -> LaunchDescription:
     timer_node_1 = Node(
         package='buoy_control',
         executable='timer_control_node',
-        namespace=LaunchConfiguration('joint_name_1'),
+        namespace=LaunchConfiguration('piston_1'),
         output='screen',
         emulate_tty=True,
         parameters=[{
-            'joint_name': LaunchConfiguration('joint_name_1'),
+            'joint_name': LaunchConfiguration('piston_1'),
             'start_time': LaunchConfiguration('start_time'),
             'delay_time': LaunchConfiguration('delay_time'),
         }]
     )
 
-    #timer_node_2 = Node(
-    #    package='buoy_control',
-    #    executable='timer_control_node',
-    #    namespace=LaunchConfiguration('joint_name_2'),
-    #    output='screen',
-    #    emulate_tty=True,
-    #    parameters=[{
-    #        'joint_name': LaunchConfiguration('joint_name_2'),
-    #        'start_time': LaunchConfiguration('start_time'),
-    #        'delay_time': LaunchConfiguration('delay_time'),
-    #    }]
-    #)
-
-    leak_node = Node(
-        package='water_sensors',
+    leak_node_1 = Node(
+        package='sensors',
         executable='leak_sensor_node',
-        name="leak_sensor",
+        namespace=LaunchConfiguration('piston_1'),
         output='screen',
         emulate_tty=True,
         parameters=[{
-            'gpio_pin': LaunchConfiguration('gpio_pin'),
+            'joint_name':LaunchConfiguration('piston_1'),
+            'gpio_pin': LaunchConfiguration('gpio_pin_1'),
+            'pull': LaunchConfiguration('pull'),
+        }]
+    )
+    
+    leak_node_2 = Node(
+        package='sensors',
+        executable='leak_sensor_node',
+        namespace=LaunchConfiguration('piston_2'),
+        output='screen',
+        emulate_tty=True,
+        parameters=[{
+            'joint_name':LaunchConfiguration('piston_2'),
+            'gpio_pin': LaunchConfiguration('gpio_pin_2'),
+            'pull': LaunchConfiguration('pull'),
+        }]
+    )
+    
+    leak_node_3 = Node(
+        package='sensors',
+        executable='leak_sensor_node',
+        namespace=LaunchConfiguration('electric_tube'),
+        output='screen',
+        emulate_tty=True,
+        parameters=[{
+            'joint_name':LaunchConfiguration('electric_tube'),
+            'gpio_pin': LaunchConfiguration('gpio_pin_3'),
             'pull': LaunchConfiguration('pull'),
         }]
     )
 
+
     return LaunchDescription([
         joint_name_1,
         joint_name_2,
+        joint_name_3,
         can_interface,
         can_id_1,
         can_id_2,
@@ -171,11 +205,14 @@ def generate_launch_description() -> LaunchDescription:
         auto_start,
         start_time,
         delay_time,
-        gpio_pin,
+        gpio_pin_1,
+        gpio_pin_2,
+        gpio_pin_3,
         pull,
         servo_node_1,
         servo_node_2,
         timer_node_1,
-        #timer_node_2,
-        leak_node,
+        leak_node_1,
+        leak_node_2,
+        leak_node_3,
     ])

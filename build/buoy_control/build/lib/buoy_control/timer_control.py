@@ -20,25 +20,18 @@ class TimerControlNode(Node):
         # Declare parameters
         self.declare_parameter('joint_name', 'joint')
         self.declare_parameter('start_time', 30)
-        self.declare_parameter('delay_time', 10)
-        #self.declare_parameter('led_pin', 26)
+        self.declare_parameter('delay_time', 45)
 
         # Get parameters
         self.joint_name = self.get_parameter('joint_name').value
         self.start_time = self.get_parameter('start_time').value
         self.delay_time = self.get_parameter('delay_time').value
-        #led_pin = self.get_parameter('led_pin').value
-
-
 
         self.get_logger().info(
             f"  Timer Control Node for joint '{self.joint_name}'\n"
             f"  Start Delay Time: {self.start_time}\n"
             f"  Switch Delay: {self.delay_time}\n"
-        #    f"  Led Pin: {led_pin}\n"
         )
-
-        #self.led = LED(led_pin)
 
         # Publisher for servo commands
         # Topic matches servo_motor_node: /{joint_name}/servo_cmd
@@ -60,20 +53,12 @@ class TimerControlNode(Node):
         # Subscriber for motor state to know where we are
         self.sub_state = self.create_subscription(MotorState, f'/{self.joint_name}/motor_state', self.motion_state, 10)
 
-        # Setup leak sensor subscription
-        #self.leak_status = self.create_subscription(Bool, '/leak_status', self.leak_response, 10)
-        
         #Start Delay
 
         time.sleep(self.start_time)
 
         # Start Motion
         self.motion_state(MotorState) 
-
-    #def leak_response(self, msg):
-    #    self.get_logger().info(f'leak status: {msg.data}')
-    #    if msg.data:
-    #        self.led.on()
 
     def buoyancy_down(self):
             self.commanded_pos = 20160
@@ -101,17 +86,10 @@ class TimerControlNode(Node):
 
         time.sleep(self.delay_time)
         
-    #    if self.commanded_pos == self.current_pos_deg:
-    #        self.stopped = True
-
         if self.state == 'UP':
             self.buoyancy_up()
             self.state = 'DOWN'
             self.stopped = False
-
-    #def on_state(self, msg: MotorState):
-    #    self.get_logger().info(f"Torque output is: {msg.torque: .3f}Nm", throttle_duration_sec = 2.0)
-    #    self.get_logger().info(f"Current drawn is: {msg.current: .2f}A", throttle_duration_sec = 2.0)
 
     def send_pos(self, pos_deg: float):
         msg = Float64MultiArray()

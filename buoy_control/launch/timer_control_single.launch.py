@@ -60,7 +60,7 @@ def generate_launch_description() -> LaunchDescription:
 
     gpio_pin = DeclareLaunchArgument(
         'gpio_pin',
-        default_value='23',
+        default_value='22',
         description='Defines the leak sensor pin'
     )
 
@@ -108,12 +108,13 @@ def generate_launch_description() -> LaunchDescription:
     )
 
     leak_node = Node(
-        package='water_sensors',
+        package='sensors',
         executable='leak_sensor_node',
-        name="leak_sensor",
+        namespace=LaunchConfiguration('joint_name_1'),
         output='screen',
         emulate_tty=True,
         parameters=[{
+            'joint_name':LaunchConfiguration('joint_name_1'),
             'gpio_pin': LaunchConfiguration('gpio_pin'),
             'pull': LaunchConfiguration('pull'),
         }]

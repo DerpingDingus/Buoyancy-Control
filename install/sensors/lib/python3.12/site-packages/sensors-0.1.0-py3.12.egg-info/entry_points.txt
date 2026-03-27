@@ -1,0 +1,3 @@
+[console_scripts]
+curtor_sensor_node = sensors.curtor_sensor_node:main
+leak_sensor_node = sensors.leak_sensor_node:main
