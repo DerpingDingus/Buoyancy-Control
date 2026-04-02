@@ -3,8 +3,8 @@
 <package format="3">
   <name>led</name>
   <version>0.0.4</version>
-  <description>SPI-driven WS2812B (NeoPixel) driver and tools for ROS 2</description>
-  <maintainer email="rykaczmarczyk@gmail.com">ciscor</maintainer>
+  <description>Status LED Node</description>
+  <maintainer email="vgvuong380@gmail.com">DerpingDingus</maintainer>
   <license>MIT</license>
 
   <exec_depend>rclpy</exec_depend>

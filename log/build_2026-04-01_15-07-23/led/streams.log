@@ -1,0 +1,19 @@
+[4.230s] Invoking command in '/home/selqie/buoyancy/led': PYTHONPATH=/home/selqie/buoyancy/build/led/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/led/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/led build --build-base /home/selqie/buoyancy/build/led/build install --record /home/selqie/buoyancy/build/led/install.log --single-version-externally-managed install_data
+[4.992s] running egg_info
+[5.043s] writing ../build/led/led.egg-info/PKG-INFO
+[5.044s] writing dependency_links to ../build/led/led.egg-info/dependency_links.txt
+[5.045s] writing entry points to ../build/led/led.egg-info/entry_points.txt
+[5.046s] writing requirements to ../build/led/led.egg-info/requires.txt
+[5.047s] writing top-level names to ../build/led/led.egg-info/top_level.txt
+[5.104s] reading manifest file '../build/led/led.egg-info/SOURCES.txt'
+[5.107s] writing manifest file '../build/led/led.egg-info/SOURCES.txt'
+[5.108s] running build
+[5.108s] running install
+[5.129s] running install_data
+[5.132s] running install_egg_info
+[5.260s] removing '/home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led-0.0.4-py3.12.egg-info' (and everything under it)
+[5.262s] Copying ../build/led/led.egg-info to /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led-0.0.4-py3.12.egg-info
+[5.266s] running install_scripts
+[5.746s] Installing led_node script to /home/selqie/buoyancy/install/led/lib/led
+[5.747s] writing list of installed files to '/home/selqie/buoyancy/build/led/install.log'
+[5.904s] Invoked command in '/home/selqie/buoyancy/led' returned '0': PYTHONPATH=/home/selqie/buoyancy/build/led/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/led/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/led build --build-base /home/selqie/buoyancy/build/led/build install --record /home/selqie/buoyancy/build/led/install.log --single-version-externally-managed install_data

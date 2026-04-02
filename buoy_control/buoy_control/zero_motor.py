@@ -8,7 +8,7 @@ from rclpy.node import Node
 
 import time
 
-from std_msgs.msg import Float64MultiArray, Bool
+from std_msgs.msg import Float64MultiArray, Bool, String
 from motor_interfaces.msg import MotorState
 
 class ZeroMotorNode(Node):
@@ -17,53 +17,35 @@ class ZeroMotorNode(Node):
 
         # Declare parameters
         self.declare_parameter('joint_name', 'joint')
-        self.declare_parameter('start_time', 10)
+        self.declare_parameter('start_time', 5)
 
         # Get parameters
         self.joint_name = self.get_parameter('joint_name').value
         self.start_time = self.get_parameter('start_time').value
 
-
-        self.get_logger().info(
-            f"  Start Delay Time: {self.start_time}\n"
-        )
-
         # Publisher for servo commands
         # Topic matches servo_motor_node: /{joint_name}/servo_cmd
-        self.pub_cmd = self.create_publisher(
-            Float64MultiArray, f'/{self.joint_name}/servo_cmd', 10
+        self.special_cmd = self.create_publisher(
+            String, f'/{self.joint_name}/special_cmd', 10
         )
-
-        self.commanded_pos = 0.0
 
         # Iteration Tracking
         self.shutdown_requested = False
 
-        #Start Delay
-
+        # Startup Delay
         time.sleep(self.start_time)
 
-        # Start Motion
-        self.buoyancy_down()
+        # Send message
+        self.send_special("zero")
 
-    def buoyancy_down(self):
-        self.commanded_pos = 0
-        new_pos = self.commanded_pos
-        self.get_logger().info(f"Pulling Motor In")
-        self.send_pos(new_pos)
-        self.countdown()
-
-    def send_pos(self, pos_deg: float):
-        msg = Float64MultiArray()
-
-        # Mode 6 = Position/Velocity/Acceleration Control
-        # value0 = target position in degrees
-        # v1 and v2 are unused in mode 4 but included for consistency
-        msg.data = [6.0, float(pos_deg), 10800.0, 5400.0]
-        self.pub_cmd.publish(msg)
+    def send_special(self,command:str) -> None:
+        msg = String()
+        msg.data = command
+        self.special_cmd.publish(msg)
+        print("Published message")
 
     def countdown(self):
-            self.get_logger().info('Finished Back Up Calibration')
+            self.get_logger().info('Motor Origin Set')
             self.shutdown_requested = True
 
 def main(args=None):

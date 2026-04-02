@@ -1,0 +1,22 @@
+[2.764s] Invoking command in '/home/selqie/buoyancy/sensors': PYTHONPATH=/home/selqie/buoyancy/build/sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/sensors build --build-base /home/selqie/buoyancy/build/sensors/build install --record /home/selqie/buoyancy/build/sensors/install.log --single-version-externally-managed install_data
+[3.569s] running egg_info
+[3.622s] writing ../build/sensors/sensors.egg-info/PKG-INFO
+[3.622s] writing dependency_links to ../build/sensors/sensors.egg-info/dependency_links.txt
+[3.624s] writing entry points to ../build/sensors/sensors.egg-info/entry_points.txt
+[3.625s] writing requirements to ../build/sensors/sensors.egg-info/requires.txt
+[3.626s] writing top-level names to ../build/sensors/sensors.egg-info/top_level.txt
+[3.738s] reading manifest file '../build/sensors/sensors.egg-info/SOURCES.txt'
+[3.742s] writing manifest file '../build/sensors/sensors.egg-info/SOURCES.txt'
+[3.742s] running build
+[3.743s] running build_py
+[3.747s] running install
+[3.768s] running install_lib
+[3.825s] running install_data
+[3.826s] running install_egg_info
+[3.882s] removing '/home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages/sensors-0.1.0-py3.12.egg-info' (and everything under it)
+[3.883s] Copying ../build/sensors/sensors.egg-info to /home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages/sensors-0.1.0-py3.12.egg-info
+[3.889s] running install_scripts
+[4.276s] Installing curtor_sensor_node script to /home/selqie/buoyancy/install/sensors/lib/sensors
+[4.278s] Installing leak_sensor_node script to /home/selqie/buoyancy/install/sensors/lib/sensors
+[4.281s] writing list of installed files to '/home/selqie/buoyancy/build/sensors/install.log'
+[4.439s] Invoked command in '/home/selqie/buoyancy/sensors' returned '0': PYTHONPATH=/home/selqie/buoyancy/build/sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/sensors build --build-base /home/selqie/buoyancy/build/sensors/build install --record /home/selqie/buoyancy/build/sensors/install.log --single-version-externally-managed install_data

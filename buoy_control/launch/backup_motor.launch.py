@@ -48,7 +48,7 @@ def generate_launch_description() -> LaunchDescription:
 
     start_time = DeclareLaunchArgument(
         'start_time',
-        default_value='10',
+        default_value='5',
         description='Defines start delay time'
     )
 

@@ -66,13 +66,13 @@ def generate_launch_description() -> LaunchDescription:
 
     start_time = DeclareLaunchArgument(
         'start_time',
-        default_value='30',
+        default_value='20',
         description='Defines start delay time'
     )
 
     delay_time = DeclareLaunchArgument(
         'delay_time',
-        default_value='45',
+        default_value='50',
         description='Defines transition delay time'
     )
 
@@ -161,7 +161,7 @@ def generate_launch_description() -> LaunchDescription:
         emulate_tty=True,
         parameters=[{
             'joint_name':LaunchConfiguration('piston_1'),
-            'gpio_pin': LaunchConfiguration('gpio_pin_1'),
+            'gpio_pin': LaunchConfiguration('gpio_pin_3'),
             'pull': LaunchConfiguration('pull'),
         }]
     )
@@ -187,7 +187,7 @@ def generate_launch_description() -> LaunchDescription:
         emulate_tty=True,
         parameters=[{
             'joint_name':LaunchConfiguration('electric_tube'),
-            'gpio_pin': LaunchConfiguration('gpio_pin_3'),
+            'gpio_pin': LaunchConfiguration('gpio_pin_1'),
             'pull': LaunchConfiguration('pull'),
         }]
     )

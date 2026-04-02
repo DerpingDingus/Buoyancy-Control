@@ -1,0 +1,28 @@
+[2.927s] Invoking command in '/home/selqie/buoyancy/buoy_control': AMENT_PREFIX_PATH=/home/selqie/buoyancy/install/motor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/selqie/buoyancy/install/motor_interfaces LD_LIBRARY_PATH=/home/selqie/buoyancy/install/motor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/selqie/buoyancy/build/buoy_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/buoy_control build --build-base /home/selqie/buoyancy/build/buoy_control/build install --record /home/selqie/buoyancy/build/buoy_control/install.log --single-version-externally-managed install_data
+[3.415s] running egg_info
+[3.439s] writing ../build/buoy_control/buoy_control.egg-info/PKG-INFO
+[3.443s] writing dependency_links to ../build/buoy_control/buoy_control.egg-info/dependency_links.txt
+[3.445s] writing entry points to ../build/buoy_control/buoy_control.egg-info/entry_points.txt
+[3.446s] writing requirements to ../build/buoy_control/buoy_control.egg-info/requires.txt
+[3.447s] writing top-level names to ../build/buoy_control/buoy_control.egg-info/top_level.txt
+[3.497s] reading manifest file '../build/buoy_control/buoy_control.egg-info/SOURCES.txt'
+[3.498s] adding license file 'LICENSE'
+[3.499s] writing manifest file '../build/buoy_control/buoy_control.egg-info/SOURCES.txt'
+[3.499s] running build
+[3.499s] running build_py
+[3.502s] copying buoy_control/zero_motor.py -> /home/selqie/buoyancy/build/buoy_control/build/lib/buoy_control
+[3.504s] running install
+[3.520s] running install_lib
+[3.574s] copying /home/selqie/buoyancy/build/buoy_control/build/lib/buoy_control/zero_motor.py -> /home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control
+[3.580s] byte-compiling /home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control/zero_motor.py to zero_motor.cpython-312.pyc
+[3.582s] running install_data
+[3.582s] running install_egg_info
+[3.627s] removing '/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control-0.0.0-py3.12.egg-info' (and everything under it)
+[3.627s] Copying ../build/buoy_control/buoy_control.egg-info to /home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control-0.0.0-py3.12.egg-info
+[3.630s] running install_scripts
+[3.845s] Installing backup_motor_node script to /home/selqie/buoyancy/install/buoy_control/lib/buoy_control
+[3.845s] Installing button_control_node script to /home/selqie/buoyancy/install/buoy_control/lib/buoy_control
+[3.847s] Installing timer_control_node script to /home/selqie/buoyancy/install/buoy_control/lib/buoy_control
+[3.848s] Installing zero_motor_node script to /home/selqie/buoyancy/install/buoy_control/lib/buoy_control
+[3.849s] writing list of installed files to '/home/selqie/buoyancy/build/buoy_control/install.log'
+[3.941s] Invoked command in '/home/selqie/buoyancy/buoy_control' returned '0': AMENT_PREFIX_PATH=/home/selqie/buoyancy/install/motor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/selqie/buoyancy/install/motor_interfaces LD_LIBRARY_PATH=/home/selqie/buoyancy/install/motor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/selqie/buoyancy/build/buoy_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/buoy_control build --build-base /home/selqie/buoyancy/build/buoy_control/build install --record /home/selqie/buoyancy/build/buoy_control/install.log --single-version-externally-managed install_data

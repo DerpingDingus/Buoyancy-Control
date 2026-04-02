@@ -19,7 +19,7 @@ class TimerControlNode(Node):
 
         # Declare parameters
         self.declare_parameter('joint_name', 'joint')
-        self.declare_parameter('start_time', 30)
+        self.declare_parameter('start_time', 10)
         self.declare_parameter('delay_time', 45)
 
         # Get parameters
@@ -80,13 +80,17 @@ class TimerControlNode(Node):
         if self.commanded_pos == self.current_pos_deg:
             self.stopped = True
 
+        if self.start == True:
+            self.start = False
+        elif self.start == False and self.stopped == True and self.state == 'DOWN':
+            time.sleep(5)
+
         if self.state == 'DOWN' and self.stopped == True:
             self.buoyancy_down()
             self.state = 'UP'
-
-        time.sleep(self.delay_time)
         
         if self.state == 'UP':
+            time.sleep(self.delay_time)
             self.buoyancy_up()
             self.state = 'DOWN'
             self.stopped = False

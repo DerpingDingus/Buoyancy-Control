@@ -1,0 +1,21 @@
+[2.577s] Invoking command in '/home/selqie/buoyancy/servo': AMENT_PREFIX_PATH=/home/selqie/buoyancy/install/motor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/selqie/buoyancy/install/motor_interfaces LD_LIBRARY_PATH=/home/selqie/buoyancy/install/motor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/selqie/buoyancy/build/servo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/servo build --build-base /home/selqie/buoyancy/build/servo/build install --record /home/selqie/buoyancy/build/servo/install.log --single-version-externally-managed install_data
+[3.112s] running egg_info
+[3.162s] writing ../build/servo/servo.egg-info/PKG-INFO
+[3.163s] writing dependency_links to ../build/servo/servo.egg-info/dependency_links.txt
+[3.165s] writing entry points to ../build/servo/servo.egg-info/entry_points.txt
+[3.166s] writing requirements to ../build/servo/servo.egg-info/requires.txt
+[3.167s] writing top-level names to ../build/servo/servo.egg-info/top_level.txt
+[3.230s] reading manifest file '../build/servo/servo.egg-info/SOURCES.txt'
+[3.231s] writing manifest file '../build/servo/servo.egg-info/SOURCES.txt'
+[3.231s] running build
+[3.231s] running build_py
+[3.234s] running install
+[3.243s] running install_lib
+[3.266s] running install_data
+[3.267s] running install_egg_info
+[3.291s] removing '/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages/servo-0.1.0-py3.12.egg-info' (and everything under it)
+[3.292s] Copying ../build/servo/servo.egg-info to /home/selqie/buoyancy/install/servo/lib/python3.12/site-packages/servo-0.1.0-py3.12.egg-info
+[3.293s] running install_scripts
+[3.523s] Installing servo_motor_node script to /home/selqie/buoyancy/install/servo/lib/servo
+[3.524s] writing list of installed files to '/home/selqie/buoyancy/build/servo/install.log'
+[3.643s] Invoked command in '/home/selqie/buoyancy/servo' returned '0': AMENT_PREFIX_PATH=/home/selqie/buoyancy/install/motor_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/selqie/buoyancy/install/motor_interfaces LD_LIBRARY_PATH=/home/selqie/buoyancy/install/motor_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/selqie/buoyancy/build/servo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/servo build --build-base /home/selqie/buoyancy/build/servo/build install --record /home/selqie/buoyancy/build/servo/install.log --single-version-externally-managed install_data

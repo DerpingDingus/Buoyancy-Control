@@ -8,15 +8,5 @@ setup.py
 ../build/led/led.egg-info/requires.txt
 ../build/led/led.egg-info/top_level.txt
 ../build/led/led.egg-info/zip-safe
-launch/led_demo.launch.py
-launch/rainbow_fade.launch.py
+launch/led_node.launch.py
 resource/led
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py
-ws2812b_ros/__init__.py
-ws2812b_ros/cli.py
-ws2812b_ros/led_node.py
-ws2812b_ros/led_tester.py
-ws2812b_ros/rainbow_fade.py
-ws2812b_ros/ws2812b_spi.py

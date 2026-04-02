@@ -16,6 +16,12 @@ def generate_launch_description() -> LaunchDescription:
         description='Joint name for motor 1'
     )
 
+    joint_name_2 = DeclareLaunchArgument(
+        'joint_name_2',
+        default_value='joint_2',
+        description='Joint name for motor 2'
+    )
+
     can_interface = DeclareLaunchArgument(
         'can_interface',
         default_value='can0',
@@ -24,6 +30,12 @@ def generate_launch_description() -> LaunchDescription:
 
     can_id_1 = DeclareLaunchArgument(
         'can_id_1',
+        default_value='1',
+        description='Motor CAN ID (0-255)'
+    )
+
+    can_id_2 = DeclareLaunchArgument(
+        'can_id_2',
         default_value='2',
         description='Motor CAN ID (0-255)'
     )
@@ -48,10 +60,9 @@ def generate_launch_description() -> LaunchDescription:
 
     start_time = DeclareLaunchArgument(
         'start_time',
-        default_value='10',
+        default_value='5',
         description='Defines start delay time'
     )
-
 
     # -- Nodes -------------------------------------------------------------------
 
@@ -71,6 +82,22 @@ def generate_launch_description() -> LaunchDescription:
         }]
     )
 
+    servo_node_2 = Node(
+        package='servo',
+        executable='servo_motor_node',
+        namespace=LaunchConfiguration('joint_name_2'),
+        output='screen',
+        emulate_tty=True,
+        parameters=[{
+            'joint_name': LaunchConfiguration('joint_name_2'),
+            'can_interface': LaunchConfiguration('can_interface'),
+            'can_id': LaunchConfiguration('can_id_2'),
+            'motor_type': LaunchConfiguration('motor_type'),
+            'control_hz': LaunchConfiguration('control_hz'),
+            'auto_start': LaunchConfiguration('auto_start'),
+        }]
+    )
+
     zero_node_1 = Node(
         package='buoy_control',
         executable='zero_motor_node',
@@ -79,18 +106,32 @@ def generate_launch_description() -> LaunchDescription:
         emulate_tty=True,
         parameters=[{
             'joint_name': LaunchConfiguration('joint_name_1'),
-            'start_time': LaunchConfiguration('start_time'),
         }]
     )
 
+    zero_node_2 = Node(
+        package='buoy_control',
+        executable='zero_motor_node',
+        namespace=LaunchConfiguration('joint_name_2'),
+        output='screen',
+        emulate_tty=True,
+        parameters=[{
+            'joint_name': LaunchConfiguration('joint_name_2'),
+        }]
+    )
+
+
     return LaunchDescription([
         joint_name_1,
+        joint_name_2,
         can_interface,
         can_id_1,
+        can_id_2,
         motor_type,
         control_hz,
         auto_start,
-        start_time,
         servo_node_1,
-        zero_node_1
+        servo_node_2,
+        zero_node_1,
+        zero_node_2
     ])

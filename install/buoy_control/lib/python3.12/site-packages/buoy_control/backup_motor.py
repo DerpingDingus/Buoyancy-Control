@@ -17,7 +17,7 @@ class BackupMotorNode(Node):
 
         # Declare parameters
         self.declare_parameter('joint_name', 'joint')
-        self.declare_parameter('start_time', 10)
+        self.declare_parameter('start_time', 5)
 
         # Get parameters
         self.joint_name = self.get_parameter('joint_name').value
@@ -47,9 +47,9 @@ class BackupMotorNode(Node):
         self.buoyancy_down() 
 
     def buoyancy_down(self):
-        self.commanded_pos = 20160
+        self.commanded_pos = 0.0
         new_pos = self.commanded_pos
-        self.get_logger().info(f"Pulling Motor In")
+        self.get_logger().info(f"Moving Motor")
         self.send_pos(new_pos)
         self.countdown()
 
@@ -63,7 +63,7 @@ class BackupMotorNode(Node):
         self.pub_cmd.publish(msg)
 
     def countdown(self):
-            self.get_logger().info('Finished Back Up Calibration')
+            self.get_logger().info('Finished Movement Calibration')
             self.shutdown_requested = True
 
 def main(args=None):

@@ -3,6 +3,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Bool # Changed to String for descriptive messaging
 from gpiozero import DigitalInputDevice
+import time
 
 class LeakSensorNode(Node):
     def __init__(self):
@@ -42,6 +43,7 @@ class LeakSensorNode(Node):
         self.publisher_.publish(msg)
         # This prints to your terminal via ROS 2 logging
         self.get_logger().warn(f'Leak detected at {self.joint_name}!!!')
+        time.sleep(10)
 
     def report_clear(self):
         msg = Bool()
