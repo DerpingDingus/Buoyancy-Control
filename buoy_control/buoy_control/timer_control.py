@@ -20,7 +20,7 @@ class TimerControlNode(Node):
         # Declare parameters
         self.declare_parameter('joint_name', 'joint')
         self.declare_parameter('start_time', 10)
-        self.declare_parameter('delay_time', 45)
+        self.declare_parameter('delay_time', 60)
 
         # Get parameters
         self.joint_name = self.get_parameter('joint_name').value
@@ -61,7 +61,7 @@ class TimerControlNode(Node):
         self.motion_state(MotorState) 
 
     def buoyancy_down(self):
-            self.commanded_pos = 20160
+            self.commanded_pos = 25000.0
             new_pos = self.commanded_pos
             self.get_logger().info(f"Decreasing Buoyancy")
             self.send_pos(new_pos)

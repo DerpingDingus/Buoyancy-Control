@@ -72,7 +72,7 @@ def generate_launch_description() -> LaunchDescription:
 
     delay_time = DeclareLaunchArgument(
         'delay_time',
-        default_value='50',
+        default_value='60',
         description='Defines transition delay time'
     )
 

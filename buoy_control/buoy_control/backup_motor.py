@@ -47,7 +47,7 @@ class BackupMotorNode(Node):
         self.buoyancy_down() 
 
     def buoyancy_down(self):
-        self.commanded_pos = 32000.0
+        self.commanded_pos = 0.0
         new_pos = self.commanded_pos
         self.get_logger().info(f"Moving Motor")
         self.send_pos(new_pos)
