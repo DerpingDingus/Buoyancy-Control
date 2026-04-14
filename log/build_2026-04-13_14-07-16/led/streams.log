@@ -1,0 +1,40 @@
+[3.245s] Invoking command in '/home/selqie/buoyancy/led': PYTHONPATH=/home/selqie/buoyancy/build/led/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/led/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/led build --build-base /home/selqie/buoyancy/build/led/build install --record /home/selqie/buoyancy/build/led/install.log --single-version-externally-managed install_data
+[4.057s] running egg_info
+[4.104s] writing ../build/led/led.egg-info/PKG-INFO
+[4.106s] writing dependency_links to ../build/led/led.egg-info/dependency_links.txt
+[4.107s] writing entry points to ../build/led/led.egg-info/entry_points.txt
+[4.108s] writing requirements to ../build/led/led.egg-info/requires.txt
+[4.110s] writing top-level names to ../build/led/led.egg-info/top_level.txt
+[4.221s] reading manifest file '../build/led/led.egg-info/SOURCES.txt'
+[4.222s] writing manifest file '../build/led/led.egg-info/SOURCES.txt'
+[4.226s] running build
+[4.226s] running build_py
+[4.226s] creating /home/selqie/buoyancy/build/led/build
+[4.227s] creating /home/selqie/buoyancy/build/led/build/lib
+[4.227s] creating /home/selqie/buoyancy/build/led/build/lib/led
+[4.227s] copying led/__init__.py -> /home/selqie/buoyancy/build/led/build/lib/led
+[4.227s] copying led/led_node.py -> /home/selqie/buoyancy/build/led/build/lib/led
+[4.228s] copying led/timer_node.py -> /home/selqie/buoyancy/build/led/build/lib/led
+[4.228s] running install
+[4.252s] running install_lib
+[4.310s] creating /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led
+[4.311s] copying /home/selqie/buoyancy/build/led/build/lib/led/__init__.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led
+[4.311s] copying /home/selqie/buoyancy/build/led/build/lib/led/led_node.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led
+[4.311s] copying /home/selqie/buoyancy/build/led/build/lib/led/timer_node.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led
+[4.311s] byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led/__init__.py to __init__.cpython-312.pyc
+[4.314s] Sorry: IndentationError: unindent does not match any outer indentation level (led_node.py, line 40)
+[4.314s] byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led/led_node.py to led_node.cpython-312.pyc
+[4.314s] byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led/timer_node.py to timer_node.cpython-312.pyc
+[4.314s]   File "/home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led/timer_node.py", line 39
+[4.314s]     def send_state(self, led_state)
+[4.315s]                                    ^
+[4.315s] SyntaxError: expected ':'
+[4.315s] 
+[4.315s] running install_data
+[4.318s] running install_egg_info
+[4.369s] Copying ../build/led/led.egg-info to /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led-0.0.0-py3.12.egg-info
+[4.372s] running install_scripts
+[4.737s] Installing led_node script to /home/selqie/buoyancy/install/led/lib/led
+[4.738s] Installing timer_node script to /home/selqie/buoyancy/install/led/lib/led
+[4.740s] writing list of installed files to '/home/selqie/buoyancy/build/led/install.log'
+[4.919s] Invoked command in '/home/selqie/buoyancy/led' returned '0': PYTHONPATH=/home/selqie/buoyancy/build/led/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/led/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/led build --build-base /home/selqie/buoyancy/build/led/build install --record /home/selqie/buoyancy/build/led/install.log --single-version-externally-managed install_data

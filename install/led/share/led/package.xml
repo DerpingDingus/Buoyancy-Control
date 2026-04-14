@@ -4,7 +4,7 @@
   <name>led</name>
   <version>0.0.4</version>
   <description>Status LED Node</description>
-  <maintainer email="vgvuong380@gmail.com">DerpingDingus</maintainer>
+  <maintainer email="vgv21@fsu.edu">DerpingDingus</maintainer>
   <license>MIT</license>
 
   <exec_depend>rclpy</exec_depend>

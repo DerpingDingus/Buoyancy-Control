@@ -4,18 +4,20 @@ package_name = 'led'
 
 setup(
     name=package_name,
-    version='0.0.4',
-    packages=find_packages(exclude=['test']),
+    version='0.0.0',
+    packages=find_packages(),
     data_files=[
-        ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
+        ('share/ament_index/resource_index/packages',
+            ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        (
-            'share/' + package_name + '/launch',
+
+        ('share/' + package_name + '/launch',
             [
                 'launch/led_node.launch.py',
             ],
-        ),
+        ),    
     ],
+
     install_requires=[
         'setuptools',
         'spidev',
@@ -30,6 +32,7 @@ setup(
     entry_points={
         'console_scripts': [
             'led_node = led.led_node:main',
+            'timer_node = led.timer_node:main'
         ],
     },
 )

@@ -1,0 +1,305 @@
+[0.000000] (-) TimerEvent: {}
+[0.000238] (led) JobQueued: {'identifier': 'led', 'dependencies': OrderedDict()}
+[0.000294] (motor_interfaces) JobQueued: {'identifier': 'motor_interfaces', 'dependencies': OrderedDict()}
+[0.000326] (sensors) JobQueued: {'identifier': 'sensors', 'dependencies': OrderedDict()}
+[0.000352] (buoy_control) JobQueued: {'identifier': 'buoy_control', 'dependencies': OrderedDict({'motor_interfaces': '/home/selqie/buoyancy/install/motor_interfaces'})}
+[0.000385] (servo) JobQueued: {'identifier': 'servo', 'dependencies': OrderedDict({'motor_interfaces': '/home/selqie/buoyancy/install/motor_interfaces'})}
+[0.000415] (motor_interfaces) JobStarted: {'identifier': 'motor_interfaces'}
+[0.002746] (led) JobStarted: {'identifier': 'led'}
+[0.011517] (sensors) JobStarted: {'identifier': 'sensors'}
+[0.024174] (motor_interfaces) JobProgress: {'identifier': 'motor_interfaces', 'progress': 'cmake'}
+[0.025196] (motor_interfaces) JobProgress: {'identifier': 'motor_interfaces', 'progress': 'build'}
+[0.026135] (motor_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/selqie/buoyancy/build/motor_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/selqie/buoyancy/build/motor_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'selqie', 'SSH_CLIENT': '192.168.1.109 57825 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/selqie', 'OLDPWD': '/home/selqie', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'selqie', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'PATH': '/home/selqie/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/selqie/buoyancy/build/motor_interfaces', 'SSH_CONNECTION': '192.168.1.109 57825 192.168.1.160 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy'}), 'shell': False}
+[0.071842] (-) TimerEvent: {}
+[0.172378] (-) TimerEvent: {}
+[0.275997] (-) TimerEvent: {}
+[0.376569] (-) TimerEvent: {}
+[0.477044] (-) TimerEvent: {}
+[0.578845] (-) TimerEvent: {}
+[0.623721] (motor_interfaces) StdoutLine: {'line': b'[  2%] Built target motor_interfaces__rosidl_generator_type_description\n'}
+[0.624116] (motor_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_motor_interfaces\n'}
+[0.624253] (motor_interfaces) StdoutLine: {'line': b'[  5%] Built target motor_interfaces__cpp\n'}
+[0.624354] (motor_interfaces) StdoutLine: {'line': b'[ 20%] Built target motor_interfaces__rosidl_generator_c\n'}
+[0.624443] (motor_interfaces) StdoutLine: {'line': b'[ 29%] Built target motor_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.624526] (motor_interfaces) StdoutLine: {'line': b'[ 38%] Built target motor_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.624608] (motor_interfaces) StdoutLine: {'line': b'[ 47%] Built target motor_interfaces__rosidl_typesupport_cpp\n'}
+[0.624686] (motor_interfaces) StdoutLine: {'line': b'[ 55%] Built target motor_interfaces__rosidl_typesupport_c\n'}
+[0.624799] (motor_interfaces) StdoutLine: {'line': b'[ 64%] Built target motor_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.624889] (motor_interfaces) StdoutLine: {'line': b'[ 73%] Built target motor_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.624967] (motor_interfaces) StdoutLine: {'line': b'[ 73%] Built target motor_interfaces\n'}
+[0.625043] (motor_interfaces) StdoutLine: {'line': b'[ 76%] Built target motor_interfaces__py\n'}
+[0.625117] (motor_interfaces) StdoutLine: {'line': b'[ 82%] Built target motor_interfaces__rosidl_generator_py\n'}
+[0.625192] (motor_interfaces) StdoutLine: {'line': b'[ 88%] Built target motor_interfaces_s__rosidl_typesupport_c\n'}
+[0.625268] (motor_interfaces) StdoutLine: {'line': b'[ 94%] Built target motor_interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[0.634211] (motor_interfaces) StdoutLine: {'line': b'[100%] Built target motor_interfaces_s__rosidl_typesupport_introspection_c\n'}
+[0.678974] (-) TimerEvent: {}
+[0.689932] (motor_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[0.743982] (motor_interfaces) StdoutLine: {'line': b'writing motor_interfaces.egg-info/PKG-INFO\n'}
+[0.744677] (motor_interfaces) StdoutLine: {'line': b'writing dependency_links to motor_interfaces.egg-info/dependency_links.txt\n'}
+[0.746045] (motor_interfaces) StdoutLine: {'line': b'writing top-level names to motor_interfaces.egg-info/top_level.txt\n'}
+[0.779074] (-) TimerEvent: {}
+[0.827643] (motor_interfaces) StdoutLine: {'line': b"reading manifest file 'motor_interfaces.egg-info/SOURCES.txt'\n"}
+[0.828538] (motor_interfaces) StdoutLine: {'line': b"writing manifest file 'motor_interfaces.egg-info/SOURCES.txt'\n"}
+[0.879217] (-) TimerEvent: {}
+[0.920155] (motor_interfaces) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_motor_interfaces_egg\n'}
+[0.979320] (-) TimerEvent: {}
+[1.079678] (-) TimerEvent: {}
+[1.086717] (motor_interfaces) CommandEnded: {'returncode': 0}
+[1.088406] (motor_interfaces) JobProgress: {'identifier': 'motor_interfaces', 'progress': 'install'}
+[1.107897] (motor_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/selqie/buoyancy/build/motor_interfaces'], 'cwd': '/home/selqie/buoyancy/build/motor_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'selqie', 'SSH_CLIENT': '192.168.1.109 57825 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/selqie', 'OLDPWD': '/home/selqie', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'selqie', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'PATH': '/home/selqie/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/selqie/buoyancy/build/motor_interfaces', 'SSH_CONNECTION': '192.168.1.109 57825 192.168.1.160 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy'}), 'shell': False}
+[1.123503] (motor_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.123919] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/ament_index/resource_index/rosidl_interfaces/motor_interfaces\n'}
+[1.124140] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/msg/MotorState.json\n'}
+[1.124284] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces\n'}
+[1.124437] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg\n'}
+[1.124587] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/motor_state.h\n'}
+[1.125855] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail\n'}
+[1.126114] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__functions.c\n'}
+[1.126239] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__type_support.c\n'}
+[1.126329] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__description.c\n'}
+[1.126464] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__struct.h\n'}
+[1.126551] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__type_support.h\n'}
+[1.126635] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__functions.h\n'}
+[1.126720] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.126847] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/environment/library_path.sh\n'}
+[1.126960] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/environment/library_path.dsv\n'}
+[1.127062] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_generator_c.so\n'}
+[1.127174] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces\n'}
+[1.127285] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg\n'}
+[1.127929] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.128120] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail\n'}
+[1.128239] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.128334] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[1.128460] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces\n'}
+[1.128549] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg\n'}
+[1.128632] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail\n'}
+[1.128795] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__type_support.c\n'}
+[1.128971] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__rosidl_typesupport_introspection_c.h\n'}
+[1.129097] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[1.129196] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[1.131016] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_c.so\n'}
+[1.131401] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces\n'}
+[1.131674] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg\n'}
+[1.131996] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail\n'}
+[1.132303] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__traits.hpp\n'}
+[1.132489] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__type_support.hpp\n'}
+[1.132673] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__builder.hpp\n'}
+[1.132914] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__struct.hpp\n'}
+[1.133032] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/motor_state.hpp\n'}
+[1.133130] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[1.133238] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces\n'}
+[1.133457] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg\n'}
+[1.133692] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail\n'}
+[1.133972] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.134102] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/dds_fastrtps\n'}
+[1.134221] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.134395] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.134531] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces\n'}
+[1.134639] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg\n'}
+[1.134775] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail\n'}
+[1.134899] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.135008] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/include/motor_interfaces/motor_interfaces/msg/detail/motor_state__type_support.cpp\n'}
+[1.135184] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[1.135324] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_typesupport_cpp.so\n'}
+[1.135457] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/environment/pythonpath.sh\n'}
+[1.135575] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/environment/pythonpath.dsv\n'}
+[1.135661] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces-0.0.0-py3.12.egg-info\n'}
+[1.135781] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[1.135897] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[1.135984] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[1.136065] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[1.136143] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces\n'}
+[1.136227] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[1.136312] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[1.136434] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/msg\n'}
+[1.136568] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/msg/_motor_state.py\n'}
+[1.136684] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/msg/_motor_state_s.c\n'}
+[1.136972] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/msg/__init__.py\n'}
+[1.137081] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[1.137166] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/__init__.py\n'}
+[1.137251] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_c.so\n'}
+[1.137333] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[1.137412] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/_motor_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[1.179818] (-) TimerEvent: {}
+[1.200045] (motor_interfaces) StdoutLine: {'line': b"Listing '/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces'...\n"}
+[1.200497] (motor_interfaces) StdoutLine: {'line': b"Listing '/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/msg'...\n"}
+[1.225011] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[1.226016] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[1.227080] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages/motor_interfaces/motor_interfaces_s__rosidl_typesupport_c.so\n'}
+[1.228096] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/lib/libmotor_interfaces__rosidl_generator_py.so\n'}
+[1.228692] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/msg/MotorState.idl\n'}
+[1.229148] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/msg/MotorState.msg\n'}
+[1.229642] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/ament_index/resource_index/package_run_dependencies/motor_interfaces\n'}
+[1.230110] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/ament_index/resource_index/parent_prefix_path/motor_interfaces\n'}
+[1.230450] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/environment/ament_prefix_path.sh\n'}
+[1.230652] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/environment/ament_prefix_path.dsv\n'}
+[1.231089] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/environment/path.sh\n'}
+[1.231387] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/environment/path.dsv\n'}
+[1.231840] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/local_setup.bash\n'}
+[1.232279] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/local_setup.sh\n'}
+[1.232703] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/local_setup.zsh\n'}
+[1.233110] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/local_setup.dsv\n'}
+[1.233516] (motor_interfaces) StdoutLine: {'line': b'-- Installing: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/package.dsv\n'}
+[1.233810] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/ament_index/resource_index/packages/motor_interfaces\n'}
+[1.234174] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_generator_cExport.cmake\n'}
+[1.234537] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.234932] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[1.235234] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[1.235717] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.236296] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.236876] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[1.237110] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.237315] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_generator_cppExport.cmake\n'}
+[1.237527] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[1.237773] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[1.238025] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.238230] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.238422] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[1.238613] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.238840] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_generator_pyExport.cmake\n'}
+[1.239053] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/export_motor_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[1.239340] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[1.239570] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.239904] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.240201] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.240446] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.240806] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.241102] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.241372] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfacesConfig.cmake\n'}
+[1.241676] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/cmake/motor_interfacesConfig-version.cmake\n'}
+[1.241978] (motor_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/selqie/buoyancy/install/motor_interfaces/share/motor_interfaces/package.xml\n'}
+[1.243943] (motor_interfaces) CommandEnded: {'returncode': 0}
+[1.280142] (-) TimerEvent: {}
+[1.318312] (motor_interfaces) JobEnded: {'identifier': 'motor_interfaces', 'rc': 0}
+[1.321177] (buoy_control) JobStarted: {'identifier': 'buoy_control'}
+[1.326684] (servo) JobStarted: {'identifier': 'servo'}
+[1.380251] (-) TimerEvent: {}
+[1.480621] (-) TimerEvent: {}
+[1.583934] (-) TimerEvent: {}
+[1.684345] (-) TimerEvent: {}
+[1.784888] (-) TimerEvent: {}
+[1.885348] (-) TimerEvent: {}
+[1.985867] (-) TimerEvent: {}
+[2.086281] (-) TimerEvent: {}
+[2.186959] (-) TimerEvent: {}
+[2.290324] (-) TimerEvent: {}
+[2.362289] (led) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/led', 'build', '--build-base', '/home/selqie/buoyancy/build/led/build', 'install', '--record', '/home/selqie/buoyancy/build/led/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/selqie/buoyancy/led', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'selqie', 'SSH_CLIENT': '192.168.1.109 57825 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/selqie', 'OLDPWD': '/home/selqie', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'selqie', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'PATH': '/home/selqie/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/selqie/buoyancy/build/led', 'SSH_CONNECTION': '192.168.1.109 57825 192.168.1.160 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/selqie/buoyancy/build/led/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/led/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1'}, 'shell': False}
+[2.367443] (sensors) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/sensors', 'build', '--build-base', '/home/selqie/buoyancy/build/sensors/build', 'install', '--record', '/home/selqie/buoyancy/build/sensors/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/selqie/buoyancy/sensors', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'selqie', 'SSH_CLIENT': '192.168.1.109 57825 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/selqie', 'OLDPWD': '/home/selqie', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'selqie', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'PATH': '/home/selqie/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/selqie/buoyancy/build/sensors', 'SSH_CONNECTION': '192.168.1.109 57825 192.168.1.160 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/selqie/buoyancy/build/sensors/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1'}, 'shell': False}
+[2.390477] (-) TimerEvent: {}
+[2.494108] (-) TimerEvent: {}
+[2.594724] (-) TimerEvent: {}
+[2.695341] (-) TimerEvent: {}
+[2.796187] (-) TimerEvent: {}
+[2.899135] (-) TimerEvent: {}
+[2.942926] (led) StdoutLine: {'line': b'running egg_info\n'}
+[2.961836] (sensors) StdoutLine: {'line': b'running egg_info\n'}
+[2.968926] (led) StdoutLine: {'line': b'writing ../build/led/led.egg-info/PKG-INFO\n'}
+[2.969826] (led) StdoutLine: {'line': b'writing dependency_links to ../build/led/led.egg-info/dependency_links.txt\n'}
+[2.971552] (led) StdoutLine: {'line': b'writing entry points to ../build/led/led.egg-info/entry_points.txt\n'}
+[2.972989] (led) StdoutLine: {'line': b'writing requirements to ../build/led/led.egg-info/requires.txt\n'}
+[2.976916] (led) StdoutLine: {'line': b'writing top-level names to ../build/led/led.egg-info/top_level.txt\n'}
+[2.981919] (sensors) StdoutLine: {'line': b'writing ../build/sensors/sensors.egg-info/PKG-INFO\n'}
+[2.982366] (sensors) StdoutLine: {'line': b'writing dependency_links to ../build/sensors/sensors.egg-info/dependency_links.txt\n'}
+[2.983222] (sensors) StdoutLine: {'line': b'writing entry points to ../build/sensors/sensors.egg-info/entry_points.txt\n'}
+[2.983822] (sensors) StdoutLine: {'line': b'writing requirements to ../build/sensors/sensors.egg-info/requires.txt\n'}
+[2.984468] (sensors) StdoutLine: {'line': b'writing top-level names to ../build/sensors/sensors.egg-info/top_level.txt\n'}
+[2.999238] (-) TimerEvent: {}
+[3.035384] (led) StdoutLine: {'line': b"reading manifest file '../build/led/led.egg-info/SOURCES.txt'\n"}
+[3.035662] (led) StdoutLine: {'line': b"writing manifest file '../build/led/led.egg-info/SOURCES.txt'\n"}
+[3.036341] (led) StdoutLine: {'line': b'running build\n'}
+[3.036878] (led) StdoutLine: {'line': b'running build_py\n'}
+[3.038024] (led) StdoutLine: {'line': b'running install\n'}
+[3.043336] (sensors) StdoutLine: {'line': b"reading manifest file '../build/sensors/sensors.egg-info/SOURCES.txt'\n"}
+[3.044878] (sensors) StdoutLine: {'line': b"writing manifest file '../build/sensors/sensors.egg-info/SOURCES.txt'\n"}
+[3.046442] (sensors) StdoutLine: {'line': b'running build\n'}
+[3.046900] (sensors) StdoutLine: {'line': b'running build_py\n'}
+[3.047796] (sensors) StdoutLine: {'line': b'running install\n'}
+[3.062879] (led) StdoutLine: {'line': b'running install_lib\n'}
+[3.070071] (sensors) StdoutLine: {'line': b'running install_lib\n'}
+[3.099385] (-) TimerEvent: {}
+[3.116896] (led) StdoutLine: {'line': b'running install_data\n'}
+[3.117895] (led) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.126806] (sensors) StdoutLine: {'line': b'running install_data\n'}
+[3.127189] (sensors) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.159858] (led) StdoutLine: {'line': b"removing '/home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[3.160781] (led) StdoutLine: {'line': b'Copying ../build/led/led.egg-info to /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led-0.0.0-py3.12.egg-info\n'}
+[3.162657] (led) StdoutLine: {'line': b'running install_scripts\n'}
+[3.163585] (sensors) StdoutLine: {'line': b"removing '/home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages/sensors-0.1.0-py3.12.egg-info' (and everything under it)\n"}
+[3.165847] (sensors) StdoutLine: {'line': b'Copying ../build/sensors/sensors.egg-info to /home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages/sensors-0.1.0-py3.12.egg-info\n'}
+[3.166061] (sensors) StdoutLine: {'line': b'running install_scripts\n'}
+[3.201810] (-) TimerEvent: {}
+[3.302361] (-) TimerEvent: {}
+[3.400775] (led) StdoutLine: {'line': b'Installing led_node script to /home/selqie/buoyancy/install/led/lib/led\n'}
+[3.401227] (sensors) StdoutLine: {'line': b'Installing curtor_sensor_node script to /home/selqie/buoyancy/install/sensors/lib/sensors\n'}
+[3.401468] (sensors) StdoutLine: {'line': b'Installing leak_sensor_node script to /home/selqie/buoyancy/install/sensors/lib/sensors\n'}
+[3.402108] (led) StdoutLine: {'line': b'Installing timer_node script to /home/selqie/buoyancy/install/led/lib/led\n'}
+[3.402429] (-) TimerEvent: {}
+[3.403161] (sensors) StdoutLine: {'line': b"writing list of installed files to '/home/selqie/buoyancy/build/sensors/install.log'\n"}
+[3.405913] (led) StdoutLine: {'line': b"writing list of installed files to '/home/selqie/buoyancy/build/led/install.log'\n"}
+[3.504942] (-) TimerEvent: {}
+[3.606168] (-) TimerEvent: {}
+[3.609252] (sensors) CommandEnded: {'returncode': 0}
+[3.629434] (sensors) JobEnded: {'identifier': 'sensors', 'rc': 0}
+[3.633325] (led) CommandEnded: {'returncode': 0}
+[3.651974] (led) JobEnded: {'identifier': 'led', 'rc': 0}
+[3.682963] (buoy_control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/buoy_control', 'build', '--build-base', '/home/selqie/buoyancy/build/buoy_control/build', 'install', '--record', '/home/selqie/buoyancy/build/buoy_control/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/selqie/buoyancy/buoy_control', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'selqie', 'SSH_CLIENT': '192.168.1.109 57825 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/selqie/buoyancy/install/motor_interfaces/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/selqie', 'OLDPWD': '/home/selqie', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'selqie', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'PATH': '/home/selqie/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/selqie/buoyancy/install/motor_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/selqie/buoyancy/build/buoy_control', 'SSH_CONNECTION': '192.168.1.109 57825 192.168.1.160 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/selqie/buoyancy/build/buoy_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/selqie/buoyancy/install/motor_interfaces'}, 'shell': False}
+[3.706288] (-) TimerEvent: {}
+[3.722553] (servo) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/servo', 'build', '--build-base', '/home/selqie/buoyancy/build/servo/build', 'install', '--record', '/home/selqie/buoyancy/build/servo/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/selqie/buoyancy/servo', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'selqie', 'SSH_CLIENT': '192.168.1.109 57825 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/selqie/buoyancy/install/motor_interfaces/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/selqie', 'OLDPWD': '/home/selqie', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'selqie', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'PATH': '/home/selqie/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/selqie/buoyancy/install/motor_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/selqie/buoyancy/build/servo', 'SSH_CONNECTION': '192.168.1.109 57825 192.168.1.160 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/selqie/buoyancy/build/servo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/selqie/buoyancy/install/motor_interfaces'}, 'shell': False}
+[3.806389] (-) TimerEvent: {}
+[3.906750] (-) TimerEvent: {}
+[4.007358] (-) TimerEvent: {}
+[4.107658] (-) TimerEvent: {}
+[4.177804] (buoy_control) StdoutLine: {'line': b'running egg_info\n'}
+[4.199209] (servo) StdoutLine: {'line': b'running egg_info\n'}
+[4.199432] (buoy_control) StdoutLine: {'line': b'writing ../build/buoy_control/buoy_control.egg-info/PKG-INFO\n'}
+[4.207743] (-) TimerEvent: {}
+[4.220211] (servo) StdoutLine: {'line': b'writing ../build/servo/servo.egg-info/PKG-INFO\n'}
+[4.220579] (servo) StdoutLine: {'line': b'writing dependency_links to ../build/servo/servo.egg-info/dependency_links.txt\n'}
+[4.220862] (servo) StdoutLine: {'line': b'writing entry points to ../build/servo/servo.egg-info/entry_points.txt\n'}
+[4.221048] (servo) StdoutLine: {'line': b'writing requirements to ../build/servo/servo.egg-info/requires.txt\n'}
+[4.221175] (servo) StdoutLine: {'line': b'writing top-level names to ../build/servo/servo.egg-info/top_level.txt\n'}
+[4.238872] (buoy_control) StdoutLine: {'line': b'writing dependency_links to ../build/buoy_control/buoy_control.egg-info/dependency_links.txt\n'}
+[4.240083] (buoy_control) StdoutLine: {'line': b'writing entry points to ../build/buoy_control/buoy_control.egg-info/entry_points.txt\n'}
+[4.241614] (buoy_control) StdoutLine: {'line': b'writing requirements to ../build/buoy_control/buoy_control.egg-info/requires.txt\n'}
+[4.243043] (buoy_control) StdoutLine: {'line': b'writing top-level names to ../build/buoy_control/buoy_control.egg-info/top_level.txt\n'}
+[4.265653] (servo) StdoutLine: {'line': b"reading manifest file '../build/servo/servo.egg-info/SOURCES.txt'\n"}
+[4.266727] (servo) StdoutLine: {'line': b"writing manifest file '../build/servo/servo.egg-info/SOURCES.txt'\n"}
+[4.266982] (servo) StdoutLine: {'line': b'running build\n'}
+[4.267108] (servo) StdoutLine: {'line': b'running build_py\n'}
+[4.267494] (servo) StdoutLine: {'line': b'running install\n'}
+[4.282524] (servo) StdoutLine: {'line': b'running install_lib\n'}
+[4.307828] (-) TimerEvent: {}
+[4.309383] (buoy_control) StdoutLine: {'line': b"reading manifest file '../build/buoy_control/buoy_control.egg-info/SOURCES.txt'\n"}
+[4.310236] (buoy_control) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[4.312092] (buoy_control) StdoutLine: {'line': b"writing manifest file '../build/buoy_control/buoy_control.egg-info/SOURCES.txt'\n"}
+[4.312487] (buoy_control) StdoutLine: {'line': b'running build\n'}
+[4.312771] (buoy_control) StdoutLine: {'line': b'running build_py\n'}
+[4.313855] (buoy_control) StdoutLine: {'line': b'running install\n'}
+[4.335355] (buoy_control) StdoutLine: {'line': b'running install_lib\n'}
+[4.335758] (servo) StdoutLine: {'line': b'running install_data\n'}
+[4.336077] (servo) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.381394] (buoy_control) StdoutLine: {'line': b'running install_data\n'}
+[4.381632] (buoy_control) StdoutLine: {'line': b'copying launch/timer_control.launch.py -> /home/selqie/buoyancy/install/buoy_control/share/buoy_control/launch\n'}
+[4.382039] (buoy_control) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.382797] (servo) StdoutLine: {'line': b"removing '/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages/servo-0.1.0-py3.12.egg-info' (and everything under it)\n"}
+[4.383242] (servo) StdoutLine: {'line': b'Copying ../build/servo/servo.egg-info to /home/selqie/buoyancy/install/servo/lib/python3.12/site-packages/servo-0.1.0-py3.12.egg-info\n'}
+[4.384389] (servo) StdoutLine: {'line': b'running install_scripts\n'}
+[4.405961] (buoy_control) StdoutLine: {'line': b"removing '/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[4.406443] (buoy_control) StdoutLine: {'line': b'Copying ../build/buoy_control/buoy_control.egg-info to /home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control-0.0.0-py3.12.egg-info\n'}
+[4.407779] (buoy_control) StdoutLine: {'line': b'running install_scripts\n'}
+[4.407896] (-) TimerEvent: {}
+[4.508186] (-) TimerEvent: {}
+[4.596085] (servo) StdoutLine: {'line': b'Installing servo_motor_node script to /home/selqie/buoyancy/install/servo/lib/servo\n'}
+[4.596876] (servo) StdoutLine: {'line': b"writing list of installed files to '/home/selqie/buoyancy/build/servo/install.log'\n"}
+[4.608285] (-) TimerEvent: {}
+[4.623492] (buoy_control) StdoutLine: {'line': b'Installing backup_motor_node script to /home/selqie/buoyancy/install/buoy_control/lib/buoy_control\n'}
+[4.623956] (buoy_control) StdoutLine: {'line': b'Installing button_control_node script to /home/selqie/buoyancy/install/buoy_control/lib/buoy_control\n'}
+[4.624697] (buoy_control) StdoutLine: {'line': b'Installing timer_control_node script to /home/selqie/buoyancy/install/buoy_control/lib/buoy_control\n'}
+[4.625432] (buoy_control) StdoutLine: {'line': b'Installing zero_motor_node script to /home/selqie/buoyancy/install/buoy_control/lib/buoy_control\n'}
+[4.626497] (buoy_control) StdoutLine: {'line': b"writing list of installed files to '/home/selqie/buoyancy/build/buoy_control/install.log'\n"}
+[4.708430] (-) TimerEvent: {}
+[4.717254] (servo) CommandEnded: {'returncode': 0}
+[4.736473] (servo) JobEnded: {'identifier': 'servo', 'rc': 0}
+[4.750162] (buoy_control) CommandEnded: {'returncode': 0}
+[4.770554] (buoy_control) JobEnded: {'identifier': 'buoy_control', 'rc': 0}
+[4.771591] (-) EventReactorShutdown: {}

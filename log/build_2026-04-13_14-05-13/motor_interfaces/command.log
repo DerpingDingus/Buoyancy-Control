@@ -1,0 +1,1 @@
+Invoking command in '/home/selqie/buoyancy/build/motor_interfaces': CMAKE_PREFIX_PATH=/opt/ros/jazzy /usr/bin/cmake --build /home/selqie/buoyancy/build/motor_interfaces -- -j4 -l4

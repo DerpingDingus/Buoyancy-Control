@@ -8,9 +8,7 @@ from rclpy.node import Node
 
 import time
 
-from gpiozero import LED
-
-from std_msgs.msg import Float64MultiArray, Bool
+from std_msgs.msg import Float64MultiArray, Bool, Int32MultiArray
 from motor_interfaces.msg import MotorState
 
 class TimerControlNode(Node):
@@ -39,6 +37,10 @@ class TimerControlNode(Node):
             Float64MultiArray, f'/{self.joint_name}/servo_cmd', 10
         )
 
+        self.led_cmd = self.create_publisher(
+            Int32MultiArray, f'/{self.joint_name}/led_states', 10
+        )
+
         # Current position tracking (updated by motor feedback)
         self.current_pos_deg = 0.0
         self.commanded_pos = 0.0
@@ -50,27 +52,38 @@ class TimerControlNode(Node):
         self.counter = 0
         self.shutdown_requested = False
 
+        # Led state tracking
+        self.led = 0
+
         # Subscriber for motor state to know where we are
         self.sub_state = self.create_subscription(MotorState, f'/{self.joint_name}/motor_state', self.motion_state, 10)
+        
+        # Startup LED state
+        self.led_state_change(self.led)
 
         #Start Delay
 
         time.sleep(self.start_time)
 
+
         # Start Motion
         self.motion_state(MotorState) 
 
     def buoyancy_down(self):
-            self.commanded_pos = 25000.0
+            self.commanded_pos = 0.0
+            self.led = 1
             new_pos = self.commanded_pos
             self.get_logger().info(f"Decreasing Buoyancy")
             self.send_pos(new_pos)
+            self.led_state_change(self.led)
             self.countdown()
 
     def buoyancy_up(self):
-            self.commanded_pos = 0
+            self.commanded_pos = 0.0
+            self.led = 1
             new_pos = self.commanded_pos
             self.get_logger().info(f"Increasing Buoyancy")
+            self.led_state_change(self.led)
             self.send_pos(new_pos)
             self.countdown()
 
@@ -95,6 +108,17 @@ class TimerControlNode(Node):
             self.state = 'DOWN'
             self.stopped = False
 
+    def led_state_change(self, led):
+        if led == 0:
+            led_state = [1, 0, 0]
+        elif led == 1:
+            led_state = [0, 1, 0]
+        elif led == 2:
+            led_state = [0, 0, 1]
+        
+        self.send_led_state(led_state)
+        self.get_logger().info(f'LED state switched')
+
     def send_pos(self, pos_deg: float):
         msg = Float64MultiArray()
 
@@ -104,11 +128,18 @@ class TimerControlNode(Node):
         msg.data = [6.0, float(pos_deg), 10800.0, 5400.0] 
         self.pub_cmd.publish(msg)
 
+    def send_led_state(self, led_state):
+        msg = Int32MultiArray()
+        msg.data = led_state
+        self.led_cmd.publish(msg)
+
     def countdown(self):
-        if self.counter < 3:
+        if self.counter < 1:
             self.counter += 1
         else:
             self.get_logger().info('Finished 2 runs. Stopping node...')
+            self.led = 2
+            self.led_state_change(self.led)
             self.shutdown_requested = True
 
 def main(args=None):

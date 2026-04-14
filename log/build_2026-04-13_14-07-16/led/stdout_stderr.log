@@ -1,0 +1,38 @@
+running egg_info
+writing ../build/led/led.egg-info/PKG-INFO
+writing dependency_links to ../build/led/led.egg-info/dependency_links.txt
+writing entry points to ../build/led/led.egg-info/entry_points.txt
+writing requirements to ../build/led/led.egg-info/requires.txt
+writing top-level names to ../build/led/led.egg-info/top_level.txt
+reading manifest file '../build/led/led.egg-info/SOURCES.txt'
+writing manifest file '../build/led/led.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/selqie/buoyancy/build/led/build
+creating /home/selqie/buoyancy/build/led/build/lib
+creating /home/selqie/buoyancy/build/led/build/lib/led
+copying led/__init__.py -> /home/selqie/buoyancy/build/led/build/lib/led
+copying led/led_node.py -> /home/selqie/buoyancy/build/led/build/lib/led
+copying led/timer_node.py -> /home/selqie/buoyancy/build/led/build/lib/led
+running install
+running install_lib
+creating /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led
+copying /home/selqie/buoyancy/build/led/build/lib/led/__init__.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led
+copying /home/selqie/buoyancy/build/led/build/lib/led/led_node.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led
+copying /home/selqie/buoyancy/build/led/build/lib/led/timer_node.py -> /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led
+byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led/__init__.py to __init__.cpython-312.pyc
+Sorry: IndentationError: unindent does not match any outer indentation level (led_node.py, line 40)
+byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led/led_node.py to led_node.cpython-312.pyc
+byte-compiling /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led/timer_node.py to timer_node.cpython-312.pyc
+  File "/home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led/timer_node.py", line 39
+    def send_state(self, led_state)
+                                   ^
+SyntaxError: expected ':'
+
+running install_data
+running install_egg_info
+Copying ../build/led/led.egg-info to /home/selqie/buoyancy/install/led/lib/python3.12/site-packages/led-0.0.0-py3.12.egg-info
+running install_scripts
+Installing led_node script to /home/selqie/buoyancy/install/led/lib/led
+Installing timer_node script to /home/selqie/buoyancy/install/led/lib/led
+writing list of installed files to '/home/selqie/buoyancy/build/led/install.log'

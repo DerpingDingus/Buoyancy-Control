@@ -1,3 +1,0 @@
-[console_scripts]
-curtor_sensor_node = water_sensors.curtor_sensor_node:main
-leak_sensor_node = water_sensors.leak_sensor_node:main

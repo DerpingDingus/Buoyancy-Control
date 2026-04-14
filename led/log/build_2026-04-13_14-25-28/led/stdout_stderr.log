@@ -1,0 +1,41 @@
+running egg_info
+creating build/led/led.egg-info
+writing build/led/led.egg-info/PKG-INFO
+writing dependency_links to build/led/led.egg-info/dependency_links.txt
+writing entry points to build/led/led.egg-info/entry_points.txt
+writing requirements to build/led/led.egg-info/requires.txt
+writing top-level names to build/led/led.egg-info/top_level.txt
+writing manifest file 'build/led/led.egg-info/SOURCES.txt'
+reading manifest file 'build/led/led.egg-info/SOURCES.txt'
+writing manifest file 'build/led/led.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/selqie/buoyancy/led/build/led/build
+creating /home/selqie/buoyancy/led/build/led/build/lib
+creating /home/selqie/buoyancy/led/build/led/build/lib/led
+copying led/__init__.py -> /home/selqie/buoyancy/led/build/led/build/lib/led
+copying led/led_node.py -> /home/selqie/buoyancy/led/build/led/build/lib/led
+copying led/timer_node.py -> /home/selqie/buoyancy/led/build/led/build/lib/led
+running install
+running install_lib
+creating /home/selqie/buoyancy/led/install/led/lib/python3.12/site-packages/led
+copying /home/selqie/buoyancy/led/build/led/build/lib/led/__init__.py -> /home/selqie/buoyancy/led/install/led/lib/python3.12/site-packages/led
+copying /home/selqie/buoyancy/led/build/led/build/lib/led/led_node.py -> /home/selqie/buoyancy/led/install/led/lib/python3.12/site-packages/led
+copying /home/selqie/buoyancy/led/build/led/build/lib/led/timer_node.py -> /home/selqie/buoyancy/led/install/led/lib/python3.12/site-packages/led
+byte-compiling /home/selqie/buoyancy/led/install/led/lib/python3.12/site-packages/led/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/selqie/buoyancy/led/install/led/lib/python3.12/site-packages/led/led_node.py to led_node.cpython-312.pyc
+byte-compiling /home/selqie/buoyancy/led/install/led/lib/python3.12/site-packages/led/timer_node.py to timer_node.cpython-312.pyc
+running install_data
+creating /home/selqie/buoyancy/led/install/led/share/ament_index
+creating /home/selqie/buoyancy/led/install/led/share/ament_index/resource_index
+creating /home/selqie/buoyancy/led/install/led/share/ament_index/resource_index/packages
+copying resource/led -> /home/selqie/buoyancy/led/install/led/share/ament_index/resource_index/packages
+copying package.xml -> /home/selqie/buoyancy/led/install/led/share/led
+creating /home/selqie/buoyancy/led/install/led/share/led/launch
+copying launch/led_node.launch.py -> /home/selqie/buoyancy/led/install/led/share/led/launch
+running install_egg_info
+Copying build/led/led.egg-info to /home/selqie/buoyancy/led/install/led/lib/python3.12/site-packages/led-0.0.0-py3.12.egg-info
+running install_scripts
+Installing led_node script to /home/selqie/buoyancy/led/install/led/lib/led
+Installing timer_node script to /home/selqie/buoyancy/led/install/led/lib/led
+writing list of installed files to '/home/selqie/buoyancy/led/build/led/install.log'

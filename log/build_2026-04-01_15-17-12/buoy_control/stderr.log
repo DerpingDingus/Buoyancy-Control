@@ -1,5 +1,0 @@
-  File "/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages/buoy_control/backup_motor.py", line 1
-    /usr/bin/env python3
-    ^
-SyntaxError: invalid syntax
-

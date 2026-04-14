@@ -1,0 +1,21 @@
+[3.321s] Invoking command in '/home/selqie/buoyancy/servo': CMAKE_PREFIX_PATH=/home/selqie/buoyancy/install/motor_interfaces:/home/selqie/buoyancy/install/sensing_bringup:/home/selqie/buoyancy/install/bno08x_driver PYTHONPATH=/home/selqie/buoyancy/build/servo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:/home/selqie/buoyancy/install/water_sensors/lib/python3.12/site-packages:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages:/home/selqie/buoyancy/install/ms5837_bar_ros/lib/python3.12/site-packages:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/led/lib/python3.12/site-packages:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/servo build --build-base /home/selqie/buoyancy/build/servo/build install --record /home/selqie/buoyancy/build/servo/install.log --single-version-externally-managed install_data
+[4.021s] running egg_info
+[4.042s] writing ../build/servo/servo.egg-info/PKG-INFO
+[4.043s] writing dependency_links to ../build/servo/servo.egg-info/dependency_links.txt
+[4.044s] writing entry points to ../build/servo/servo.egg-info/entry_points.txt
+[4.045s] writing requirements to ../build/servo/servo.egg-info/requires.txt
+[4.046s] writing top-level names to ../build/servo/servo.egg-info/top_level.txt
+[4.107s] reading manifest file '../build/servo/servo.egg-info/SOURCES.txt'
+[4.109s] writing manifest file '../build/servo/servo.egg-info/SOURCES.txt'
+[4.110s] running build
+[4.110s] running build_py
+[4.111s] running install
+[4.133s] running install_lib
+[4.186s] running install_data
+[4.186s] running install_egg_info
+[4.211s] removing '/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages/servo-0.1.0-py3.12.egg-info' (and everything under it)
+[4.211s] Copying ../build/servo/servo.egg-info to /home/selqie/buoyancy/install/servo/lib/python3.12/site-packages/servo-0.1.0-py3.12.egg-info
+[4.212s] running install_scripts
+[4.475s] Installing servo_motor_node script to /home/selqie/buoyancy/install/servo/lib/servo
+[4.476s] writing list of installed files to '/home/selqie/buoyancy/build/servo/install.log'
+[4.608s] Invoked command in '/home/selqie/buoyancy/servo' returned '0': CMAKE_PREFIX_PATH=/home/selqie/buoyancy/install/motor_interfaces:/home/selqie/buoyancy/install/sensing_bringup:/home/selqie/buoyancy/install/bno08x_driver PYTHONPATH=/home/selqie/buoyancy/build/servo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/motor_interfaces/lib/python3.12/site-packages:/home/selqie/buoyancy/install/water_sensors/lib/python3.12/site-packages:/home/selqie/buoyancy/install/servo/lib/python3.12/site-packages:/home/selqie/buoyancy/install/sensors/lib/python3.12/site-packages:/home/selqie/buoyancy/install/ms5837_bar_ros/lib/python3.12/site-packages:/home/selqie/buoyancy/install/buoy_control/lib/python3.12/site-packages:/home/selqie/buoyancy/install/led/lib/python3.12/site-packages:/home/selqie/buoyancy/install/battery/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/servo build --build-base /home/selqie/buoyancy/build/servo/build install --record /home/selqie/buoyancy/build/servo/install.log --single-version-externally-managed install_data

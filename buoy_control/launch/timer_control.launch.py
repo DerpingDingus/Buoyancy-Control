@@ -94,17 +94,29 @@ def generate_launch_description() -> LaunchDescription:
         description='Defines the leak sensor pin'
     )
 
+    led_pin_1 = DeclareLaunchArgument(
+        'led_pin_1',
+        default_value='16',
+        description='Defines a led pin'
+    )
+
+    led_pin_2 = DeclareLaunchArgument(
+        'led_pin_2',
+        default_value='20',
+        description='Defines a led pin'
+    )
+
+    led_pin_3 = DeclareLaunchArgument(
+        'led_pin_3',
+        default_value='21',
+        description='Defines a led pin'
+    )
+
     pull = DeclareLaunchArgument(
         'pull',
         default_value='DOWN',
         description='Sets pin state'
     )
-
-    #leak_led_pin = DeclareLaunchArgument(
-    #    'leak_led_pin',
-    #    default_value='26',
-    #    description='Defines the LED pin'
-    #)
 
     # -- Nodes -------------------------------------------------------------------
 
@@ -192,6 +204,20 @@ def generate_launch_description() -> LaunchDescription:
         }]
     )
 
+    led_node = Node(
+        package='led',
+        executable='led_node',
+        namespace=LaunchConfiguration('piston_1'),
+        output='screen',
+        emulate_tty=True,
+        parameters=[{
+            'joint_name':LaunchConfiguration('piston_1'),
+            'led_pin_1': LaunchConfiguration('led_pin_1'),
+            'led_pin_2': LaunchConfiguration('led_pin_2'),
+            'led_pin_3': LaunchConfiguration('led_pin_3'),
+        }]
+    )
+
 
     return LaunchDescription([
         joint_name_1,
@@ -208,6 +234,9 @@ def generate_launch_description() -> LaunchDescription:
         gpio_pin_1,
         gpio_pin_2,
         gpio_pin_3,
+        led_pin_1,
+        led_pin_2,
+        led_pin_3,
         pull,
         servo_node_1,
         servo_node_2,
@@ -215,4 +244,5 @@ def generate_launch_description() -> LaunchDescription:
         leak_node_1,
         leak_node_2,
         leak_node_3,
+        led_node,
     ])
